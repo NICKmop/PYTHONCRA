@@ -29,13 +29,6 @@ class Gnagnam:
                     print("Next Page : {}".format(cnt));
                     return Gnagnam.mainCra(cnt, numberCnt);
                 else:
-                    # print("title : ", title[i].text.strip());
-                    # print("siteName : ", siteName);
-                    # print("https://www.gangnam.go.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text);
-                    
-                    # if "2022-07" in registrationdate[i].text:
-                    #     break;
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                     

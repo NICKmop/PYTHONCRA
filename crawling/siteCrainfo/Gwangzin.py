@@ -29,13 +29,6 @@ class Gwangzin:
                     print("Next Page : {}".format(cnt));
                     return Gwangzin.mainCra(cnt, numberCnt);
                 else:
-                    # print("title : ", title[i].text.strip());
-                    # print(link[i].attrs.get('href'))
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    # print("registrationdate : ", registrationdate[i].text);
-                    
-                    # if "2022-07" in registrationdate[i].text:
-                    #     break;
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                     

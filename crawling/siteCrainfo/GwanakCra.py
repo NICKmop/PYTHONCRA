@@ -29,7 +29,6 @@ class craMain:
                     print("Next Page : {}".format(cnt));
                     return craMain.mainCra(cnt);
                 else:
-                    print("데이터 수집 시작")
                     firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,number[i].text,
                         datasModel.toJson(
                             "https://www.gfac.or.kr/html/notify/{}".format(link[i].attrs.get('href')),

@@ -20,8 +20,6 @@ class Gnagbuk:
             registrationdate = soup.select('div.bbs_normal_list > ul > li > div.subject > div.subject_inner > span');
 
             linkCount = len(link) - 1;
-            # print("linkCount : ", linkCount);
-
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
@@ -29,14 +27,6 @@ class Gnagbuk:
                     print("Next Page : {}".format(cnt));
                     return Gnagbuk.mainCra(cnt, numberCnt);
                 else:
-                    # print("title : ", title[i].text.strip());
-                    # print("siteName : ", siteName);
-                    # print(link[i].attrs)
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    # print("registrationdate : ", registrationdate[i].text);
-                    
-                    # if "2022-07" in registrationdate[i].text:
-                    #     break;
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                     
