@@ -4,11 +4,22 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
-class Gnagnam:
+class Gangnam:
+    # Gangnam_url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(1);
+    # response = requests.get(Gangnam_url);
+
+    # html = response.text;
+    # soup = BeautifulSoup(html, 'html.parser')
+    # 타이틀 ,기관, 링크, 등록일, 번호
+    # title = soup.select('td.align-l');
+    # link = soup.select('td:nth-child(2) > a');
+    # registrationdate = soup.select('tr > td:nth-child(5)');
+
     def mainCra(cnt,numberCnt):
         numberCnt = numberCnt;
         cnt  = cnt;
         url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(cnt);
+        
         response = requests.get(url);
 
         if response.status_code == 200:
@@ -16,7 +27,6 @@ class Gnagnam:
             soup = BeautifulSoup(html, 'html.parser')
             # 타이틀 ,기관, 링크, 등록일, 번호
             title = soup.select('td.align-l');
-            siteName = "강남문화재단";
             link = soup.select('td:nth-child(2) > a');
             registrationdate = soup.select('tr > td:nth-child(5)');
 
@@ -27,7 +37,7 @@ class Gnagnam:
                 if linkCount == i:
                     cnt += 1;
                     print("Next Page : {}".format(cnt));
-                    return Gnagnam.mainCra(cnt, numberCnt);
+                    return Gangnam.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
@@ -44,4 +54,4 @@ class Gnagnam:
                         )
                     );
         else : 
-            print(response.status_code)
+            print(response.status_code);

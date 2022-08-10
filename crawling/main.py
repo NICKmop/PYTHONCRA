@@ -1,9 +1,15 @@
 from siteCrainfo.GwanakCra import craMain
-from siteCrainfo.GangnamCra import Gnagnam
+from siteCrainfo.GangnamCra import Gangnam
 from siteCrainfo.GangbukCra import Gnagbuk
 from siteCrainfo.Gwangzin import Gwangzin
 from siteCrainfo.Dongjak import Dongjak
 from siteCrainfo.Seocho import Seocho
+from siteCrainfo.Seongdong import Seongdong
+from siteCrainfo.Seongbuk import Seongbuk
+from siteCrainfo.Yangcheon import Yangcheon
+from siteCrainfo.Yeongdeungpo import Yeongdeungpo
+
+from common.common_fnc import common_fnc
 
 if __name__ == '__main__':
     if __package__ is None:
@@ -13,19 +19,26 @@ if __name__ == '__main__':
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
 
         craMain.mainCra(0);
-        Gnagnam.mainCra(1,0);
+        Gangnam.mainCra(1,0);
         Gnagbuk.mainCra(1,0);
         Gwangzin.mainCra(1,0);
         Dongjak.mainCra(1,0);
         Seocho.mainCra(1,0);
+        Seongdong.mainCra(1,0);
+        Seongbuk.mainCra(1,0);
+        Yangcheon.mainCra(1,0);
+        Yeongdeungpo.mainCra(1,0);
     else:
         craMain.mainCra(0);
-        Gnagnam.mainCra(1,0);
+        Gangnam.mainCra(1,0);
         Gnagbuk.mainCra(1,0);
         Gwangzin.mainCra(1,0);
         Dongjak.mainCra(1,0);
         Seocho.mainCra(1,0);
-
+        Seongdong.mainCra(1,0);
+        Seongbuk.mainCra(1,0);
+        Yangcheon.mainCra(1,0);
+        Yeongdeungpo.mainCra(1,0);
 
 
         

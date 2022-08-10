@@ -9,12 +9,12 @@ class commonConstant_NAME:
     DONGJAK_NAME = "DONGJAK";           # 동작 
     MAPO_NAME = "MAPO";                 # 마포 -> 링크 이슈로 인하여 잠깐 보류
     SEOCHO_NAME = "SEOCHO";             # 서초 
-    SEONGDONG_NAME = "SEONGDONG";       # 성동
+    SEONGDONG_NAME = "SEONGDONG";       # 성동 -> 링크 이슈로 인하여 잠깐 보류
     SEONGBUK_NAME = "SEONGBUK"          # 성북
-    SONGPA_NAME = "SONGPA"              # 송파
+    SONGPA_NAME = "SONGPA"              # 송파 -> 링크가 .do 로 되어있음.
     YANGCHEON_NAME = "YANGCHEON"        # 양천
-    YEONGDEUNGPO_NAME = "YEONGDEUNGPO"  # 영등포
-                                        # 은평
+    YEONGDEUNGPO_NAME = "YEONGDEUNGPO"  # 영등포 
+    EUNPYENG_NAME = "EUNPYENG"          # 은평
                                         # 종로
                                         # 중구
 
@@ -45,3 +45,4 @@ class commonConstant_NAME:
     # 서울문화재단	https://www.sfac.or.kr/opensquare/notice/notice_list.do
 
     STOPCUOUNT = 21;
+    STATUS_SUCCESS_CODE = 200;
