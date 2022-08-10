@@ -4,8 +4,8 @@ class commonConstant_NAME:
     GWANAK_NAME = "GWANAK";             # 관악
     GWANGZIN_NAME = "GWANGZIN";         # 광진
     GEUAMCHEOUN_NAME = "GEUAMCHEOUN";   # 금천 -> 데이터 크롤링상 url문제가 있음.
-    DOBONG_NAME = "DOBONG";             # 도봉    
-    DONGDAEMUN_NAME = "DONGDAEMUN";     # 동대문
+    DOBONG_NAME = "DOBONG";             # 도봉 ->  
+    DONGDAEMUN_NAME = "DONGDAEMUN";     # 동대문 ->
     DONGJAK_NAME = "DONGJAK";           # 동작 
     MAPO_NAME = "MAPO";                 # 마포
     SEOCHO_NAME = "SEOCHO";             # 서초
