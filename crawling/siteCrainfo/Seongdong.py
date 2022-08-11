@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Seongdong:
     def mainCra(cnt,numberCnt):
+        print("Seongdong Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -30,27 +31,22 @@ class Seongdong:
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Seongdong Next Page : {}".format(cnt));
                     return Seongdong.mainCra(cnt, numberCnt);
                 else:
-                    print("title : ", title[i].text.strip());
-                    print(link[i].attrs.get('href'))
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text.strip());
-                    
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                     
-                    # firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
-                    #     datasModel.toJson(
-                    #         link[i].attrs.get('href'),
-                    #         numberCnt,
-                    #         "",
-                    #         title[i].text.strip(),
-                    #         "",
-                    #         registrationdate[i].text.strip(),
-                    #         "성동문화재단",
-                    #     )
-                    # );
+                    firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
+                        datasModel.toJson(
+                            link[i].attrs.get('href'),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            registrationdate[i].text.strip(),
+                            "성동문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

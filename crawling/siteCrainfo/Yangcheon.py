@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Yangcheon:
     def mainCra(cnt,numberCnt):
+        print("Yangcheon Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -30,7 +31,7 @@ class Yangcheon:
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Yangcheon Next Page : {}".format(cnt));
                     return Yangcheon.mainCra(cnt, numberCnt);
                 else:
                     print("title : ", title[i].text.strip());

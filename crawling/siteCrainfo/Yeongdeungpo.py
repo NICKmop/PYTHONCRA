@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Yeongdeungpo:
     def mainCra(cnt,numberCnt):
+        print("Yeongdeungpo Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -24,20 +25,14 @@ class Yeongdeungpo:
             registrationdate = soup.select('ul.board-list-wrap > li > ul.board-body > li.board-date'); # board-date
 
             linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Yeongdeungpo Next Page : {}".format(cnt));
                     return Yeongdeungpo.mainCra(cnt, numberCnt);
                 else:
-                    print("title : ", title[i].text.strip());
-                    print(link[i].attrs.get('href'))
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text.strip().split('|')[1].strip());
-                    
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break; 
                     

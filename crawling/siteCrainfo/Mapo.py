@@ -4,7 +4,8 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
-class Dongjak:
+# 보류
+class Mapo:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'

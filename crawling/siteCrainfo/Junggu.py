@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Junggu:
     def mainCra(cnt,numberCnt):
+        print("Junggu Start")
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -23,20 +24,14 @@ class Junggu:
             registrationdate = soup.select('tbody > tr > td:nth-child(4)');
 
             linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Junggu Next Page : {}".format(cnt));
                     return Junggu.mainCra(cnt, numberCnt);
                 else:
-                    print("title : ", title[i].text.strip());
-                    print("link : ", link[i].attrs.get('href'));
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text.strip());
-                    
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break; 
                     

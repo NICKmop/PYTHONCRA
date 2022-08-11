@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Gwangzin:
     def mainCra(cnt,numberCnt):
+        print(commonConstant_NAME.GWANGZIN_NAME," Start");
         numberCnt = numberCnt;
         cnt  = cnt; # 1
         url = 'http://www.naruart.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);
@@ -20,13 +21,12 @@ class Gwangzin:
             registrationdate = soup.select('tbody > tr > td.td_datetime');
 
             linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print(commonConstant_NAME.GWANGZIN_NAME," Next Page : {}".format(cnt));
                     return Gwangzin.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
