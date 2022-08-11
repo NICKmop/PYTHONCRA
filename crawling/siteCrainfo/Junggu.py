@@ -4,47 +4,51 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
-class Dongjak:
+class Junggu:
     def mainCra(cnt,numberCnt):
-        print("Dongjak Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
         numberCnt = numberCnt;
         cnt  = cnt; # 1
-        url = 'https://www.idfac.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);
+        url = 'https://www.caci.or.kr/caci/bbs/BMSR00040/list.do?pageIndex={}&menuNo=200016&searchGubunCd=&searchCondition=&searchKeyword='.format(cnt);
         response = requests.get(url);
 
         if response.status_code == 200:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
-
             # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('tbody > tr > td.title > div > a');
-            title = soup.select('tbody > tr > td.title > div > a');
-            registrationdate = soup.select('tbody > tr > td.date');
+            link = soup.select('tbody > tr > td.text-left > a');
+            title = soup.select('tbody > tr > td.text-left > a');
+            registrationdate = soup.select('tbody > tr > td:nth-child(4)');
 
             linkCount = len(link) - 1;
+            print("linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Dongjak Next Page : {}".format(cnt));
-                    return Dongjak.mainCra(cnt, numberCnt);
+                    print("Next Page : {}".format(cnt));
+                    return Junggu.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
+                    print("title : ", title[i].text.strip());
+                    print("link : ", link[i].attrs.get('href'));
+                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
+                    print("registrationdate : ", registrationdate[i].text.strip());
                     
-                    firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
+                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                        break; 
+                    
+                    firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
                         datasModel.toJson(
-                            link[i].attrs.get('href'),
+                            "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
-                            "동작문화재단",
+                            registrationdate[i].text.strip(),
+                            "중구문화재단",
                         )
                     );
         else : 

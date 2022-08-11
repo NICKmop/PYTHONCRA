@@ -16,6 +16,7 @@ class Gangnam:
     # registrationdate = soup.select('tr > td:nth-child(5)');
 
     def mainCra(cnt,numberCnt):
+        print("Gangnam Start");
         numberCnt = numberCnt;
         cnt  = cnt;
         url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(cnt);
@@ -36,7 +37,7 @@ class Gangnam:
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Gangnam Next Page : {}".format(cnt));
                     return Gangnam.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:

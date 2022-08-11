@@ -6,6 +6,7 @@ from models.datasModel import datasModel
 
 class Gnagbuk:
     def mainCra(cnt,numberCnt):
+        print("Gnagbuk Start");
         numberCnt = numberCnt;
         cnt  = cnt; # 1
         url = 'http://www.gbcf.or.kr/load.asp?subPage=510&searchValue=&searchType=&cate=&page={}&board_md=list'.format(cnt);
@@ -24,7 +25,7 @@ class Gnagbuk:
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
+                    print("Gnagbuk Next Page : {}".format(cnt));
                     return Gnagbuk.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:

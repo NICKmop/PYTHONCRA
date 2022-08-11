@@ -1,4 +1,4 @@
-from siteCrainfo.GwanakCra import craMain
+from siteCrainfo.GwanakCra import Gwanak
 from siteCrainfo.GangnamCra import Gangnam
 from siteCrainfo.GangbukCra import Gnagbuk
 from siteCrainfo.Gwangzin import Gwangzin
@@ -8,6 +8,8 @@ from siteCrainfo.Seongdong import Seongdong
 from siteCrainfo.Seongbuk import Seongbuk
 from siteCrainfo.Yangcheon import Yangcheon
 from siteCrainfo.Yeongdeungpo import Yeongdeungpo
+from siteCrainfo.Jongro import Jongro
+from siteCrainfo.Junggu import Junggu
 
 from common.common_fnc import common_fnc
 
@@ -18,27 +20,30 @@ if __name__ == '__main__':
         print(path.dirname( path.dirname( path.abspath(__file__) ) ));
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
 
-        craMain.mainCra(0);
-        Gangnam.mainCra(1,0);
-        Gnagbuk.mainCra(1,0);
-        Gwangzin.mainCra(1,0);
-        Dongjak.mainCra(1,0);
-        Seocho.mainCra(1,0);
-        Seongdong.mainCra(1,0);
-        Seongbuk.mainCra(1,0);
-        Yangcheon.mainCra(1,0);
-        Yeongdeungpo.mainCra(1,0);
+        # Gwanak.mainCra(0,0);
+        # Gangnam.mainCra(1,0);
+        # Gnagbuk.mainCra(1,0);
+        # Gwangzin.mainCra(1,0);
+        # Dongjak.mainCra(1,0);
+        # Seocho.mainCra(1,0);
+        # Seongdong.mainCra(1,0);
+        # Seongbuk.mainCra(1,0);
+        # Yangcheon.mainCra(1,0);
+        # Yeongdeungpo.mainCra(1,0);
+        # Jongro.mainCra(1,0);
+        Junggu.mainCra(1,0);
     else:
-        craMain.mainCra(0);
-        Gangnam.mainCra(1,0);
-        Gnagbuk.mainCra(1,0);
-        Gwangzin.mainCra(1,0);
-        Dongjak.mainCra(1,0);
-        Seocho.mainCra(1,0);
-        Seongdong.mainCra(1,0);
-        Seongbuk.mainCra(1,0);
-        Yangcheon.mainCra(1,0);
-        Yeongdeungpo.mainCra(1,0);
-
+        # Gwanak.mainCra(0,0);
+        # Gangnam.mainCra(1,0);
+        # Gnagbuk.mainCra(1,0);
+        # Gwangzin.mainCra(1,0);
+        # Dongjak.mainCra(1,0);
+        # Seocho.mainCra(1,0);
+        # Seongdong.mainCra(1,0);
+        # Seongbuk.mainCra(1,0);
+        # Yangcheon.mainCra(1,0);
+        # Yeongdeungpo.mainCra(1,0);
+        # Jongro.mainCra(1,0);
+        Junggu.mainCra(1,0);
 
         

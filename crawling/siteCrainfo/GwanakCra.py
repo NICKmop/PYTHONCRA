@@ -4,8 +4,9 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
-class craMain:
+class Gwanak:
     def mainCra(cnt, numberCnt):
+        print("Gwanak Start");
         numberCnt = numberCnt;
         cnt = cnt;
         url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);
@@ -22,14 +23,12 @@ class craMain:
             
             linkCount = len(link) - 1;
 
-            
-
             for i in range(len(link)):
                 numberCnt +=1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Next Page : {}".format(cnt));
-                    return craMain.mainCra(cnt);
+                    print("Gwanak Next Page : {}".format(cnt));
+                    return Gwanak.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
