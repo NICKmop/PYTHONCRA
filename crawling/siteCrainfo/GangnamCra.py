@@ -14,9 +14,9 @@ class Gangnam:
     # title = soup.select('td.align-l');
     # link = soup.select('td:nth-child(2) > a');
     # registrationdate = soup.select('tr > td:nth-child(5)');
+    print("Gangnam Start");
 
     def mainCra(cnt,numberCnt):
-        print("Gangnam Start");
         numberCnt = numberCnt;
         cnt  = cnt;
         url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(cnt);

@@ -5,8 +5,9 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gwanak:
+    print("Gwanak Start");
+
     def mainCra(cnt, numberCnt):
-        print("Gwanak Start");
         numberCnt = numberCnt;
         cnt = cnt;
         url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);

@@ -5,8 +5,8 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Dongjak:
+    print("Dongjak Start");
     def mainCra(cnt,numberCnt):
-        print("Dongjak Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 

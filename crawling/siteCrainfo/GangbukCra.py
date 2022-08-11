@@ -5,8 +5,8 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gnagbuk:
+    print("Gnagbuk Start");
     def mainCra(cnt,numberCnt):
-        print("Gnagbuk Start");
         numberCnt = numberCnt;
         cnt  = cnt; # 1
         url = 'http://www.gbcf.or.kr/load.asp?subPage=510&searchValue=&searchType=&cate=&page={}&board_md=list'.format(cnt);
