@@ -15,7 +15,7 @@ class Dongjak:
         url = 'https://www.idfac.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
 

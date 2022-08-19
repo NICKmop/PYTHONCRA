@@ -23,7 +23,7 @@ class Gangnam:
         
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser')
             # 타이틀 ,기관, 링크, 등록일, 번호

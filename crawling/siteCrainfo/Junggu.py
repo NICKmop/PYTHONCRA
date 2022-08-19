@@ -15,7 +15,7 @@ class Junggu:
         url = 'https://www.caci.or.kr/caci/bbs/BMSR00040/list.do?pageIndex={}&menuNo=200016&searchGubunCd=&searchCondition=&searchKeyword='.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
             # 타이틀 ,기관, 링크, 등록일, 번호

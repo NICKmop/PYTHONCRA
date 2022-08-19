@@ -15,7 +15,7 @@ class Mapo:
         url = 'https://www.mfac.or.kr/communication/notice_all_list.jsp?sc_b_code=BOARD_1207683401&sc_type=1&page={}'.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
 
