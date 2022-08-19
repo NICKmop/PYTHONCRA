@@ -15,7 +15,7 @@ class Seongbuk:
         url = 'https://www.sbculture.or.kr/culture/bbs/BMSR00021/list.do?pageIndex={}&menuNo=500049&fDate=&tDate=&searchCondition=3&searchKeyword='.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
 

@@ -1,5 +1,7 @@
 import requests;
-from bs4 import BeautifulSoup;
+from bs4 import BeautifulSoup
+
+from crawling.common.common_constant import commonConstant_NAME;
 
 
 # 번호로 페이지 이동
@@ -7,7 +9,7 @@ url = "https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page=1";
 
 response = requests.get(url); 
  
-if response.status_code == 200:
+if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
     html = response.text;
     soup = BeautifulSoup(html, 'html.parser');
 

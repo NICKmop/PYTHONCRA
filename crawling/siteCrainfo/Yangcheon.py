@@ -15,7 +15,7 @@ class Yangcheon:
         url = 'https://yfac.kr/main/contents.do?v_page={}&&a_num=48342159'.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
 

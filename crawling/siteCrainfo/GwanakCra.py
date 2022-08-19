@@ -13,7 +13,7 @@ class Gwanak:
         url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser')
 

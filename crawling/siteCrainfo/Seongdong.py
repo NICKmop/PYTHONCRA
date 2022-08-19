@@ -15,7 +15,7 @@ class Seongdong:
         url = 'https://www.sdfac.or.kr/kor/sdfac/board/noti_list.do?page={}&b_idx=&bbs_id=&article_category=&searchCnd=3&searchWrd='.format(cnt);
         response = requests.get(url);
 
-        if response.status_code == 200:
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser');
 
