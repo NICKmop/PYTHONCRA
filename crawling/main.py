@@ -26,7 +26,7 @@ if __name__ == '__main__':
         Gwangzin.mainCra(1,0);
         Dongjak.mainCra(1,0);
         Seocho.mainCra(1,0);
-        Seongdong.mainCra(1,0);
+        # Seongdong.mainCra(1,0); -> 링크 문제.
         Seongbuk.mainCra(1,0);
         Yangcheon.mainCra(1,0);
         Yeongdeungpo.mainCra(1,0);
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         Gwangzin.mainCra(1,0);
         Dongjak.mainCra(1,0);
         Seocho.mainCra(1,0);
-        Seongdong.mainCra(1,0);
+        # Seongdong.mainCra(1,0); -> 링크 문제.
         Seongbuk.mainCra(1,0);
         Yangcheon.mainCra(1,0);
         Yeongdeungpo.mainCra(1,0);

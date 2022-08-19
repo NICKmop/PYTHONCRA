@@ -32,12 +32,8 @@ class Mapo:
                 if linkCount == i:
                     cnt += 1;
                     print("Next Page : {}".format(cnt));
-                    return Dongjak.mainCra(cnt, numberCnt);
+                    return Mapo.mainCra(cnt, numberCnt);
                 else:
-                    print("title : ", title[i].text.strip());
-                    print(link[i].attrs.get('href'))
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text);
                     
                     # if "2022-07" in registrationdate[i].text:
                     #     break;

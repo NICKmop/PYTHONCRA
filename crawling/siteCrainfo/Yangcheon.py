@@ -34,11 +34,6 @@ class Yangcheon:
                     print("Yangcheon Next Page : {}".format(cnt));
                     return Yangcheon.mainCra(cnt, numberCnt);
                 else:
-                    print("title : ", title[i].text.strip());
-                    print(link[i].attrs.get('href'))
-                    # print("https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')));
-                    print("registrationdate : ", registrationdate[i].text.strip());
-                    
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break; 
                     

@@ -20,12 +20,12 @@ class Seongdong:
             soup = BeautifulSoup(html, 'html.parser');
 
             # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('div.content > ul.listType > li > a.arc_tit');
+            link = soup.select('ul.listType > li > a.arc_tit');
             title = soup.select('tbody > tr > td.left > a.arc_tit');
             registrationdate = soup.select('tbody > tr > td:nth-child(4)');
 
             linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
+            print("Seongdong linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
