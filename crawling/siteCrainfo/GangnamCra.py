@@ -5,17 +5,6 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gangnam:
-    # Gangnam_url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(1);
-    # response = requests.get(Gangnam_url);
-
-    # html = response.text;
-    # soup = BeautifulSoup(html, 'html.parser')
-    # 타이틀 ,기관, 링크, 등록일, 번호
-    # title = soup.select('td.align-l');
-    # link = soup.select('td:nth-child(2) > a');
-    # registrationdate = soup.select('tr > td:nth-child(5)');
-    print("Gangnam Start");
-
     def mainCra(cnt,numberCnt):
         numberCnt = numberCnt;
         cnt  = cnt;

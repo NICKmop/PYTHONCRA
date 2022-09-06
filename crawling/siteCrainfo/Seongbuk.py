@@ -6,7 +6,6 @@ from models.datasModel import datasModel
 
 class Seongbuk:
     def mainCra(cnt,numberCnt):
-        print("Seongbuk Start");
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 

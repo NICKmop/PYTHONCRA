@@ -5,7 +5,6 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gnagbuk:
-    print("Gnagbuk Start");
     def mainCra(cnt,numberCnt):
         numberCnt = numberCnt;
         cnt  = cnt; # 1

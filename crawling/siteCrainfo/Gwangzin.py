@@ -6,7 +6,6 @@ from models.datasModel import datasModel
 
 class Gwangzin:
     def mainCra(cnt,numberCnt):
-        print(commonConstant_NAME.GWANGZIN_NAME," Start");
         numberCnt = numberCnt;
         cnt  = cnt; # 1
         url = 'http://www.naruart.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);

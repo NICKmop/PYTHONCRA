@@ -17,7 +17,6 @@ class commonConstant_NAME:
     EUNPYENG_NAME = "EUNPYENG";          # 은평 -> 링크 이슈로 인하여 잠깐 보류
     JONGRO_NAME = "JONGRO";             # 종로
     JUNGGU_NAME = "JUNGGU";             # 중구
-
     NPO_NAME = "NPO";               # NPO
     SEOUL_NAME = "SEOUL";           # 서울
 
@@ -40,7 +39,6 @@ class commonConstant_NAME:
     # 은평문화재단	https://www.efac.or.kr/sub06/sub01.php
     # 종로문화재단	https://www.jfac.or.kr/site/main/archive/post/category/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD
     # 중구문화재단	https://www.caci.or.kr/caci/bbs/BMSR00040/list.do?pageIndex=1&menuNo=200016&searchGubunCd=&searchCondition=&searchKeyword=
-        
     # 서울시NPO지원센터	https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo
     # 서울문화재단	https://www.sfac.or.kr/opensquare/notice/notice_list.do
 
