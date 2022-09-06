@@ -4,9 +4,10 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
+# 현재 달 날짜 찾는지 아직 미정. 
+
 class Junggu:
     def mainCra(cnt,numberCnt):
-        print("Junggu Start")
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -23,6 +24,7 @@ class Junggu:
             title = soup.select('tbody > tr > td.text-left > a');
             registrationdate = soup.select('tbody > tr > td:nth-child(4)');
 
+
             linkCount = len(link) - 1;
 
             for i in range(len(link)):
@@ -35,6 +37,11 @@ class Junggu:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break; 
                     
+                    # 날짜 중 08월이 아닌달 데이터 getString 
+                    datelist = registrationdate[i].text.strip();
+                    if datelist.split('-')[1] != '08':
+                        print("8월달 데이터가 아님.... :  {}".format(datelist));
+
                     firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
