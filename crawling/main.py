@@ -1,3 +1,4 @@
+from siteCrainfo.Eunpyeng import Eunpyeng
 from siteCrainfo.GwanakCra import Gwanak
 from siteCrainfo.GangnamCra import Gangnam
 from siteCrainfo.GangbukCra import Gnagbuk
@@ -18,28 +19,30 @@ if __name__ == '__main__':
         print(path.dirname( path.dirname( path.abspath(__file__) ) ));
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
 
-        Gwanak.mainCra(0,0);
-        Gangnam.mainCra(0,0);
-        Gnagbuk.mainCra(1,0);
-        Gwangzin.mainCra(1,0);
-        Dongjak.mainCra(1,0);
-        Seocho.mainCra(1,0);
-        Seongbuk.mainCra(1,0);
-        Yangcheon.mainCra(1,0);
-        Yeongdeungpo.mainCra(1,0);
-        Jongro.mainCra(1,0);
-        Junggu.mainCra(1,0);
+        # Gwanak.mainCra(0,0);
+        # Gangnam.mainCra(0,0);
+        # Gnagbuk.mainCra(1,0);
+        # Gwangzin.mainCra(1,0);
+        # Dongjak.mainCra(1,0);
+        # Seocho.mainCra(1,0);
+        # Seongbuk.mainCra(1,0);
+        # Yangcheon.mainCra(1,0);
+        # Yeongdeungpo.mainCra(1,0);
+        # Jongro.mainCra(1,0);
+        # Junggu.mainCra(1,0);
+        Eunpyeng.mainCra();
     else:
-        Gwanak.mainCra(0,0);
-        Gangnam.mainCra(0,0);
-        Gnagbuk.mainCra(1,0);
-        Gwangzin.mainCra(1,0);
-        Dongjak.mainCra(1,0);
-        Seocho.mainCra(1,0);
-        Seongbuk.mainCra(1,0);
-        Yangcheon.mainCra(1,0);
-        Yeongdeungpo.mainCra(1,0);
-        Jongro.mainCra(1,0);
-        Junggu.mainCra(1,0);
+        # Gwanak.mainCra(0,0);
+        # Gangnam.mainCra(0,0);
+        # Gnagbuk.mainCra(1,0);
+        # Gwangzin.mainCra(1,0);
+        # Dongjak.mainCra(1,0);
+        # Seocho.mainCra(1,0);
+        # Seongbuk.mainCra(1,0);
+        # Yangcheon.mainCra(1,0);
+        # Yeongdeungpo.mainCra(1,0);
+        # Jongro.mainCra(1,0);
+        # Junggu.mainCra(1,0);
+        Eunpyeng.mainCra();
 
         
