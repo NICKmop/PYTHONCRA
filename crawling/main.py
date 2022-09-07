@@ -30,7 +30,7 @@ if __name__ == '__main__':
         # Yeongdeungpo.mainCra(1,0);
         # Jongro.mainCra(1,0);
         # Junggu.mainCra(1,0);
-        Eunpyeng.mainCra();
+        Eunpyeng.mainCra(1,0);
     else:
         # Gwanak.mainCra(0,0);
         # Gangnam.mainCra(0,0);
@@ -43,6 +43,6 @@ if __name__ == '__main__':
         # Yeongdeungpo.mainCra(1,0);
         # Jongro.mainCra(1,0);
         # Junggu.mainCra(1,0);
-        Eunpyeng.mainCra();
+        Eunpyeng.mainCra(1,0);
 
         
