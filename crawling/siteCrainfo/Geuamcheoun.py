@@ -14,7 +14,7 @@ class Geuamcheoun:
         registrationdate = soupData.select('.title > .mVer > p:nth-child(2)');
 
         # print("link : ", link);
-        # print("registrationdate : ", registrationdate);
+        print("registrationdate : ", registrationdate);
 
         linkCount = len(link) - 1;
         for i in range(len(link)):
@@ -29,7 +29,6 @@ class Geuamcheoun:
                     break;
             linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             # print(title[i].text.strip());
-            print(registrationdate[i].text);
 
             firebase_con.updateModel( commonConstant_NAME.GEUAMCHEOUN_NAME,i,
                 datasModel.toJson(

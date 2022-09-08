@@ -1,3 +1,4 @@
+from siteCrainfo.Dobong import Dobong
 from siteCrainfo.Geuamcheoun import Geuamcheoun
 from siteCrainfo.Eunpyeng import Eunpyeng
 from siteCrainfo.GwanakCra import Gwanak
@@ -12,6 +13,11 @@ from siteCrainfo.Yangcheon import Yangcheon
 from siteCrainfo.Yeongdeungpo import Yeongdeungpo
 from siteCrainfo.Jongro import Jongro
 from siteCrainfo.Junggu import Junggu
+from siteCrainfo.Dongdaemun import Dongdaemun
+from siteCrainfo.Mapo import Mapo
+from siteCrainfo.Seongdong import Seongdong
+from siteCrainfo.Songpa import Songpa
+
 
 if __name__ == '__main__':
     if __package__ is None:
@@ -32,7 +38,12 @@ if __name__ == '__main__':
         # Jongro.mainCra(1,0);
         # Junggu.mainCra(1,0);
         # Eunpyeng.mainCra(1,0);
-        Geuamcheoun.mainCra(1,0);
+        # Geuamcheoun.mainCra(1,0);
+        # Dobong.mainCra(1,0); 대기 
+        # Dongdaemun.mainCra(1,0);
+        # Mapo.mainCra(1,0);
+        # Seongdong.mainCra(1,0);
+        Songpa.mainCra(1,0);
     else:
         # Gwanak.mainCra(0,0);
         # Gangnam.mainCra(0,0);
@@ -46,7 +57,13 @@ if __name__ == '__main__':
         # Jongro.mainCra(1,0);
         # Junggu.mainCra(1,0);
         # Eunpyeng.mainCra(1,0);
-        Geuamcheoun.mainCra(1,0);
+        # Geuamcheoun.mainCra(1,0);
+        # Dobong.mainCra(1,0); 대기
+        # Dongdaemun.mainCra(1,0);
+        # Mapo.mainCra(1,0);
+        # Seongdong.mainCra(1,0);
+        Songpa.mainCra(1,0);
+
 
 
         

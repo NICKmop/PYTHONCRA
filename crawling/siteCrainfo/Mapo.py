@@ -1,55 +1,45 @@
-import requests
-from bs4 import BeautifulSoup
+import re
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
+import common.common_fnc  as com
 
 # 보류
 class Mapo:
     def mainCra(cnt,numberCnt):
-        requests.packages.urllib3.disable_warnings()
-        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+        url = 'https://www.mfac.or.kr/communication/notice_all_list.jsp';
+        soupData = com.pageconnect(cnt, url, "javascript:submitPage({})".format(cnt));
+        
+        link = soupData.select('.tit > a');
+        title = soupData.select('.btnDetail');
+        registrationdate = soupData.select('.date');
 
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
-        url = 'https://www.mfac.or.kr/communication/notice_all_list.jsp?sc_b_code=BOARD_1207683401&sc_type=1&page={}'.format(cnt);
-        response = requests.get(url);
+        linkCount = len(link) - 1;
+        for i in range(len(link)):
+            numberCnt += 1;
+            if linkCount == i:
+                # javascript:pageNum('frm01','200');
+                cnt += 10;
+                print("Mapo Next Page : {}".format(cnt));
+                return Mapo.mainCra(cnt, numberCnt),
+            else:
+                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    break;
+            # linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('seq'));
+            linkSp = link[i].attrs.get('seq');
 
-        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
-            html = response.text;
-            soup = BeautifulSoup(html, 'html.parser');
+            # print(link[i].attrs.get('seq'));
+            # print(title[i].text.strip());
+            # print(registrationdate[i + 1].text);
 
-            # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('div.board_wrap > ul > li > div > a');
-            title = soup.select('tbody > tr > td.title > div > a');
-            registrationdate = soup.select('tbody > tr > td.date');
-
-            linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
-
-            for i in range(len(link)):
-                numberCnt += 1;
-                if linkCount == i:
-                    cnt += 1;
-                    print("Next Page : {}".format(cnt));
-                    return Mapo.mainCra(cnt, numberCnt);
-                else:
-                    
-                    # if "2022-07" in registrationdate[i].text:
-                    #     break;
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
-                    
-                    firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
-                        datasModel.toJson(
-                            link[i].attrs.get('href'),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            registrationdate[i].text,
-                            "동작문화재단",
-                        )
-                    );
-        else : 
-            print(response.status_code)
+            firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,i,
+                datasModel.toJson(
+                    "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
+                    i,
+                    "",
+                    title[i].text.strip(),
+                    "",
+                    registrationdate[i].text,
+                    "마포문화재단"
+                )
+            )

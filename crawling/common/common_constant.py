@@ -3,13 +3,13 @@ class commonConstant_NAME:
     GANGBUK_NAME ="GANGBUK";            # 강북
     GWANAK_NAME = "GWANAK";             # 관악
     GWANGZIN_NAME = "GWANGZIN";         # 광진
-    GEUAMCHEOUN_NAME = "GEUAMCHEOUN";   # 금천 -> 데이터 크롤링상 url문제가 있음.
+    GEUAMCHEOUN_NAME = "GEUAMCHEOUN";   # 금천
     DOBONG_NAME = "DOBONG";             # 도봉 -> page 크롤링 이슈상 잠깐 보류
-    DONGDAEMUN_NAME = "DONGDAEMUN";     # 동대문 -> page 크롤링 이슈상 잠깐 보류
+    DONGDAEMUN_NAME = "DONGDAEMUN";     # 동대문
     DONGJAK_NAME = "DONGJAK";           # 동작 
-    MAPO_NAME = "MAPO";                 # 마포 -> 링크 이슈로 인하여 잠깐 보류
+    MAPO_NAME = "MAPO";                 # 마포
     SEOCHO_NAME = "SEOCHO";             # 서초 
-    SEONGDONG_NAME = "SEONGDONG";       # 성동 -> 링크 이슈로 인하여 잠깐 보류
+    SEONGDONG_NAME = "SEONGDONG";       # 성동
     SEONGBUK_NAME = "SEONGBUK";          # 성북
     SONGPA_NAME = "SONGPA";              # 송파 -> 링크가 .do 로 되어있음.
     YANGCHEON_NAME = "YANGCHEON";        # 양천
@@ -17,6 +17,7 @@ class commonConstant_NAME:
     EUNPYENG_NAME = "EUNPYENG";          # 은평
     JONGRO_NAME = "JONGRO";             # 종로
     JUNGGU_NAME = "JUNGGU";             # 중구
+
     NPO_NAME = "NPO";               # NPO
     SEOUL_NAME = "SEOUL";           # 서울
 
@@ -27,7 +28,7 @@ class commonConstant_NAME:
     # 구로문화재단	https://www.guroartsvalley.or.kr/user/board/mn011801.do
     # 금천문화재단	https://gcfac.or.kr/board/free?gcfac_menu_cd=U0113
     # 도봉문화재단	http://www.dbfac.or.kr/front/board/boardContentsListPage.do?board_id=1
-    # 동대문문화재단	https://www.ddmac.or.kr/sub04/sub01.php
+    # 동대문문화재단https://www.ddmac.or.kr/sub04/sub01.php
     # 동작문화재단	https://www.idfac.or.kr/bbs/board.php?bo_table=notice
     # 마포문화재단	https://www.mfac.or.kr/communication/notice_all_list.jsp
     # 서초문화재단	http://www.seochocf.or.kr/site/main/archive/post/category/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD?metaCode1=GENERAL
