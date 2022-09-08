@@ -17,6 +17,8 @@ from siteCrainfo.Dongdaemun import Dongdaemun
 from siteCrainfo.Mapo import Mapo
 from siteCrainfo.Seongdong import Seongdong
 from siteCrainfo.Songpa import Songpa
+from siteCrainfo.Npocra import Npocra
+from siteCrainfo.Seoul import Seoul
 
 
 if __name__ == '__main__':
@@ -32,7 +34,7 @@ if __name__ == '__main__':
         # Gwangzin.mainCra(1,0);
         # Dongjak.mainCra(1,0);
         # Seocho.mainCra(1,0);
-        # Seongbuk.mainCra(1,0);
+        # Seeongbuk.mainCra(1,0);
         # Yangcheon.mainCra(1,0);
         # Yeongdeungpo.mainCra(1,0);
         # Jongro.mainCra(1,0);
@@ -43,7 +45,9 @@ if __name__ == '__main__':
         # Dongdaemun.mainCra(1,0);
         # Mapo.mainCra(1,0);
         # Seongdong.mainCra(1,0);
-        Songpa.mainCra(1,0);
+        # Songpa.mainCra(1,0);
+        # Npocra.mainCra(1,0);
+        Seoul.mainCra(1,0);
     else:
         # Gwanak.mainCra(0,0);
         # Gangnam.mainCra(0,0);
@@ -52,7 +56,7 @@ if __name__ == '__main__':
         # Dongjak.mainCra(1,0);
         # Seocho.mainCra(1,0);
         # Seongbuk.mainCra(1,0);
-        # Yangcheon.mainCra(1,0);
+        # Yangchxeon.mainCra(1,0);
         # Yeongdeungpo.mainCra(1,0);
         # Jongro.mainCra(1,0);
         # Junggu.mainCra(1,0);
@@ -62,7 +66,9 @@ if __name__ == '__main__':
         # Dongdaemun.mainCra(1,0);
         # Mapo.mainCra(1,0);
         # Seongdong.mainCra(1,0);
-        Songpa.mainCra(1,0);
+        # Songpa.mainCra(1,0);
+        # Npocra.mainCra(1,0);
+        Seoul.mainCra(1,0);
 
 
 

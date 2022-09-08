@@ -1,28 +1,51 @@
-import requests;
+import requests
 from bs4 import BeautifulSoup
+from dbbox.firebases import firebase_con
+from common.common_constant import commonConstant_NAME
+from models.datasModel import datasModel
 
-from crawling.common.common_constant import commonConstant_NAME;
+class Npocra:
+    def mainCra(cnt,numberCnt):
+        requests.packages.urllib3.disable_warnings()
+        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+        url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&amp;page={}'.format(cnt);
+        
+        response = requests.get(url);
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
+            html = response.text;
+            soup = BeautifulSoup(html, 'html.parser');
 
+            # 타이틀 ,기관, 링크, 등록일, 번호
+            link = soup.select('.title');
+            title = soup.select('.title');
+            registrationdate = soup.select('.date');
+            
+            print(link);
 
-# 번호로 페이지 이동
-url = "https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page=1";
+            linkCount = len(link) - 1;
 
-response = requests.get(url); 
- 
-if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
-    html = response.text;
-    soup = BeautifulSoup(html, 'html.parser');
-
-    content = soup.select('table.table > tr > td');
-
-    Category = soup.select('table.table > tr > td.category');
-    link = soup.select('table.table > tr >td > a');
-    createUser = soup.select('table.table > tr > td:nth-child(3)');
-    date = soup.select('table.table > tr > td.date');
-
-    for i in range(len(createUser)):
-        print("createUser : ", createUser[i].text.strip());
-        print("Category : ", Category[i].text.strip());
-        print("link : ", link[i].attrs.get('href'));
-        print("date : ", date[i].text.strip());
- 
+            for i in range(len(link)):
+                numberCnt += 1;
+                if linkCount == i:
+                    cnt += 1;
+                    print("Npocra Next Page : {}".format(cnt));
+                    return Npocra.mainCra(cnt, numberCnt);
+                else:
+                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                        break;
+                
+                print(registrationdate[i].text.strip());
+                    
+                firebase_con.updateModel(commonConstant_NAME.NPO_NAME,numberCnt,
+                    datasModel.toJson(
+                        link[i].attrs.get('href'),
+                        numberCnt,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        registrationdate[i].text.strip(),
+                        "서울NPO지원센터",
+                    )
+                );
+        else : 
+            print(response.status_code)

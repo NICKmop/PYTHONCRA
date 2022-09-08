@@ -24,21 +24,21 @@ class Songpa:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
-            linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
+            linkSp = link[i].attrs.get('href').split('Page');
+            linkSub = re.sub(r'[^0-9]','',linkSp[0]);
             
-            # print(link[i].attrs.get('href'));
-            print(linkSp)
+            # print(linkSub);
             # print(title[i].text.strip());
             # print(registrationdate[i].text);
 
-            # firebase_con.updateModel( commonConstant_NAME.SONGPA_NAME,i,
-            #     datasModel.toJson(
-            #         "https://www.sdfac.or.kr/kor/sdfac/board/noti_view.do?page={}&b_idx={}&bbs_id=noti&article_category=&searchCnd=3&searchWrd=".format(cnt , linkSp),
-            #         i,
-            #         "",
-            #         title[i].text.strip(),
-            #         "",
-            #         registrationdate[i].text,
-            #         "송파문화재단"
-            #     )
-            # )
+            firebase_con.updateModel( commonConstant_NAME.SONGPA_NAME,i,
+                datasModel.toJson(
+                    "https://www.songpafac.or.kr/notice_view.do?brd_seq={}&curPage=&searchtype=&keyword=".format(cnt , linkSub),
+                    i,
+                    "",
+                    title[i].text.strip(),
+                    "",
+                    registrationdate[i].text,
+                    "송파문화재단"
+                )
+            )
