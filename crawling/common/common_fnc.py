@@ -1,16 +1,16 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-def pageReload(driver, pageNumber):
-    driver.execute_script("javascript:pageNum('frm01','{}')".format(pageNumber))
-
-def driver1(driver, pageNumber, url):
+def pageReload(driver, pageNumber, script):
+    driver.execute_script(script)
+    # javascript:pagingUtil.pageSubmit('2') -> 금천
+def driver1(driver, pageNumber, url, script):
     driver.get(url);
-    pageReload(driver,pageNumber);
+    pageReload(driver,pageNumber, script);
     html = driver.page_source;
     return html;
 
-def pageconnect(pageNumber, url):
+def pageconnect(pageNumber, url, script):
     if pageNumber is None:
         pageNumber = 0;
         
@@ -18,5 +18,5 @@ def pageconnect(pageNumber, url):
     driver.implicitly_wait(15);
     driver.get(url);
 
-    soup = BeautifulSoup(driver1(driver,pageNumber, url), 'html.parser');
+    soup = BeautifulSoup(driver1(driver,pageNumber, url, script), 'html.parser');
     return soup;
