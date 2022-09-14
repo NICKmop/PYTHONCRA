@@ -37,7 +37,7 @@ class Geuamcheoun:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i + 1].text,
+                    registrationdate[i].text,
                     "금천문화재단"
                 )
             )
