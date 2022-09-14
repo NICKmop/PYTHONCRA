@@ -1,6 +1,25 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import time
+import time, logging
+from  datetime import date
+
+def loggingdata(data):
+    today = date.today();
+
+    logger = logging.getLogger();
+    logger.setLevel(logging.INFO);
+    
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+    stream_handler = logging.StreamHandler();
+    stream_handler.setFormatter(formatter);
+    logger.addHandler(stream_handler);
+
+    file_handler = logging.FileHandler('D:/pythoncra/crawling/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
+    file_handler.setFormatter(formatter);
+    logger.addHandler(file_handler);
+
+    logger.info(data);
 
 def pageReload(driver, pageNumber, script):
     time.sleep(2);

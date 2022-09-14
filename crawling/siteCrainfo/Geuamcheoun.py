@@ -41,5 +41,4 @@ class Geuamcheoun:
                     "금천문화재단"
                 )
             )
-
             

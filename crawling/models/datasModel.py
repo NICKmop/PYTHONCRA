@@ -1,3 +1,4 @@
+import common.common_fnc
 class datasModel:
     link = "";
     number = "";
@@ -15,7 +16,6 @@ class datasModel:
         self.registrationdate = registrationdate;
 
     def toJson(self, link, number, result, title, apperiod, registrationdate):
-
         dataModel = {
             "link" : self, 
             "number" : link, 
@@ -25,6 +25,10 @@ class datasModel:
             "registrationdate" : apperiod,
             "center_name " : registrationdate,
         }
+
+        common.common_fnc.loggingdata(dataModel);
+
         return dataModel;
+
 
         

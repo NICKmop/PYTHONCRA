@@ -20,8 +20,6 @@ class Npocra:
             title = soup.select('.title');
             registrationdate = soup.select('.date');
             
-            print(link);
-
             linkCount = len(link) - 1;
 
             for i in range(len(link)):
@@ -34,7 +32,6 @@ class Npocra:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                 
-                print(registrationdate[i].text.strip());
                     
                 firebase_con.updateModel(commonConstant_NAME.NPO_NAME,numberCnt,
                     datasModel.toJson(

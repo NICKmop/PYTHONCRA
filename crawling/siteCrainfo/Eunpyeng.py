@@ -26,7 +26,8 @@ class Eunpyeng:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
 
-            linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
+            linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
+
             firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,i,
                 datasModel.toJson(
                     "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
