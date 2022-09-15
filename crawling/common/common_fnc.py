@@ -34,10 +34,12 @@ def driver1(driver, pageNumber, url, script):
 def pageconnect(pageNumber, url, script):
     if pageNumber is None:
         pageNumber = 0;
-        
-    driver = webdriver.Chrome('D:/pythoncra/crawling/chromedriver.exe');
-    driver.implicitly_wait(15);
-    driver.get(url);
+    
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    browser = webdriver.Chrome('D:/pythoncra/crawling/chromedriver.exe', options=options);
+    browser.implicitly_wait(15);
+    browser.get(url);
 
-    soup = BeautifulSoup(driver1(driver,pageNumber, url, script), 'html.parser');
+    soup = BeautifulSoup(driver1(browser,pageNumber, url, script), 'html.parser');
     return soup;

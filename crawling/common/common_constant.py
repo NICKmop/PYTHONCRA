@@ -22,8 +22,11 @@ class commonConstant_NAME:
     SEOUL_NAME = "SEOUL";                # 서울
 
     #자치 구
-    GANGNAM_BOROUGH_NOTICE = "";                    # 강남구
-    GANGNAM_BOROUGH_OTHER_INSTITUTIONS = "";        # 강남구
+    GANGNAM_BOROUGH_NOTICE = "GANGNAM_NOTICE";                       # 강남구
+    GANGNAM_BOROUGH_OTHER_INSTITUTIONS = "GANGNAM_INSTITUTIONS";     # 강남구
+    GANGDONG_BOROUGH_NOTICE = "GANGDONG_NOTICE";                      # 강동구
+    GANGDONG_BOROUGH_OTHER_INSTITUTIONS = "GANGDONG_INSTITUTIONS";    # 강동구
+    
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075
     # 강북구		https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285												https://www.gangbuk.go.kr/www/boardList.do?boardSeq=48&key=296
