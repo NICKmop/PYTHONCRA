@@ -26,6 +26,8 @@ class commonConstant_NAME:
     GANGNAM_BOROUGH_OTHER_INSTITUTIONS = "GANGNAM_INSTITUTIONS";     # 강남구
     GANGDONG_BOROUGH_NOTICE = "GANGDONG_NOTICE";                      # 강동구
     GANGDONG_BOROUGH_OTHER_INSTITUTIONS = "GANGDONG_INSTITUTIONS";    # 강동구
+    GANGBUK_BOROUGH_NOTICE = "GANGBUK_NOTICE";                      # 강북구
+    GANGBUK_BOROUGH_OTHER_INSTITUTIONS = "GANGBUK_INSTITUTIONS";    # 강북구
     
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075

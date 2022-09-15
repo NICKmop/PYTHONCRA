@@ -21,7 +21,12 @@ from siteCrainfo.cultureFoundation.Songpa import Songpa
 from siteCrainfo.cultureFoundation.Npocra import Npocra
 #자치구 
 from siteCrainfo.cultureBorough.notice.Gangnam_Borough_Notice import Gangnam_notice
+from siteCrainfo.cultureBorough.notice.Gangdong_Borough_Notice import Gangdong_notice
+from siteCrainfo.cultureBorough.notice.Gangbuk_Borough_Notice import Gangbuk_notice
+
 from siteCrainfo.cultureBorough.otherInstitutions.Gangnam_Borough_Other_Institutions import Gangnam_Institutions
+from siteCrainfo.cultureBorough.otherInstitutions.Gangdong_Borough_Other_Institutions import Gangdong_Institutions
+
 if __name__ == '__main__':
 
     if __package__ is None:
@@ -53,7 +58,12 @@ if __name__ == '__main__':
 
         #자치구
         # Gangnam_notice.mainCra(1,0);
-        Gangnam_Institutions.mainCra(1,0);
+        # Gangdong_notice.mainCra(1,0);
+        Gangbuk_notice.mainCra(1,0);
+
+        # Gangnam_Institutions.mainCra(1,0);
+        # Gangdong_Institutions.mainCra(1,0);
+        
     else:
         # 재단
         # Gwanak.mainCra(0,0);
@@ -78,7 +88,11 @@ if __name__ == '__main__':
 
         #자치구
         # Gangnam_notice.mainCra(1,0);
-        Gangnam_Institutions.mainCra(1,0);
+        # Gangdong_notice.mainCra(1,0);
+        Gangbuk_notice.mainCra(1,0);
+
+        # Gangnam_Institutions.mainCra(1,0);
+        # Gangdong_Institutions.mainCra(1,0);
 
 
         
