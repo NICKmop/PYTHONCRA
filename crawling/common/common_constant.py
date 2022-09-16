@@ -26,14 +26,27 @@ class commonConstant_NAME:
     GANGNAM_BOROUGH_OTHER_INSTITUTIONS = "GANGNAM_INSTITUTIONS";     # 강남구
     GANGDONG_BOROUGH_NOTICE = "GANGDONG_NOTICE";                      # 강동구
     GANGDONG_BOROUGH_OTHER_INSTITUTIONS = "GANGDONG_INSTITUTIONS";    # 강동구
+
     GANGBUK_BOROUGH_NOTICE = "GANGBUK_NOTICE";                      # 강북구
     GANGBUK_BOROUGH_OTHER_INSTITUTIONS = "GANGBUK_INSTITUTIONS";    # 강북구
+
+    GANGSEO_BOROUGH_NOTICE = "GANGSEO_NOTICE";                      # 강서구
     
+    GWANAK_BOROUGH_NOTICE = "GWANAK_NOTICE";
+    GWANAK_BOROUGH_OTHER_INSTITUTIONS = "GWANAK_INSTITUTIONS";
+    GWANGJIN_BOROUGH_NOTICE = "GWANGJIN_NOTICE"
+    GWANGJIN_BOROUGH_OTHER_INSTITUTIONS = "GWANGJIN_INSTITUTIONS"
+    GURO_BOROUGH_NOTICE = "GURO_NOTICE";
+    GURO_BOROUGH_OTHER_INSTITUTIONS = "GURO_INSTITUTIONS";
+    GEUAMCHEOUN_BOROUGH_NOTICE = "GEUAMCHEOUN_NOTICE";
+    GEUAMCHEOUN_BOROUGH_OTHER_INSTITUTIONS = "GEUAMCHEOUN_INSTITUTIONS";
+    NOWON_BOROUGH_NOTICE = "NOWON_NOTICE"; 
+    NOWON_BOROUGH_OTHER_INSTITUTIONS = "NOWON_INSTITUTIONS"; 
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075
     # 강북구		https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285												https://www.gangbuk.go.kr/www/boardList.do?boardSeq=48&key=296
     # 강서구		https://www.gangseo.seoul.kr/gs040101																		타기관소식없음	
-    # 관악구		https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239												https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239
+    # 관악구	타기관이랑 URL 똑같음	https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239												https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239
     # 광진구		https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190										https://www.gwangjin.go.kr/portal/bbs/B0000006/list.do?menuNo=200195
     # 구로구		https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=662&key=1790&											https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=669&key=1804&
     # 금천구		https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=293										https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=100&key=296

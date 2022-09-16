@@ -4,9 +4,9 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
-class Gangbuk_notice:
+class Gangbuk_Institutions:
     def mainCra(cnt,numberCnt):
-        url = 'https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285';
+        url = '';
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
