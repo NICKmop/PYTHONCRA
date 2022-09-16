@@ -28,8 +28,6 @@ class Guro_notice:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
 
-                    # print(link[i].attrs.get('href'));
-                    
                     firebase_con.updateModel(commonConstant_NAME.GURO_BOROUGH_NOTICE,numberCnt,
                         datasModel.toJson(
                             "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),

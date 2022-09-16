@@ -26,12 +26,8 @@ class Gangnam_Institutions:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
-            # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             linkSp = link[i].attrs.get('href');
-            # print("title : ", title[i].text.strip());
-            # print("linkSp : ", linkSp);
-            # print(registrationdate[i].text);
-
+           
             firebase_con.updateModel( commonConstant_NAME.GANGNAM_BOROUGH_OTHER_INSTITUTIONS,numberCnt,
                 datasModel.toJson(
                     "https://www.gangnam.go.kr{}".format(linkSp),

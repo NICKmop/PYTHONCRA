@@ -36,21 +36,9 @@ class Gwanak_notice:
 
             linkSubts = linkSubNt.split(",");
             
-            linkresult = [];
-            for i in range(len(linkSubts)):
-                linkSubtsrep = linkSubts[i].replace("'", '')
-                linkresult.append(linkSubtsrep);
-                
-            print(linkresult[0]);
-            print(linkresult[1]);
-            
-
-            # # print("title : ", title[i].text.strip());
-            # # print(registrationdate[i].text);
-
             firebase_con.updateModel( commonConstant_NAME.GWANAK_BOROUGH_NOTICE,numberCnt,
                 datasModel.toJson(
-                    "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkresult[0], linkresult[1], linkresult[1]),
+                    "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),
                     numberCnt,
                     "",
                     title[i].text.strip(),

@@ -1,3 +1,4 @@
+from dataclasses import replace
 import re
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
@@ -33,24 +34,16 @@ class Gwanak_Institutions:
             
             linkSub = linkAttr.split("(")[1];
             linkSubNt = linkSub.split(")")[0];
-
             linkSubts = linkSubNt.split(",");
             
-            linkresult = [];
-            for i in range(len(linkSubts)):
-                linkSubtsrep = linkSubts[i].replace("'", '')
-                linkresult.append(linkSubtsrep);
-                
-            print(linkresult[0]);
-            print(linkresult[1]);
-            
-
-            # # print("title : ", title[i].text.strip());
+            print(linkSubts[0]);
+            print("11111 : ", linkSubts[1]);
+            # print("title : ", title[i].text.strip());
             # # print(registrationdate[i].text);
 
             firebase_con.updateModel( commonConstant_NAME.GWANAK_BOROUGH_OTHER_INSTITUTIONS,numberCnt,
                 datasModel.toJson(
-                    "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkresult[0], linkresult[1], linkresult[1]),
+                    "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ''), linkSubts[1].replace("'", ''), linkSubts[1].replace("'", '')),
                     numberCnt,
                     "",
                     title[i].text.strip(),

@@ -28,8 +28,6 @@ class Gwanagjin_notice:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
 
-                    print(link[i].attrs.get('href'));
-                    
                     firebase_con.updateModel(commonConstant_NAME.GWANGJIN_BOROUGH_NOTICE,numberCnt,
                         datasModel.toJson(
                             "https://www.gwangjin.go.kr{}".format(link[i].attrs.get('href')),
