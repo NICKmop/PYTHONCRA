@@ -42,16 +42,20 @@ class commonConstant_NAME:
     GEUAMCHEOUN_BOROUGH_OTHER_INSTITUTIONS = "GEUAMCHEOUN_INSTITUTIONS";
     NOWON_BOROUGH_NOTICE = "NOWON_NOTICE"; 
     NOWON_BOROUGH_OTHER_INSTITUTIONS = "NOWON_INSTITUTIONS"; 
+    DOBONG_BOROUGH_NOTICE = "DOBONG_NOTICE";
+    DOBONG_BOROUGH_OTHER_INSTITUTIONS = "DOBONG_INSTITUTIONS";
+
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075
     # 강북구		https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285												https://www.gangbuk.go.kr/www/boardList.do?boardSeq=48&key=296
     # 강서구		https://www.gangseo.seoul.kr/gs040101																		타기관소식없음	
-    # 관악구	타기관이랑 URL 똑같음	https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239												https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239
+    # 관악구	    타기관이랑 URL 똑같음	https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239												https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239
     # 광진구		https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190										https://www.gwangjin.go.kr/portal/bbs/B0000006/list.do?menuNo=200195
     # 구로구		https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=662&key=1790&											https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=669&key=1804&
     # 금천구		https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=293										https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=100&key=296
     # 노원구		https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_estnColumn1=11						https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1011
     # 도봉구		https://www.dobong.go.kr/bbs.asp?code=10004124																https://www.dobong.go.kr/bbs.asp?code=10004281
+
     # 동대문구	    https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=38&key=198												https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=43&key=209
     # 동작구		https://www.dongjak.go.kr/portal/bbs/B0000022/list.do?menuNo=200641											https://www.dongjak.go.kr/portal/bbs/B0000174/list.do?menuNo=200643
     # 마포구		https://www.mapo.go.kr/site/main/board/notice/list															https://www.mapo.go.kr/site/main/board/othernews/list

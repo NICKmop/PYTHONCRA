@@ -29,6 +29,7 @@ from siteCrainfo.cultureBorough.notice.Gwangjin_Borough_Notice import Gwanagjin_
 from siteCrainfo.cultureBorough.notice.Guro_Borough_Notice import Guro_notice
 from siteCrainfo.cultureBorough.notice.Geuamcheoun_Borough_Notice import Geuamcheoun_notice
 from siteCrainfo.cultureBorough.notice.Nowon_Borough_Notice import Nowon_notice
+from siteCrainfo.cultureBorough.notice.Dobong_Borough_Notice import Dobong_notice
 
 from siteCrainfo.cultureBorough.otherInstitutions.Gangnam_Borough_Other_Institutions import Gangnam_Institutions
 from siteCrainfo.cultureBorough.otherInstitutions.Gangdong_Borough_Other_Institutions import Gangdong_Institutions
@@ -72,16 +73,17 @@ if __name__ == '__main__':
         # Gangdong_notice.mainCra(1,0);
         # Gangbuk_notice.mainCra(1,0); 확인 중...
         # Gangseo_notice.mainCra(1,0);
-        Gwanak_notice.mainCra(1,0);
-        # Gwanagjin_notice.mainCra(1,0);
+        # Gwanak_notice.mainCra(1,0);
+        Gwanagjin_notice.mainCra(1,0);
         # Guro_notice.mainCra(1,0);
         # Geuamcheoun_notice.mainCra(1,0);
         # Nowon_notice.mainCra(1,0);
+        Dobong_notice.mainCra(1,0);
 
         # Gangnam_Institutions.mainCra(1,0);
-        # Gangdong_Institutions.mainCra(1,0);
+        Gangdong_Institutions.mainCra(1,0);
         # Gwanak_Institutions.mainCra(1,0);
-        # Gwanagjin_Institutions.mainCra(1,0);
+        Gwanagjin_Institutions.mainCra(1,0);
         # Guro_Institutions.mainCra(1,0);
         # Geuamcheoun_Institutions.mainCra(1,0);
         # Nowon_Institutions.mainCra(1,0);
@@ -112,16 +114,17 @@ if __name__ == '__main__':
         # Gangdong_notice.mainCra(1,0);
         # Gangbuk_notice.mainCra(1,0);
         # Gangseo_notice.mainCra(1,0);
-        Gwanak_notice.mainCra(1,0);
-        # Gwanagjin_notice.mainCra(1,0);
+        # Gwanak_notice.mainCra(1,0);
+        Gwanagjin_notice.mainCra(1,0);
         # Guro_notice.mainCra(1,0);
         # Geuamcheoun_notice.mainCra(1,0);
         # Nowon_notice.mainCra(1,0);
+        Dobong_notice.mainCra(1,0);
 
         # Gangnam_Institutions.mainCra(1,0);
-        # Gangdong_Institutions.mainCra(1,0);
+        Gangdong_Institutions.mainCra(1,0);
         # Gwanak_Institutions.mainCra(1,0);
-        # Gwanagjin_Institutions.mainCra(1,0);
+        Gwanagjin_Institutions.mainCra(1,0);
         # Guro_Institutions.mainCra(1,0);
         # Geuamcheoun_Institutions.mainCra(1,0);
         # Nowon_Institutions.mainCra(1,0);

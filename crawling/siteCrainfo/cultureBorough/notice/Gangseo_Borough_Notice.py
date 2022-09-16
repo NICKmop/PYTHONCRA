@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup
 
 class Gangseo_notice:
     def mainCra(cnt,numberCnt):
-        url = 'https://www.gangseo.seoul.kr/gs040101';
+        url = 'https://www.gangseo.seoul.kr/gs040101?curPage={}'.format(cnt);
+
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
@@ -25,7 +26,7 @@ class Gangseo_notice:
                     print(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Gangseo_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == 20:
                         break;
 
                     # print(link[i].attrs.get('href'));

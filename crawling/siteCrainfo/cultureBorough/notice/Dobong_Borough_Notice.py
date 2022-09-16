@@ -4,41 +4,43 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
-class Gwanagjin_Institutions:
+
+class Dobong_notice:
     def mainCra(cnt,numberCnt):
-        url = 'https://www.gwangjin.go.kr/portal/bbs/B0000006/list.do?menuNo=200195&pageIndex={}'.format(cnt);
+        url = 'https://www.dobong.go.kr/bbs.asp?intPage={}&code=10004124&'.format(cnt);
         response = requests.get(url);
+
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser')
             # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('.s > a');
-            title = soup.select('.s > a');
-            registrationdate = soup.select('.date');
-            print(link);
-            linkCount = len(link) - 1;
+            link = soup.select('.al > a');
+            title = soup.select('.al > a');
+            registrationdate = soup.select('td:nth-child(3)');
 
+            linkCount = len(link) - 1;
+        
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print(commonConstant_NAME.GWANGJIN_BOROUGH_OTHER_INSTITUTIONS," Next Page : {}".format(cnt));
-                    return Gwanagjin_Institutions.mainCra(cnt, numberCnt);
+                    print(commonConstant_NAME.DOBONG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
+                    return Dobong_notice.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-
-                    print(link[i].attrs.get('href'));
                     
-                    firebase_con.updateModel(commonConstant_NAME.GWANGJIN_BOROUGH_OTHER_INSTITUTIONS,numberCnt,
+                    linkrep = link[i].attrs.get('href').replace("'", "");
+
+                    firebase_con.updateModel(commonConstant_NAME.DOBONG_BOROUGH_NOTICE,numberCnt,
                         datasModel.toJson(
-                            "https://www.gwangjin.go.kr{}".format(link[i].attrs.get('href')),
+                            "https://www.dobong.go.kr{}".format(linkrep),
                             numberCnt,
                             "",
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "광진구_타기관공시송달",
+                            "도봉구_공지사항",
                         )
                     );
         else : 

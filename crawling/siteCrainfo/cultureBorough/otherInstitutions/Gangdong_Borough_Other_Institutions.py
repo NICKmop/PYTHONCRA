@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 class Gangdong_Institutions:
     def mainCra(cnt,numberCnt):
-        url = 'https://www.gangdong.go.kr/web/newportal/bbs/b_075';
+        url = 'https://www.gangdong.go.kr/web/newportal/bbs/b_075?cp={}&pageSize=15&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=b_075&baNotice=false&baCommSelec=false&baOpenDay=true&baUse=true'.format(cnt);
         response = requests.get(url);
 
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:

@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 class Gwanagjin_notice:
     def mainCra(cnt,numberCnt):
-        url = 'https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190';
+        url = 'https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190&pSiteId=portal&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
