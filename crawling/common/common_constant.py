@@ -44,7 +44,17 @@ class commonConstant_NAME:
     NOWON_BOROUGH_OTHER_INSTITUTIONS = "NOWON_INSTITUTIONS"; 
     DOBONG_BOROUGH_NOTICE = "DOBONG_NOTICE";
     DOBONG_BOROUGH_OTHER_INSTITUTIONS = "DOBONG_INSTITUTIONS";
-
+    DONGDAEMUN_BOROUGH_NOTICE = "DONGDAEMUN_NOTICE";
+    DONGDAEMUN_BOROUGH_OTHER_INSTITUTIONS = "DONGDAEMUN_INSTITUTIONS";
+    DONGJAK_BOROUGH_NOTICE = "DONGJAK_NOTICE"; 
+    DONGJAK_BOROUGH_OTHER_INSTITUTIONS = "DONGJAK_INSTITUTIONS";
+    MAPO_BOROUGH_NOTICE = "MAPO_NOTICE";
+    MAPO_BOROUGH_OTHER_INSTITUTIONS ="MAPO_INSTITUTIONS";
+    # SEODAEMUNGU_BOROUGH_NOTICE = "SEODAEMUNGU_NOTICE"; -> 링크가 js 로..
+    # SEODAEMUNGU_BOROUGH_OTHER_INSTITUTIONS = "SEODAEMUNGU_INSTITUTIONS"
+    SEOCHO_BOROUGH_NOTICE = "SEOCHO_NOTICE";
+    
+    # SEOCHO_BOROUGH_OTHER_INSTITUTIONS = "SEOCHO_INSTITUTIONS";
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075
     # 강북구		https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285												https://www.gangbuk.go.kr/www/boardList.do?boardSeq=48&key=296
@@ -55,12 +65,12 @@ class commonConstant_NAME:
     # 금천구		https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=293										https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=100&key=296
     # 노원구		https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_estnColumn1=11						https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1011
     # 도봉구		https://www.dobong.go.kr/bbs.asp?code=10004124																https://www.dobong.go.kr/bbs.asp?code=10004281
-
     # 동대문구	    https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=38&key=198												https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=43&key=209
     # 동작구		https://www.dongjak.go.kr/portal/bbs/B0000022/list.do?menuNo=200641											https://www.dongjak.go.kr/portal/bbs/B0000174/list.do?menuNo=200643
     # 마포구		https://www.mapo.go.kr/site/main/board/notice/list															https://www.mapo.go.kr/site/main/board/othernews/list
     # 서대문구	    https://www.sdm.go.kr/news/news/notice.do																	https://www.sdm.go.kr/news/news/another.do
     # 서초구		https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=57												https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=69
+    
     # 성동구		https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472&											https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=186&key=1475&
     # 성북구		https://www.sb.go.kr/PageLink.do																			https://www.sb.go.kr/PageLink.do
     # 송파구		https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=92&key=2775&											https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=95&key=2780&
