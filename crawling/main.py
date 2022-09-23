@@ -33,6 +33,15 @@ from siteCrainfo.cultureBorough.notice.Dongdaemun_Borough_Notice import Dongdaem
 from siteCrainfo.cultureBorough.notice.Dongjak_Borough_Notice import Dongjak_notice
 from siteCrainfo.cultureBorough.notice.Mapo_Borough_Notice import Mapo_notice
 from siteCrainfo.cultureBorough.notice.Seocho_Borough_Notice import Seocho_notice
+from siteCrainfo.cultureBorough.notice.Seongdong_Borough_Notice import Seongdong_notice
+from siteCrainfo.cultureBorough.notice.Songpa_Borough_Notice import Songpa_notice
+from siteCrainfo.cultureBorough.notice.Yangcheon_Borough_Notice import Yangcheon_notice
+from siteCrainfo.cultureBorough.notice.Yeongdeungpo_Borough_Notice import Yeongdeungpo_notice
+from siteCrainfo.cultureBorough.notice.Youngsan_Borough_Notice import Youngsan_notice
+from siteCrainfo.cultureBorough.notice.Eunpyeng_Borough_Notice import Eunpyeng_notice
+from siteCrainfo.cultureBorough.notice.Jongro_Borough_Notice import Jongro_notice
+from siteCrainfo.cultureBorough.notice.Junggu_Borough_Notice import Junggu_notice
+from siteCrainfo.cultureBorough.notice.Jungnang_Borough_Notice import Jungnang_notice
 
 from siteCrainfo.cultureBorough.otherInstitutions.Gangnam_Borough_Other_Institutions import Gangnam_Institutions
 from siteCrainfo.cultureBorough.otherInstitutions.Gangdong_Borough_Other_Institutions import Gangdong_Institutions
@@ -76,8 +85,8 @@ if __name__ == '__main__':
         #자치구
         # Gangnam_notice.mainCra(1,0);
         # Gangdong_notice.mainCra(1,0);
-        # Gangbuk_notice.mainCra(1,0); 확인 중...
-        # Gangseo_notice.mainCra(1,0);
+        # Gangbuk_notice.mainCra(1,0);
+        # Gangseo_notice.mainCra(1,0); 링크 이슈
         # Gwanak_notice.mainCra(1,0);
         # Gwanagjin_notice.mainCra(1,0);
         # Guro_notice.mainCra(1,0);
@@ -87,8 +96,17 @@ if __name__ == '__main__':
         # Dongdaemun_notice.mainCra(1,0);
         # Dongjak_notice.mainCra(1,0);
         # Mapo_notice.mainCra(1,0);
-        Seocho_notice.mainCra(1,0);
-        
+        # Seocho_notice.mainCra(1,0);
+        # Seongdong_notice.mainCra(1,0);
+        # Songpa_notice.mainCra(1,0);
+        # Yangcheon_notice.mainCra(1,0);
+        # Yeongdeungpo_notice.mainCra(1,0);
+        # Youngsan_notice.mainCra(1,0);
+        # Eunpyeng_notice.mainCra(1,0);
+        # Jongro_notice.mainCra(1,0);
+        # Junggu_notice.mainCra(1,0);
+        Jungnang_notice.mainCra(1,0);
+
         # Gangnam_Institutions.mainCra(1,0);
         # Gangdong_Institutions.mainCra(1,0);
         # Gwanak_Institutions.mainCra(1,0);
@@ -135,7 +153,16 @@ if __name__ == '__main__':
         # Dongdaemun_notice.mainCra(1,0);
         # Dongjak_notice.mainCra(1,0);
         # Mapo_notice.mainCra(1,0);
-        Seocho_notice.mainCra(1,0);
+        # Seocho_notice.mainCra(1,0);
+        # Seongdong_notice.mainCra(1,0);
+        # Songpa_notice.mainCra(1,0);
+        # Yangcheon_notice.mainCra(1,0);
+        # Yeongdeungpo_notice.mainCra(1,0);
+        # Youngsan_notice.mainCra(1,0);
+        # Eunpyeng_notice.mainCra(1,0);
+        # Jongro_notice.mainCra(1,0);
+        # Junggu_notice.mainCra(1,0);
+        Jungnang_notice.mainCra(1,0);
         
         # Gangnam_Institutions.mainCra(1,0);
         # Gangdong_Institutions.mainCra(1,0);

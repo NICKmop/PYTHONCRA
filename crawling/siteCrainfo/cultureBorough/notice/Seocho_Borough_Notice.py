@@ -31,19 +31,19 @@ class Seocho_notice:
 
                     # print(title[i].text.strip());
                     
-                    firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
+                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
 
-                    # firebase_con.updateModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE,numberCnt,
-                    #     datasModel.toJson(
-                    #         "https://www.seocho.go.kr{}".format(link[i].attrs.get('href').removeprefix('.')),
-                    #         numberCnt,
-                    #         "",
-                    #         title[i].text.strip(),
-                    #         "",
-                    #         registrationdate[i].text,
-                    #         "서초구_공지사항",
-                    #     )
-                    # );
+                    firebase_con.updateModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE,numberCnt,
+                        datasModel.toJson(
+                            "https://www.seocho.go.kr{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            registrationdate[i].text,
+                            "서초구_공지사항",
+                        )
+                    );
         else : 
             print(response.status_code)
             

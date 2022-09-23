@@ -53,12 +53,23 @@ class commonConstant_NAME:
     # SEODAEMUNGU_BOROUGH_NOTICE = "SEODAEMUNGU_NOTICE"; -> 링크가 js 로..
     # SEODAEMUNGU_BOROUGH_OTHER_INSTITUTIONS = "SEODAEMUNGU_INSTITUTIONS"
     SEOCHO_BOROUGH_NOTICE = "SEOCHO_NOTICE";
-    
+    SEONGDONG_BOROUGH_NOTICE = "SEONGDONG_NOTICE";
+    # SEONGBUK_BOROUGH_NOTICE = "SEONGBUK_NOTICE";
+    SONGPA_BOROUGH_NOTICE = "SONGPA_NOTICE";
+    YANGCHEON_BOROUGH_NOTICE = "YANGCHEON_NOTICE";
+    YEONGDEUNGPO_BOROUGH_NOTICE = "YEONGDEUNGPO_NOTICE";
+    YOUNGSAN_BOROUGH_NOTICE = "YOUNGSAN_NOTICE";
+    EUNPYENG_BOROUGH_NOTICE = "EUNPYENG_NOTICE";
+    JONGRO_BOROUGH_NOTICE = "JONGRO_NOTICE";
+    JUNGGU_BOROUGH_NOTICE = "JUNGGU_NOTICE";
+    JUNGNANG_BOROUGH_NOTICE = "JUNGNANG_NOTICE";
     # SEOCHO_BOROUGH_OTHER_INSTITUTIONS = "SEOCHO_INSTITUTIONS";
     # 강남구		https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101											https://www.gangnam.go.kr/board/B_000046/list.do?mid=ID05_0410
     # 강동구		https://www.gangdong.go.kr/web/newportal/bbs/b_068															https://www.gangdong.go.kr/web/newportal/bbs/b_075
+    
     # 강북구		https://www.gangbuk.go.kr/www/boardList.do?boardSeq=41&key=285												https://www.gangbuk.go.kr/www/boardList.do?boardSeq=48&key=296
     # 강서구		https://www.gangseo.seoul.kr/gs040101																		타기관소식없음	
+    
     # 관악구	    타기관이랑 URL 똑같음	https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239												https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239
     # 광진구		https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190										https://www.gwangjin.go.kr/portal/bbs/B0000006/list.do?menuNo=200195
     # 구로구		https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=662&key=1790&											https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=669&key=1804&
@@ -70,9 +81,8 @@ class commonConstant_NAME:
     # 마포구		https://www.mapo.go.kr/site/main/board/notice/list															https://www.mapo.go.kr/site/main/board/othernews/list
     # 서대문구	    https://www.sdm.go.kr/news/news/notice.do																	https://www.sdm.go.kr/news/news/another.do
     # 서초구		https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=57												https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=69
-    
     # 성동구		https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472&											https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=186&key=1475&
-    # 성북구		https://www.sb.go.kr/PageLink.do																			https://www.sb.go.kr/PageLink.do
+    # 성북구		https://www.sb.go.kr/PageLink.do	-> 링크 이슈																https://www.sb.go.kr/PageLink.do
     # 송파구		https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=92&key=2775&											https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=95&key=2780&
     # 양천구		https://www.yangcheon.go.kr/site/yangcheon/ex/bbs/List.do?cbIdx=254											타기관소식없음
     # 영등포구	    https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=40&key=2848&											https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=47&key=2869&
@@ -80,6 +90,7 @@ class commonConstant_NAME:
     # 은평구		https://www.ep.go.kr/www/selectBbsNttList.do?bbsNo=42&key=744												https://www.ep.go.kr/www/selectBbsNttList.do?bbsNo=53&key=771
     # 종로구		https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000201&menuId=1752&menuNo=1752	https://www.jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000231&menuId=1758&menuNo=1758
     # 중구		    http://www.junggu.seoul.kr/content.do?cmsid=14231															타기관소식없음
+    
     # 중랑구		https://www.jungnang.go.kr/portal/bbs/list/B0000002.do?menuNo=200473										https://www.jungnang.go.kr/portal/bbs/list/B0000128.do?menuNo=200478
 
     STOPCUOUNT = 21;

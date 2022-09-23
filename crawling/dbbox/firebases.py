@@ -16,11 +16,9 @@ class firebase_con:
         db = firestore.client();
         doc_ref = db.collection(u'crawlingData').document(name);
         doc = doc_ref.get();
-
         if doc.exists:
-            print(doc.to_dict());    
+            print(doc.order_by_key());    
         else:
             print(u'No such document!')
 
-        
 

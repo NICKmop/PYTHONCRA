@@ -31,7 +31,7 @@ class Gangseo_notice:
 
                     # print(link[i].attrs.get('href'));
                     
-                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE,numberCnt,
                         datasModel.toJson(
                             "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,

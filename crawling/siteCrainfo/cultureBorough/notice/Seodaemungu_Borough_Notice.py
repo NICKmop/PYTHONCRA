@@ -24,9 +24,8 @@ class Seodaemungu_notice:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break; 
-            # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
+                    
             linkAttr = link[i].attrs.get('onclick');
-            # linkSubts = linkSubNt.split(",");
             
             firebase_con.updateModel( commonConstant_NAME.SEODAEMUNGU_NOTICE,numberCnt,
                 datasModel.toJson(
