@@ -19,11 +19,13 @@ class Jungnang_notice:
             # print(registrationdate);
             linkCount = len(link) - 1;
 
+            # firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
+
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print(commonConstant_NAME.JUNGNANG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
+                    print(commonConstant_NAME.JUNGNANG_NAME," Next Page : {}".format(cnt));
                     return Jungnang_notice.mainCra(cnt, numberCnt);
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
@@ -31,10 +33,8 @@ class Jungnang_notice:
 
                     # print(title[i].text.strip()); 
                     # print(registrationdate);
-                    
-                    firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
 
-                    firebase_con.updateModel(commonConstant_NAME.JUNGNANG_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,

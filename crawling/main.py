@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
         # 재단
         # Gwanak.mainCra(0,0);
-        # Gangnam.mainCra(0,0);
+        Gangnam.mainCra(0,0);
         # Gnagbuk.mainCra(1,0);
         # Gwangzin.mainCra(1,0);
         # Dongjak.mainCra(1,0);
@@ -83,7 +83,7 @@ if __name__ == '__main__':
         # Npocra.mainCra(1,0);
 
         #자치구
-        # Gangnam_notice.mainCra(1,0);
+        Gangnam_notice.mainCra(1);
         # Gangdong_notice.mainCra(1,0);
         # Gangbuk_notice.mainCra(1,0);
         # Gangseo_notice.mainCra(1,0); 링크 이슈
@@ -105,7 +105,7 @@ if __name__ == '__main__':
         # Eunpyeng_notice.mainCra(1,0);
         # Jongro_notice.mainCra(1,0);
         # Junggu_notice.mainCra(1,0);
-        Jungnang_notice.mainCra(1,0);
+        # Jungnang_notice.mainCra(1,0);
 
         # Gangnam_Institutions.mainCra(1,0);
         # Gangdong_Institutions.mainCra(1,0);
@@ -120,7 +120,7 @@ if __name__ == '__main__':
     else:
         # 재단
         # Gwanak.mainCra(0,0);
-        # Gangnam.mainCra(0,0);
+        Gangnam.mainCra(0,0);
         # Gnagbuk.mainCra(1,0);
         # Gwangzin.mainCra(1,0);
         # Dongjak.mainCra(1,0);
@@ -140,7 +140,7 @@ if __name__ == '__main__':
         # Npocra.mainCra(1,0);
 
         #자치구
-        # Gangnam_notice.mainCra(1,0);
+        Gangnam_notice.mainCra(1);
         # Gangdong_notice.mainCra(1,0);
         # Gangbuk_notice.mainCra(1,0);
         # Gangseo_notice.mainCra(1,0);
@@ -162,7 +162,7 @@ if __name__ == '__main__':
         # Eunpyeng_notice.mainCra(1,0);
         # Jongro_notice.mainCra(1,0);
         # Junggu_notice.mainCra(1,0);
-        Jungnang_notice.mainCra(1,0);
+        # Jungnang_notice.mainCra(1,0);
         
         # Gangnam_Institutions.mainCra(1,0);
         # Gangdong_Institutions.mainCra(1,0);

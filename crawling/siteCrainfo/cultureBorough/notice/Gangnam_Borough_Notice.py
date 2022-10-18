@@ -5,7 +5,11 @@ from models.datasModel import datasModel
 import common.common_fnc  as com
 
 class Gangnam_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGNAM_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101';
         soupData = com.pageconnect(cnt, url, "selectPage_func({})".format(cnt));
         
@@ -13,7 +17,7 @@ class Gangnam_notice:
         title = soupData.select('.grid-item > td > a');
         registrationdate = soupData.select('.grid-item > td:nth-child(5)');
 
-        # print("link : ", link);
+        print("firebases Nct : {}".format(cnt));
 
         linkCount = len(link) - 1;
         for i in range(len(link)):
@@ -22,17 +26,13 @@ class Gangnam_notice:
                 # javascript:pageNum('frm01','200');
                 cnt += 1;
                 print("Gangnam_notice Next Page : {}".format(cnt));
-                return Gangnam_notice.mainCra(cnt, numberCnt),
+                return Gangnam_notice.mainCra(cnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                if numberCnt == 40:
                     break;
-            # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             linkSp = link[i].attrs.get('href');
-            # print("title : ", title[i].text.strip());
-            # print("linkSp : ", linkSp);
-            # print(registrationdate[i].text);
 
-            firebase_con.updateModel( commonConstant_NAME.GANGNAM_BOROUGH_NOTICE,numberCnt,
+            firebase_con.updateModel( commonConstant_NAME.GANGNAM_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.gangnam.go.kr{}".format(linkSp),
                     numberCnt,

@@ -26,7 +26,7 @@ class datasModel:
             "center_name " : registrationdate,
         }
 
-        common.common_fnc.loggingdata(dataModel);
+        # common.common_fnc.loggingdata(dataModel);
 
         return dataModel;
 

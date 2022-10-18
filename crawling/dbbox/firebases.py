@@ -12,10 +12,24 @@ class firebase_con:
         doc_ref = db.collection(u'crawlingData').document(name)
         doc_ref.update({"{}_{}".format(name,i) : values});
         
-    def selectModel(name):
+    def selectModelKeyNumber(name):
+        spdataList = [];
         db = firestore.client();
         doc_ref = db.collection(u'crawlingData').document(name);
         doc = doc_ref.get();
-        print('doc format : {}'.format(doc));
+        if doc.exists:
+            originData = doc.to_dict().keys();
+            for i in originData:
+                if len(i.split("_")) == 3:
+                    spdataList.append(int(i.split("_")[2]));
+                
+                if len(i.split("_")) == 2:
+                    spdataList.append(int(i.split("_")[1]));
+                
+            # print("split_ : {}".format(spdataList));
+            return spdataList;
+
+        else:
+            print(u'No such document!')
 
 

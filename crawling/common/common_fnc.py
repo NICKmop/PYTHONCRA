@@ -37,7 +37,7 @@ def pageconnect(pageNumber, url, script):
     
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    browser = webdriver.Chrome('D:/pythoncra/crawling/chromedriver.exe', options=options);
+    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     browser.get(url);
 
