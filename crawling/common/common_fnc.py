@@ -15,7 +15,7 @@ def loggingdata(data):
     stream_handler.setFormatter(formatter);
     logger.addHandler(stream_handler);
 
-    file_handler = logging.FileHandler('D:/pythoncra/crawling/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
+    file_handler = logging.FileHandler('/Users/yeon/StudioProjects/pythoncra/crawling/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
     file_handler.setFormatter(formatter);
     logger.addHandler(file_handler);
 
