@@ -1,6 +1,8 @@
 class commonConstant_NAME:
-    # 재단
-    GANGNAM_NAME = "GANGNAM";            # 강남
+    # 하나의 collection으로 통합
+    GANGNAM_NAME = "GANGNAM";                                       # 강남
+    GANGNAM_BOROUGH_NOTICE = "GANGNAM_NOTICE";                       # 강남구
+
     GANGBUK_NAME ="GANGBUK";             # 강북
     GWANAK_NAME = "GWANAK";              # 관악
     GWANGZIN_NAME = "GWANGZIN";          # 광진
@@ -20,9 +22,10 @@ class commonConstant_NAME:
     JUNGGU_NAME = "JUNGGU";              # 중구
     NPO_NAME = "NPO";                    # NPO
     SEOUL_NAME = "SEOUL";                # 서울
+    # 추가 작업 중
+    JUNGNANG_NAME = "JUNGNANG";          # 중랑
 
     #자치 구
-    GANGNAM_BOROUGH_NOTICE = "GANGNAM_NOTICE";                       # 강남구
     GANGNAM_BOROUGH_OTHER_INSTITUTIONS = "GANGNAM_INSTITUTIONS";     # 강남구
     GANGDONG_BOROUGH_NOTICE = "GANGDONG_NOTICE";                      # 강동구
     GANGDONG_BOROUGH_OTHER_INSTITUTIONS = "GANGDONG_INSTITUTIONS";    # 강동구
