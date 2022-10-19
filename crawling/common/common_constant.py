@@ -88,18 +88,32 @@ class commonConstant_NAME:
     # 서울시
     NPO_NAME = "NPO";                    # NPO
     SEOUL_NAME = "SEOUL";                # 서울
-    
+    YOUTHSEOUL_NAME = "YOUTHSEOUL"
+    SBASEOUL_NAME ="SBASEOUL";
+    JOBSEOUL_NAME = "JOBSEOUL";
+    HOUSINGSEOUL_NANE ="HOUSINGSEOUL";
     #       서울시NPO지원센터	https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo
-    #       서울문화재단	https://www.sfac.or.kr/opensquare/notice/notice_list.do
+    #       서울문화재단	https://www.sfac.or.kr/opensquare/notice/notice_list.do -> 링크 확인 필요
     #       청년몽땅정보통	https://youth.seoul.go.kr/site/main/board/notice/list?cp=1&pageSize=15&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=notice&baCategory1=basic&baNotice=false&baCommSelec=true&baOpenDay=true&baUse=true
     #       SBA	https://www.sba.seoul.kr/Pages/CustomerCenter/Notice.aspx
-    #       서울일자리포털	https://job.seoul.go.kr/Main.do?method=getMain
-    #       내손안에 서울	https://mediahub.seoul.go.kr/main.do
-    #       서울복지포털	https://wis.seoul.go.kr/
+    #       서울일자리포털	https://job.seoul.go.kr/Main.do?method=getMain -> 포털의 어느 부분인지
+    #       내손안에 서울	https://mediahub.seoul.go.kr/main.do -> 포털의 어느 부분인지
+    #       서울복지포털	https://wis.seoul.go.kr/ -> 포털의 어느 부분인지
     #       서울주거포털	https://housing.seoul.go.kr/site/main/board/notice/list
     #       50+	https://50plus.or.kr/notice_recruit.do
 
     STOPCUOUNT = 32;
     NOTICE_STOP_COUNT = 62;
+
+    # 서울시 STOP COUNT
+    SEOUL_STOP_COUNT_ONE = 32; # 서울시NPO지원센터
+    SEOUL_STOP_COUNT_TWO = 62; # 청년몽땅정보통
+    SEOUL_STOP_COUNT_THREE = 92;
+    SEOUL_STOP_COUNT_FOUR = 122;
+    SEOUL_STOP_COUNT_FIVE = 152;
+    SEOUL_STOP_COUNT_SIX = 182;
+    SEOUL_STOP_COUNT_SEVEN = 212;
+    SEOUL_STOP_COUNT_EIGHT = 242;
+    SEOUL_STOP_COUNT_NIGHT = 272;
 
     STATUS_SUCCESS_CODE = 200;

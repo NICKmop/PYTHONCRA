@@ -4,11 +4,11 @@ from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
-class Npocra:
-    def mainCra(cnt,numberCnt):
-        requests.packages.urllib3.disable_warnings()
-        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-        url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&amp;page={}'.format(cnt);
+class Housingseoul:
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
+        numberCnt = max(cntNumber);
+        url = 'https://housing.seoul.go.kr/site/main/board/notice/list?cp={}&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true'.format(cnt);
         
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -16,32 +16,35 @@ class Npocra:
             soup = BeautifulSoup(html, 'html.parser');
 
             # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('.title');
-            title = soup.select('.title');
-            registrationdate = soup.select('.date');
+            link = soup.select('.td-m > a');
+            title = soup.select('.td-m');
+            registrationdate = soup.select('.td3');
             
-            linkCount = len(link) - 1;
+            linkCount = len(link);
+
+            print(link);
+            print(title);
+            print(registrationdate);
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
-                    print("Npocra Next Page : {}".format(cnt));
-                    return Npocra.mainCra(cnt, numberCnt);
+                    print(commonConstant_NAME.HOUSINGSEOUL_NANE, "Next Page : {}".format(cnt));
+                    return Housingseoul.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_ONE:
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         break;
                 
-                    
                 firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
                     datasModel.toJson(
-                        link[i].attrs.get('href'),
+                        'https://housing.seoul.go.kr{}'.format(link[i].attrs.get('href')),
                         numberCnt,
                         "",
                         title[i].text.strip(),
                         "",
                         registrationdate[i].text.strip(),
-                        "서울NPO지원센터",
+                        "서울주거포털",
                     )
                 );
         else : 
