@@ -22,7 +22,7 @@ class Nowon_notice:
                 print("Nowon_notice Next Page : {}".format(cnt));
                 return Nowon_notice.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break; 
             # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             linkAttr = link[i].attrs.get('onclick');
@@ -30,7 +30,7 @@ class Nowon_notice:
             linkSubNt = linkSub.split("')")[0];
             # linkSubts = linkSubNt.split(",");
             
-            firebase_con.updateModel( commonConstant_NAME.NOWON_BOROUGH_NOTICE,numberCnt,
+            firebase_con.updateModel( commonConstant_NAME.NOWON_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={}&q_estnColumn1=11&q_rowPerPage=10&q_currPage={}&q_sortName=&q_sortOrder=&q_searchKeyTy=sj___1002&q_searchVal=&".format(linkSubNt,cnt),
                     numberCnt,

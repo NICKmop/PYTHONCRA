@@ -29,14 +29,9 @@ class Youngsan_notice:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
 
-                    # print(title[i].text.strip());
-                    print(registrationdate);
-                    
-                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
-
-                    firebase_con.updateModel(commonConstant_NAME.YOUNGSAN_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.YOUNGSAN_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.yongsan.go.kr{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.yongsan.go.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),

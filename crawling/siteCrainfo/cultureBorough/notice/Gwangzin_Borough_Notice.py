@@ -4,8 +4,11 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
-class Gwanagjin_notice:
-    def mainCra(cnt,numberCnt):
+class Gwangzin_notice:
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANGZIN_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.gwangjin.go.kr/portal/bbs/B0000001/list.do?menuNo=200190&pSiteId=portal&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -23,12 +26,12 @@ class Gwanagjin_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.GWANGJIN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Gwanagjin_notice.mainCra(cnt, numberCnt);
+                    return Gwangzin_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    firebase_con.updateModel(commonConstant_NAME.GWANGJIN_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gwangjin.go.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,

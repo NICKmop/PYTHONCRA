@@ -13,9 +13,6 @@ class Geuamcheoun:
         title = soupData.select('.title > a');
         registrationdate = soupData.select('.title > .mVer > p:nth-child(2)');
 
-        # print("link : ", link);
-        print("registrationdate : ", registrationdate);
-
         linkCount = len(link) - 1;
         for i in range(len(link)):
             numberCnt += 1;

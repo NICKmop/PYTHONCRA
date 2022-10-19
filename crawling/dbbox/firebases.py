@@ -9,6 +9,7 @@ class firebase_con:
 
     def updateModel(name,i,values):
         db = firestore.client();
+        # db.collection(u'crawlingData').document(name).delete();
         doc_ref = db.collection(u'crawlingData').document(name)
         doc_ref.update({"{}_{}".format(name,i) : values});
         

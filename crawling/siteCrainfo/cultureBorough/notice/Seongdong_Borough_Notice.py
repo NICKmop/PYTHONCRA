@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Seongdong_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEONGDONG_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&&pageUnit=10&key=1472&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,19 +27,14 @@ class Seongdong_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.SEONGDONG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Seongdong_notice.mainCra(cnt, numberCnt);
+                    return Seongdong_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print(title[i].text.strip());
-                    print(registrationdate);
-                    
-                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
-
-                    firebase_con.updateModel(commonConstant_NAME.SEONGDONG_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.sd.go.kr/main{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.sd.go.kr/main{}".format(link[i].attrs.get('href').replace('.','',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

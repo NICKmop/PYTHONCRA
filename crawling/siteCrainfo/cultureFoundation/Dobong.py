@@ -1,9 +1,8 @@
-import re
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 import common.common_fnc  as com
-from selenium import webdriver
+
 class Dobong:
     def mainCra(cnt,numberCnt):
         url = 'http://www.dbfac.or.kr/front/board/boardContentsListPage.do?board_id=1';

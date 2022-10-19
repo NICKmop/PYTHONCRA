@@ -5,9 +5,12 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Gangbuk_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
+        numberCnt = max(cntNumber);
         url = 'https://www.gangbuk.go.kr/www/boardList.do?page={}&boardSeq=41&key=285&category=&searchType=&searchKeyword=&searchFile=&subContents=&mpart=&part=&item='.format(cnt);
         response = requests.get(url);
+
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser')
@@ -16,19 +19,20 @@ class Gangbuk_notice:
             title = soup.select('.tb > .subject > a');
             registrationdate = soup.select('td:nth-child(6)');
             
-            linkCount = len(link) - 1;
+            linkCount = len(link);
+            print("linkCount :  {}".format(linkCount));
 
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.GANGBUK_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Gangbuk_notice.mainCra(cnt, numberCnt);
+                    return Gangbuk_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
                     
-                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gangbuk.go.kr/www{}".format(link[i].attrs.get('href')),
                             numberCnt,

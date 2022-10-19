@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Seocho_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=57&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,18 +27,16 @@ class Seocho_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Seocho_notice.mainCra(cnt, numberCnt);
+                    return Seocho_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print(title[i].text.strip());
+                    # print(link[i].attrs.get('href'));
                     
-                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
-
-                    firebase_con.updateModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.seocho.go.kr{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),

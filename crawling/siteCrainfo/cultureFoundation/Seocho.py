@@ -9,8 +9,6 @@ class Seocho:
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
         url = 'http://www.seochocf.or.kr/site/main/archive/post/category/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD?cp={}&sortDirection=DESC&catId=7&metaCode1=GENERAL'.format(cnt);
         response = requests.get(url);
 
@@ -37,7 +35,7 @@ class Seocho:
                     
                     firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                         datasModel.toJson(
-                            link[i].attrs.get('href'),
+                            "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),

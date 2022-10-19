@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Geuamcheoun_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GEUAMCHEOUN_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.geumcheon.go.kr/portal/selectBbsNttList.do?key=293&id=&bbsNo=4&searchCtgry=&pageUnit=10&searchCnd=all&searchKrwd=&integrDeptCode=&searchDeptCode=&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -23,15 +26,15 @@ class Geuamcheoun_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.GEUAMCHEOUN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Geuamcheoun_notice.mainCra(cnt, numberCnt);
+                    return Geuamcheoun_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
                     # print(link[i].attrs.get('href').removeprefix('.'));
-                    linkrep = link[i].attrs.get('href').removeprefix('.');
+                    linkrep = link[i].attrs.get('href').replace('.','',1);
                     
-                    firebase_con.updateModel(commonConstant_NAME.GEUAMCHEOUN_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GEUAMCHEOUN_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.geumcheon.go.kr/portal{}".format(linkrep),
                             numberCnt,

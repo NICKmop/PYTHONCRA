@@ -6,7 +6,10 @@ from bs4 import BeautifulSoup
 
 
 class Dobong_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DOBONG_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.dobong.go.kr/bbs.asp?intPage={}&code=10004124&'.format(cnt);
         response = requests.get(url);
 
@@ -25,16 +28,16 @@ class Dobong_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.DOBONG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Dobong_notice.mainCra(cnt, numberCnt);
+                    return Dobong_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
                     
                     linkrep = link[i].attrs.get('href').replace("'", "");
 
-                    firebase_con.updateModel(commonConstant_NAME.DOBONG_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.DOBONG_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.dobong.go.kr{}".format(linkrep),
+                            "https://www.dobong.go.kr{}".format(linkrep.replace(".","",1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

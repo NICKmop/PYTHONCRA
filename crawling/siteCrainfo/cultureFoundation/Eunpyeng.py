@@ -28,10 +28,10 @@ class Eunpyeng:
 
             linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
 
-            firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,i,
+            firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
-                    i,
+                    numberCnt,
                     "",
                     title[i].text.strip(),
                     "",

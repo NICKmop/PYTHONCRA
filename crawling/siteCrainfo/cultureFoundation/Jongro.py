@@ -37,7 +37,7 @@ class Jongro:
                     
                     firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.jfac.or.kr/{}".format(link[i].attrs.get('href')),
+                            "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),

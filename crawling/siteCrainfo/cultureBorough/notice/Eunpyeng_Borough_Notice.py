@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Eunpyeng_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.EUNPYENG_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.ep.go.kr/www/selectBbsNttList.do?key=744&bbsNo=42&searchCtgry=&searchCnd=all&searchKrwd=&integrDeptCode=&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,19 +27,16 @@ class Eunpyeng_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.EUNPYENG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Eunpyeng_notice.mainCra(cnt, numberCnt);
+                    return Eunpyeng_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print(title[i].text.strip());
-                    print(registrationdate);
-                    
-                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
+                    print(link[i].attrs.get('href'))
 
-                    firebase_con.updateModel(commonConstant_NAME.EUNPYENG_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.EUNPYENG_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.ep.go.kr/www{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.ep.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

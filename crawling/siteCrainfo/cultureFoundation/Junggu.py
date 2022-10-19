@@ -34,13 +34,13 @@ class Junggu:
                     print("Junggu Next Page : {}".format(cnt));
                     return Junggu.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == linkCount:
                         break; 
                     
                     # 날짜 중 08월이 아닌달 데이터 getString 
-                    datelist = registrationdate[i].text.strip();
-                    if datelist.split('-')[1] != '08':
-                        print("8월달 데이터가 아님.... :  {}".format(datelist));
+                    # datelist = registrationdate[i].text.strip();
+                    # if datelist.split('-')[1] != '08':
+                    #     print("8월달 데이터가 아님.... :  {}".format(datelist));
 
                     firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
                         datasModel.toJson(

@@ -23,8 +23,8 @@ from siteCrainfo.cultureBorough.notice.Gangnam_Borough_Notice import Gangnam_not
 from siteCrainfo.cultureBorough.notice.Gangdong_Borough_Notice import Gangdong_notice
 from siteCrainfo.cultureBorough.notice.Gangbuk_Borough_Notice import Gangbuk_notice
 from siteCrainfo.cultureBorough.notice.Gangseo_Borough_Notice import Gangseo_notice
+from siteCrainfo.cultureBorough.notice.Gwangzin_Borough_Notice import Gwangzin_notice
 from siteCrainfo.cultureBorough.notice.Gwanak_Borough_Notice import Gwanak_notice
-from siteCrainfo.cultureBorough.notice.Gwangjin_Borough_Notice import Gwanagjin_notice
 from siteCrainfo.cultureBorough.notice.Guro_Borough_Notice import Guro_notice
 from siteCrainfo.cultureBorough.notice.Geuamcheoun_Borough_Notice import Geuamcheoun_notice
 from siteCrainfo.cultureBorough.notice.Nowon_Borough_Notice import Nowon_notice
@@ -60,120 +60,148 @@ if __name__ == '__main__':
         from os import path
         print(path.dirname( path.dirname( path.abspath(__file__) ) ));
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
-
         # 재단
         # Gwanak.mainCra(0,0);
-        Gangnam.mainCra(0,0);
+        # Gwanak_notice.mainCra(1);
+
+        # Gangnam.mainCra(0,0);
+        # Gangnam_notice.mainCra(1);
+
         # Gnagbuk.mainCra(1,0);
+        # 크롤링 확인 필요 부분
+        # Gangbuk_notice.mainCra(1);
+        
         # Gwangzin.mainCra(1,0);
+        # Gwangzin_notice.mainCra(1);
+
         # Dongjak.mainCra(1,0);
+        # Dongjak_notice.mainCra(1);
+
         # Seocho.mainCra(1,0);
+        # Seocho_notice.mainCra(1);
+
         # Seongbuk.mainCra(1,0);
+
         # Yangcheon.mainCra(1,0);
+        # Yangcheon_notice.mainCra(1);
+
         # Yeongdeungpo.mainCra(1,0);
+        # Yeongdeungpo_notice.mainCra(1);
+
         # Jongro.mainCra(1,0);
+        # Jongro_notice.mainCra(1);
+
         # Junggu.mainCra(1,0);
+        # Junggu_notice.mainCra(1);
+
         # Eunpyeng.mainCra(1,0);
+        # Eunpyeng_notice.mainCra(1);
+
         # Geuamcheoun.mainCra(1,0);
+        # Geuamcheoun_notice.mainCra(1);
+
         # Dobong.mainCra(1,0); 
+        # Dobong_notice.mainCra(1);
+
         # Dongdaemun.mainCra(1,0);
+        # Dongdaemun_notice.mainCra(1);
+
         # Mapo.mainCra(1,0);
+        # Mapo_notice.mainCra(1);
+
         # Seongdong.mainCra(1,0);
+        # Seongdong_notice.mainCra(1);
+        
         # Songpa.mainCra(1,0);
-        # Npocra.mainCra(1,0);
+        # Songpa_notice.mainCra(1);
 
-        #자치구
-        Gangnam_notice.mainCra(1);
         # Gangdong_notice.mainCra(1,0);
-        # Gangbuk_notice.mainCra(1,0);
-        # Gangseo_notice.mainCra(1,0); 링크 이슈
-        # Gwanak_notice.mainCra(1,0);
-        # Gwanagjin_notice.mainCra(1,0);
-        # Guro_notice.mainCra(1,0);
-        # Geuamcheoun_notice.mainCra(1,0);
-        # Nowon_notice.mainCra(1,0);
-        # Dobong_notice.mainCra(1,0);
-        # Dongdaemun_notice.mainCra(1,0);
-        # Dongjak_notice.mainCra(1,0);
-        # Mapo_notice.mainCra(1,0);
-        # Seocho_notice.mainCra(1,0);
-        # Seongdong_notice.mainCra(1,0);
-        # Songpa_notice.mainCra(1,0);
-        # Yangcheon_notice.mainCra(1,0);
-        # Yeongdeungpo_notice.mainCra(1,0);
-        # Youngsan_notice.mainCra(1,0);
-        # Eunpyeng_notice.mainCra(1,0);
-        # Jongro_notice.mainCra(1,0);
-        # Junggu_notice.mainCra(1,0);
-        # Jungnang_notice.mainCra(1,0);
 
-        # Gangnam_Institutions.mainCra(1,0);
-        # Gangdong_Institutions.mainCra(1,0);
-        # Gwanak_Institutions.mainCra(1,0);
-        # Gwanagjin_Institutions.mainCra(1,0);
-        # Guro_Institutions.mainCra(1,0);
-        # Geuamcheoun_Institutions.mainCra(1,0);
-        # Nowon_Institutions.mainCra(1,0);
-        # Dongdaemun_Institutions.mainCra(1,0);
-        # Dongjak_Institutions.mainCra(1,0);
-        # Mapo_Institutions.mainCra(1,0);
+        # Gangseo_notice.mainCra(1,0);
+
+        # Guro_notice.mainCra(1,0);
+
+        # Nowon_notice.mainCra(1,0);
+
+        # Youngsan_notice.mainCra(1,0);
+
+        Jungnang_notice.mainCra(1,0);
+
+        #서울시는 따로 진행 
+        # Npocra.mainCra(1,0);
+        #자치구
+
     else:
         # 재단
         # Gwanak.mainCra(0,0);
-        Gangnam.mainCra(0,0);
-        # Gnagbuk.mainCra(1,0);
-        # Gwangzin.mainCra(1,0);
-        # Dongjak.mainCra(1,0);
-        # Seocho.mainCra(1,0);
-        # Seongbuk.mainCra(1,0);
-        # Yangcheon.mainCra(1,0);
-        # Yeongdeungpo.mainCra(1,0);
-        # Jongro.mainCra(1,0);
-        # Junggu.mainCra(1,0);
-        # Eunpyeng.mainCra(1,0);
-        # Geuamcheoun.mainCra(1,0);
-        # Dobong.mainCra(1,0);
-        # Dongdaemun.mainCra(1,0);
-        # Mapo.mainCra(1,0);
-        # Seongdong.mainCra(1,0);
-        # Songpa.mainCra(1,0);
-        # Npocra.mainCra(1,0);
+        # Gwanak_notice.mainCra(1);
 
-        #자치구
-        Gangnam_notice.mainCra(1);
+        # Gangnam.mainCra(0,0);
+        # Gangnam_notice.mainCra(1);
+
+        # Gnagbuk.mainCra(1,0);
+        # 크롤링 확인 필요 부분
+        # Gangbuk_notice.mainCra(1);
+
+        # Gwangzin.mainCra(1,0);
+        # Gwangzin_notice.mainCra(1);
+
+        # Dongjak.mainCra(1,0);
+        # Dongjak_notice.mainCra(1);
+
+        # Seocho.mainCra(1,0);
+        # Seocho_notice.mainCra(1);
+
+        # Seongbuk.mainCra(1,0);
+
+        # Yangcheon.mainCra(1,0);
+        # Yangcheon_notice.mainCra(1);
+
+        # Yeongdeungpo.mainCra(1,0);
+        # Yeongdeungpo_notice.mainCra(1);
+
+        # Jongro.mainCra(1,0);
+        # Jongro_notice.mainCra(1);
+
+        # Junggu.mainCra(1,0);
+        # Junggu_notice.mainCra(1);
+
+        # Eunpyeng.mainCra(1,0);
+        # Eunpyeng_notice.mainCra(1);
+
+        # Geuamcheoun.mainCra(1,0);
+        # Geuamcheoun_notice.mainCra(1);
+
+        # Dobong.mainCra(1,0);
+        # Dobong_notice.mainCra(1);
+
+        # Dongdaemun.mainCra(1,0);
+        # Dongdaemun_notice.mainCra(1);
+
+        # Mapo.mainCra(1,0);
+        # Mapo_notice.mainCra(1);
+
+        # Seongdong.mainCra(1,0);
+        # Seongdong_notice.mainCra(1);
+
+        # Songpa.mainCra(1,0);
+        # Songpa_notice.mainCra(1);
+
         # Gangdong_notice.mainCra(1,0);
-        # Gangbuk_notice.mainCra(1,0);
+
         # Gangseo_notice.mainCra(1,0);
-        # Gwanak_notice.mainCra(1,0);
-        # Gwanagjin_notice.mainCra(1,0);
+
         # Guro_notice.mainCra(1,0);
-        # Geuamcheoun_notice.mainCra(1,0);
+
         # Nowon_notice.mainCra(1,0);
-        # Dobong_notice.mainCra(1,0);
-        # Dongdaemun_notice.mainCra(1,0);
-        # Dongjak_notice.mainCra(1,0);
-        # Mapo_notice.mainCra(1,0);
-        # Seocho_notice.mainCra(1,0);
-        # Seongdong_notice.mainCra(1,0);
-        # Songpa_notice.mainCra(1,0);
-        # Yangcheon_notice.mainCra(1,0);
-        # Yeongdeungpo_notice.mainCra(1,0);
+
         # Youngsan_notice.mainCra(1,0);
-        # Eunpyeng_notice.mainCra(1,0);
-        # Jongro_notice.mainCra(1,0);
-        # Junggu_notice.mainCra(1,0);
-        # Jungnang_notice.mainCra(1,0);
-        
-        # Gangnam_Institutions.mainCra(1,0);
-        # Gangdong_Institutions.mainCra(1,0);
-        # Gwanak_Institutions.mainCra(1,0);
-        # Gwanagjin_Institutions.mainCra(1,0);
-        # Guro_Institutions.mainCra(1,0);
-        # Geuamcheoun_Institutions.mainCra(1,0);
-        # Nowon_Institutions.mainCra(1,0);
-        # Dongdaemun_Institutions.mainCra(1,0);
-        # Dongjak_Institutions.mainCra(1,0);
-        # Mapo_Institutions.mainCra(1,0);
+
+        Jungnang_notice.mainCra(1,0);
+
+        # 서울시는 따로 적용 필요
+        # Npocra.mainCra(1,0);
+        #자치구
 
 
 

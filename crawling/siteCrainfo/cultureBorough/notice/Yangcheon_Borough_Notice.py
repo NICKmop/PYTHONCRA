@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 import common.common_fnc  as com
 
 class Yangcheon_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YANGCHEON_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.yangcheon.go.kr/site/yangcheon/ex/bbs/List.do;jsessionid=hQBUNSnObUA1jLlEVux1s4J1SNRDwXu7lZ6YkRLvSztrEKuMbLgVDg7w93anM7oK.YCWEB_servlet_engine3?cbIdx=254#'.format(cnt);
         soupData = com.pageconnect(cnt, url, "doBbsFPag({});return false;".format(cnt));
         # 타이틀 ,기관, 링크, 등록일, 번호
@@ -20,9 +23,9 @@ class Yangcheon_notice:
             if linkCount == i:
                 cnt += 1;
                 print(commonConstant_NAME.YANGCHEON_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                return Yangcheon_notice.mainCra(cnt, numberCnt);
+                return Yangcheon_notice.mainCra(cnt);
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
                 # print("reg : ", registrationdate[i].text);
                 # print("title : ", title[i].text.strip());
@@ -31,10 +34,8 @@ class Yangcheon_notice:
                 linkSubNt = linkSub.split(")")[0];
 
                 linkSubts = linkSubNt.split(",");
-                # print("link : ", linkSubts);
-                # replace("'", "")
 
-                firebase_con.updateModel(commonConstant_NAME.YANGCHEON_BOROUGH_NOTICE,numberCnt,
+                firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,numberCnt,
                     datasModel.toJson(
                         "https://www.yangcheon.go.kr/site/yangcheon/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'",""), linkSubts[1].replace("'",""), linkSubts[1].replace("'","")),
                         numberCnt,

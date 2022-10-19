@@ -25,12 +25,12 @@ class Guro_notice:
                     print(commonConstant_NAME.GURO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Guro_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    firebase_con.updateModel(commonConstant_NAME.GURO_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GURO_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
+                            "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

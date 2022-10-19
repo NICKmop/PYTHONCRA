@@ -16,10 +16,7 @@ class Jungnang_notice:
             title = soup.select('.tit > a');
             registrationdate = soup.select('td:nth-child(5)');
 
-            # print(registrationdate);
             linkCount = len(link) - 1;
-
-            # firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
 
             for i in range(len(link)):
                 numberCnt += 1;
@@ -30,9 +27,6 @@ class Jungnang_notice:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-
-                    # print(title[i].text.strip()); 
-                    # print(registrationdate);
 
                     firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                         datasModel.toJson(

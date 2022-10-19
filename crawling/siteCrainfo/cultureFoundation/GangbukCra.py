@@ -32,7 +32,9 @@ class Gnagbuk:
                     
                     firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
+                            # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
+                            # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
+                            "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
                             title[i].text.strip(),

@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Mapo_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.MAPO_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.mapo.go.kr/site/main/board/notice/list?cp={}&sortOrder=BA_REGDATE&sortDirection=DESC&listType=list&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,18 +27,16 @@ class Mapo_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.MAPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Mapo_notice.mainCra(cnt, numberCnt);
+                    return Mapo_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print("linkK:::: ", link[i].attrs.get('href').removeprefix('.'));
-                    # print(title);
-                    # print(registrationdate);
+
                     
-                    firebase_con.updateModel(commonConstant_NAME.MAPO_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.mapo.go.kr{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.mapo.go.kr{}".format(link[i].attrs.get('href').replace('.','',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

@@ -9,8 +9,6 @@ class Yeongdeungpo:
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
         url = 'https://www.ydpcf.or.kr/board.do?bid=1&p={}'.format(cnt);
         response = requests.get(url);
 
@@ -27,12 +25,14 @@ class Yeongdeungpo:
 
             for i in range(len(link)):
                 numberCnt += 1;
+                print("linkCount :  {}".format(linkCount));
+
                 if linkCount == i:
                     cnt += 1;
                     print("Yeongdeungpo Next Page : {}".format(cnt));
                     return Yeongdeungpo.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == linkCount:
                         break; 
                     
                     firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,

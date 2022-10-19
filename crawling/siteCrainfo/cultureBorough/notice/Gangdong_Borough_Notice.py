@@ -27,10 +27,10 @@ class Gangdong_notice:
                     print(commonConstant_NAME.GANGDONG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Gangdong_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
                     
-                    firebase_con.updateModel(commonConstant_NAME.GANGDONG_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GANGDONG_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gangdong.go.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,

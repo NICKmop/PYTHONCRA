@@ -26,12 +26,10 @@ class Gangseo_notice:
                     print(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Gangseo_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == 20:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print(link[i].attrs.get('href'));
-                    
-                    firebase_con.updateModel(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
                             numberCnt,

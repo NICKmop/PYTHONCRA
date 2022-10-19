@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Dongdaemun_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGDAEMUN_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.ddm.go.kr/www/selectBbsNttList.do?key=198&bbsNo=38&searchCtgry=&searchCnd=all&searchKrwd=&integrDeptCode=&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,18 +27,14 @@ class Dongdaemun_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.DONGDAEMUN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Dongdaemun_notice.mainCra(cnt, numberCnt);
+                    return Dongdaemun_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    print("linkK:::: ", link[i].attrs.get('href').removeprefix('.'));
-                    # print(title);
-                    # print(registrationdate);
-                    
-                    firebase_con.updateModel(commonConstant_NAME.DONGDAEMUN_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.DONGDAEMUN_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.ddm.go.kr/www{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.ddm.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

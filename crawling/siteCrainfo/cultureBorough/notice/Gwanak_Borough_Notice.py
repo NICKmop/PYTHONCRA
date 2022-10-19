@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 import common.common_fnc  as com
 
 class Gwanak_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANAK_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=239';
         soupData = com.pageconnect(cnt, url, "javascript:doBbsFPag({});return false;".format(cnt));
         
@@ -23,9 +26,9 @@ class Gwanak_notice:
                 # javascript:pageNum('frm01','200');
                 cnt += 1;
                 print("Gwanak_notice Next Page : {}".format(cnt));
-                return Gwanak_notice.mainCra(cnt, numberCnt),
+                return Gwanak_notice.mainCra(cnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                if numberCnt == 41:
                     break;
             # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             linkAttr = link[i].attrs.get('onclick');
@@ -36,7 +39,7 @@ class Gwanak_notice:
 
             linkSubts = linkSubNt.split(",");
             
-            firebase_con.updateModel( commonConstant_NAME.GWANAK_BOROUGH_NOTICE,numberCnt,
+            firebase_con.updateModel( commonConstant_NAME.GWANAK_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),
                     numberCnt,

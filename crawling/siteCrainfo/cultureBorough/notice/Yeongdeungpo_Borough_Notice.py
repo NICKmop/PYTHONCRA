@@ -5,7 +5,10 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Yeongdeungpo_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
+        numberCnt = max(cntNumber);
+
         url = 'https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=40&&pageUnit=10&key=2848&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -24,19 +27,16 @@ class Yeongdeungpo_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.YEONGDEUNGPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Yeongdeungpo_notice.mainCra(cnt, numberCnt);
+                    return Yeongdeungpo_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    # print(title[i].text.strip());
-                    print(registrationdate);
-                    
-                    # firebase_con.selectModel(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE);
+                    print("replace URL : {}".format(link[i].attrs.get('href').replace('.','',1)));
 
-                    firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_BOROUGH_NOTICE,numberCnt,
+                    firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.ydp.go.kr/www{}".format(link[i].attrs.get('href').removeprefix('.')),
+                            "https://www.ydp.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),
