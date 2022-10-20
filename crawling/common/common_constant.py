@@ -85,6 +85,8 @@ class commonConstant_NAME:
     YOUNGSAN_NAME = "YOUNGSAN";
     YOUNGSAN_BOROUGH_NOTICE = "YOUNGSAN_NOTICE";
 
+    SEODAEMUN_NAME = "SEODAEMUN";
+
     # 서울시
     NPO_NAME = "NPO";                    # NPO
     SEOUL_NAME = "SEOUL";                # 서울

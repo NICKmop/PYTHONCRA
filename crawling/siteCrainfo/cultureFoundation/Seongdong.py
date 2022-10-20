@@ -38,7 +38,7 @@ class Seongdong:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    registrationdate[i].text.strip(),
                     "성동문화재단"
                 )
             )

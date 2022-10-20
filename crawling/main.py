@@ -1,6 +1,7 @@
 # 재단
 from exceptiongroup import catch
 from siteCrainfo.cultureFoundation.Seoul import Seoul
+from siteCrainfo.cultureFoundation.Seodaemun import Seodaemun
 from siteCrainfo.cultureFoundation.Youthseoul import Youthseoul
 from siteCrainfo.cultureFoundation.Sbaseoul import Sbaseoul 
 from siteCrainfo.cultureFoundation.Housingseoul import Housingseoul 
@@ -131,15 +132,18 @@ if __name__ == '__main__':
 
             Jungnang_notice.mainCra(1,0);
 
+
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);
             Sbaseoul.mainCra(1);
             Housingseoul.mainCra(1);
 
             #서울시는 따로 진행 
-            # Seoul.mainCra(1,0);
             # 크롤링 확인 필요 부분
+            # Seoul.mainCra(1,0);
             # Gangbuk_notice.mainCra(1);
+            # Seodaemun.mainCra(1,0);
+
         except ConnectionError as conerror:
             print(conerror);
         
@@ -212,15 +216,17 @@ if __name__ == '__main__':
 
             Jungnang_notice.mainCra(1,0);
 
+
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);
             Sbaseoul.mainCra(1);
             Housingseoul.mainCra(1);
 
             # 크롤링 확인 필요 부분
-            # Gangbuk_notice.mainCra(1);
             # 서울시는 따로 적용 필요
+            # Gangbuk_notice.mainCra(1);
             # Seoul.mainCra(1,0); 링크 한번 확인 필요
+            # Seodaemun.mainCra(1,0);
         except ConnectionError as conerror:
             print(conerror);
         
