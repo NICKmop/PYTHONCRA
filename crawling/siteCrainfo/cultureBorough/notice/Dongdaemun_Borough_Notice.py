@@ -40,7 +40,7 @@ class Dongdaemun_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "동대문_공지사항",
+                            "동대문구청",
                         )
                     );
         else : 

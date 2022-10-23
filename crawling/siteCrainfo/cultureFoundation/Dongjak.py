@@ -34,7 +34,10 @@ class Dongjak:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    
+                
+                if title[i].text.strip() == '':
+                    continue;
+                else:
                     firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
                         datasModel.toJson(
                             link[i].attrs.get('href'),

@@ -43,7 +43,7 @@ class Dongjak_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "동작구_공지사항",
+                            "동작구청",
                         )
                     );
         else : 

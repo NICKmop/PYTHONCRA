@@ -25,19 +25,20 @@ class Eunpyeng:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
-
-            linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
-
-            firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,numberCnt,
-                datasModel.toJson(
-                    "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
-                    numberCnt,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    registrationdate[i + 1].text,
-                    "은평문화재단"
+            if title[i].text.strip() == '':
+                    continue;
+            else:
+                linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
+                firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,numberCnt,
+                    datasModel.toJson(
+                        "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
+                        numberCnt,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        registrationdate[i + 1].text,
+                        "은평문화재단"
+                    )
                 )
-            )
 
             

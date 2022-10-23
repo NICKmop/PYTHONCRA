@@ -42,7 +42,7 @@ class Seocho_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "서초구_공지사항",
+                            "서초구청",
                         )
                     );
         else : 

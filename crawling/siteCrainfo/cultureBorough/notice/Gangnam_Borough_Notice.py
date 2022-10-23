@@ -40,7 +40,7 @@ class Gangnam_notice:
                     title[i].text.strip(),
                     "",
                     registrationdate[i].text,
-                    "강남구_공지사항"
+                    "강남구청"
                 )
             )
             

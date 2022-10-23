@@ -40,7 +40,7 @@ class Songpa_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "송파구_공지사항",
+                            "송파구청",
                         )
                     );
         else : 

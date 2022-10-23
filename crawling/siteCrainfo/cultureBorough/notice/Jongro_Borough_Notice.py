@@ -40,7 +40,7 @@ class Jongro_notice:
                     title[i].text.strip(),
                     "",
                     registrationdate[i].text,
-                    "종로구_공지사항"
+                    "종로구청"
                 )
             )
             

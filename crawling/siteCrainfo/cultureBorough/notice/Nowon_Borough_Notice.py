@@ -38,7 +38,7 @@ class Nowon_notice:
                     title[i].text.strip(),
                     "",
                     registrationdate[i].text,
-                    "노원구_공지사항"
+                    "노원구청"
                 )
             )
             

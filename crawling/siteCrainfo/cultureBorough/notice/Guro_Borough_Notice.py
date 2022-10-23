@@ -36,7 +36,7 @@ class Guro_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "구로구_공지사항",
+                            "구로구청",
                         )
                     );
         else : 

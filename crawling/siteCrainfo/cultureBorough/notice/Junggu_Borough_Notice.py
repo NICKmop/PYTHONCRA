@@ -41,7 +41,7 @@ class Junggu_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "중구_공지사항",
+                            "중구구청",
                         )
                     );
         else : 

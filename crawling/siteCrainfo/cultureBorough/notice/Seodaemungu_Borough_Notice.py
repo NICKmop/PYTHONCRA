@@ -35,7 +35,7 @@ class Seodaemungu_notice:
                     title[i].text.strip(),
                     "",
                     registrationdate[i].text,
-                    "서대문구_공지사항"
+                    "서대문구청"
                 )
             )
             

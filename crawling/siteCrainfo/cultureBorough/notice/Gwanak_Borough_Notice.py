@@ -47,7 +47,7 @@ class Gwanak_notice:
                     title[i].text.strip(),
                     "",
                     registrationdate[i].text,
-                    "관악구_공지사항"
+                    "관악구청"
                 )
             )
             

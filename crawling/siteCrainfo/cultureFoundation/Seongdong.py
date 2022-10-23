@@ -25,11 +25,6 @@ class Seongdong:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
             linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('onclick'));
-            # linkSp = link[i].attrs.get('seq');
-
-            print(linkSp);
-            print(title[i].text.strip());
-            print(registrationdate[i].text);
 
             firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,i,
                 datasModel.toJson(

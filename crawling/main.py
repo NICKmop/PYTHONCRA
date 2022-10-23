@@ -68,6 +68,9 @@ if __name__ == '__main__':
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
         # 재단
         try:
+            Yeongdeungpo.mainCra(1,0);
+            Yeongdeungpo_notice.mainCra(1);
+
             Gwanak_notice.mainCra(1);
             Gwanak.mainCra(0,0);
 
@@ -89,9 +92,6 @@ if __name__ == '__main__':
 
             Yangcheon.mainCra(1,0);
             Yangcheon_notice.mainCra(1);
-
-            Yeongdeungpo.mainCra(1,0);
-            Yeongdeungpo_notice.mainCra(1);
 
             Jongro.mainCra(1,0);
             Jongro_notice.mainCra(1);
@@ -132,7 +132,6 @@ if __name__ == '__main__':
 
             Jungnang_notice.mainCra(1,0);
 
-
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);
             Sbaseoul.mainCra(1);
@@ -140,8 +139,9 @@ if __name__ == '__main__':
 
             #서울시는 따로 진행 
             # 크롤링 확인 필요 부분
-            # Seoul.mainCra(1,0);
             # Gangbuk_notice.mainCra(1);
+            
+            # Seoul.mainCra(1,0);
             # Seodaemun.mainCra(1,0);
 
         except ConnectionError as conerror:
@@ -151,6 +151,9 @@ if __name__ == '__main__':
     else:
         # 재단
         try:
+            Yeongdeungpo.mainCra(1,0);
+            Yeongdeungpo_notice.mainCra(1);
+
             Gwanak.mainCra(0,0);
             Gwanak_notice.mainCra(1);
 
@@ -173,9 +176,6 @@ if __name__ == '__main__':
 
             Yangcheon.mainCra(1,0);
             Yangcheon_notice.mainCra(1);
-
-            Yeongdeungpo.mainCra(1,0);
-            Yeongdeungpo_notice.mainCra(1);
 
             Jongro.mainCra(1,0);
             Jongro_notice.mainCra(1);
@@ -215,7 +215,6 @@ if __name__ == '__main__':
             Youngsan_notice.mainCra(1,0);
 
             Jungnang_notice.mainCra(1,0);
-
 
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);

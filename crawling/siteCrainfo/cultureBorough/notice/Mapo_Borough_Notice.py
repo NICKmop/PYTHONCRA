@@ -42,7 +42,7 @@ class Mapo_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "마포구_공지사항",
+                            "마포구청",
                         )
                     );
         else : 

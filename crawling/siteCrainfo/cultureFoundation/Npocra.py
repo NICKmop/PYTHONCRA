@@ -20,7 +20,7 @@ class Npocra:
             title = soup.select('.title');
             registrationdate = soup.select('.date');
             
-            linkCount = len(link) - 1;
+            linkCount = len(link) ;
 
             for i in range(len(link)):
                 numberCnt += 1;

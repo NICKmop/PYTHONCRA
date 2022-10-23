@@ -40,7 +40,7 @@ class Gangbuk_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "강북구_공지사항",
+                            "강북구청",
                         )
                     );
         else : 

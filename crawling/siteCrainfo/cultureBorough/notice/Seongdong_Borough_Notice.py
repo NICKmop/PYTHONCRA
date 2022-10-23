@@ -40,7 +40,7 @@ class Seongdong_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "성동구_공지사항",
+                            "성동구청",
                         )
                     );
         else : 

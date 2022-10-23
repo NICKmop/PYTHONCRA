@@ -43,7 +43,7 @@ class Dobong_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "도봉구_공지사항",
+                            "도봉구청",
                         )
                     );
         else : 

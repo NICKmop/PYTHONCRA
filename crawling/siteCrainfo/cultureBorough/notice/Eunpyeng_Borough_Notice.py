@@ -42,7 +42,7 @@ class Eunpyeng_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "은평구_공지사항",
+                            "은평구청",
                         )
                     );
         else : 

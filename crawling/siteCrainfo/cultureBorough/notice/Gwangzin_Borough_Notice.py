@@ -39,7 +39,7 @@ class Gwangzin_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "광진구_공지사항",
+                            "광진구청",
                         )
                     );
         else : 

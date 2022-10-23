@@ -24,19 +24,20 @@ class Dongdaemun:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
-            linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
-            # print(linkSp);
-            # print(title[i].text.strip());
-            # print(registrationdate[i].text);
 
-            firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,i,
-                datasModel.toJson(
-                    "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
-                    i,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    registrationdate[i].text,
-                    "동대문문화재단"
+            if title[i].text.strip() == '':
+                continue;
+            else:
+                linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
+                
+                firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,i,
+                    datasModel.toJson(
+                        "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
+                        i,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        registrationdate[i].text,
+                        "동대문문화재단"
+                    )
                 )
-            )

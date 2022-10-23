@@ -105,7 +105,7 @@ class commonConstant_NAME:
     #       50+	https://50plus.or.kr/notice_recruit.do
 
     STOPCUOUNT = 32;
-    NOTICE_STOP_COUNT = 62;
+    NOTICE_STOP_COUNT = 64;
 
     # 서울시 STOP COUNT
     SEOUL_STOP_COUNT_ONE = 32; # 서울시NPO지원센터

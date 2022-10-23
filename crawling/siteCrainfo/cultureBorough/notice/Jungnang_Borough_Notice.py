@@ -36,7 +36,7 @@ class Jungnang_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "중랑구_공지사항",
+                            "중랑구청",
                         )
                     );
         else : 

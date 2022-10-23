@@ -42,7 +42,7 @@ class Geuamcheoun_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "금천구_공지사항",
+                            "금천구청",
                         )
                     );
         else : 

@@ -42,7 +42,7 @@ class Yeongdeungpo_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "영등포구_공지사항",
+                            "영등포구청",
                         )
                     );
         else : 
