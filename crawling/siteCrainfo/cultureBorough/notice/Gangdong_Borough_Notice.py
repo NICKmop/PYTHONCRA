@@ -38,7 +38,7 @@ class Gangdong_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "강동구_공지사항",
+                            "강동구청",
                         )
                     );
         else : 

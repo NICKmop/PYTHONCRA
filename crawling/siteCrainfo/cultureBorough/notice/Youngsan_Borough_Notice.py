@@ -37,7 +37,7 @@ class Youngsan_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
-                            "용산구_공지사항",
+                            "용산구청",
                         )
                     );
         else : 
