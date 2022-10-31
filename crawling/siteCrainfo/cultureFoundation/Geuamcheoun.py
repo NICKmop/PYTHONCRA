@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -24,8 +25,11 @@ class Geuamcheoun:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
+                    
             linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
             # print(title[i].text.strip());
+            
+            changeText= str(registrationdate[i].text.split(":")[1].replace(' ', ''));
 
             firebase_con.updateModel( commonConstant_NAME.GEUAMCHEOUN_NAME,i,
                 datasModel.toJson(
@@ -34,7 +38,7 @@ class Geuamcheoun:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "금천문화재단"
                 )
             )

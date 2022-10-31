@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -39,6 +40,7 @@ class Sbaseoul:
                 linkSubts = linkSubNt.split(",");
                 # print("linkSubts : {}".format(linkSubts[0]));
                 # print("result : {}".format("https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"',''))))
+                changeText= str(registrationdate[i].text);
 
                 firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
                     datasModel.toJson(
@@ -47,7 +49,7 @@ class Sbaseoul:
                         "",
                         title[i].text.strip(),
                         "",
-                        registrationdate[i].text,
+                        fnChnagetype(changeText.strip()),
                         "SBA지원센터"
                     )
                 )

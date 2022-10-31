@@ -1,8 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
+import datetime
+
 
 class Gwangzin:
     def mainCra(cnt,numberCnt):
@@ -29,6 +32,8 @@ class Gwangzin:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
                     
+                    cngdate = registrationdate[i].text.replace('.','-');
+                    
                     firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
                         datasModel.toJson(
                             link[i].attrs.get('href'),
@@ -36,7 +41,7 @@ class Gwangzin:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype("20"+cngdate),
                             "광진문화재단",
                         )
                     );

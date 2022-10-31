@@ -1,3 +1,4 @@
+from typing import Type
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -26,11 +27,21 @@ class firebase_con:
                 
                 if len(i.split("_")) == 2:
                     spdataList.append(int(i.split("_")[1]));
-                
-            # print("split_ : {}".format(spdataList));
             return spdataList;
-
         else:
             print(u'No such document!')
+    
+    def selecTitle(name, center_name):
+        spdataList = [];
+        db = firestore.client();
+        doc_ref = db.collection(u'crawlingData').document(name);
+        doc = doc_ref.get();
+        originData = doc.to_dict().values();
 
+        for i in originData:
+            if(center_name == i['center_name ']):
+                spdataList.append(i['title'].strip());
+                # print(i['title'].strip());
+            
+        return spdataList;
 

@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -30,8 +31,9 @@ class Gangnam_notice:
             else:
                 if numberCnt == 40:
                     break;
+                    
             linkSp = link[i].attrs.get('href');
-
+            changeText = str(registrationdate[i].text);
             firebase_con.updateModel( commonConstant_NAME.GANGNAM_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.gangnam.go.kr{}".format(linkSp),
@@ -39,7 +41,7 @@ class Gangnam_notice:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "강남구청"
                 )
             )

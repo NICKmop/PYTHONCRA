@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -38,6 +39,7 @@ class Dongjak:
                 if title[i].text.strip() == '':
                     continue;
                 else:
+                    changeText= str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
                         datasModel.toJson(
                             link[i].attrs.get('href'),
@@ -45,7 +47,7 @@ class Dongjak:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "동작문화재단",
                         )
                     );

@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -34,7 +35,7 @@ class Dongjak_notice:
                         break;
 
                     # print("linkK:::: ", link[i].attrs.get('href'));
-                    
+                    changeText = str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.dongjak.go.kr{}".format(link[i].attrs.get('href')),
@@ -43,6 +44,7 @@ class Dongjak_notice:
                             title[i].text.strip(),
                             "",
                             registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "동작구청",
                         )
                     );

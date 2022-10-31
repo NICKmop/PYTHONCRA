@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -28,6 +29,7 @@ class Eunpyeng:
             if title[i].text.strip() == '':
                     continue;
             else:
+                changeText= str(registrationdate[i + 1].text);
                 linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
                 firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,numberCnt,
                     datasModel.toJson(
@@ -36,7 +38,7 @@ class Eunpyeng:
                         "",
                         title[i].text.strip(),
                         "",
-                        registrationdate[i + 1].text,
+                        fnChnagetype(changeText.strip()),
                         "은평문화재단"
                     )
                 )

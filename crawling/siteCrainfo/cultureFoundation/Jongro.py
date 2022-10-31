@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -34,7 +35,7 @@ class Jongro:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break; 
-                    
+                    changeText= str(registrationdate[i].text.strip());
                     firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
@@ -42,7 +43,7 @@ class Jongro:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            fnChnagetype(changeText),
                             "종로문화재단",
                         )
                     );

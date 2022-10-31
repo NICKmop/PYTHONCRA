@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -28,6 +29,7 @@ class Guro_notice:
                     if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
+                    changeText = str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.GURO_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
@@ -35,7 +37,7 @@ class Guro_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "구로구청",
                         )
                     );

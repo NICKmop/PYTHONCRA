@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
+from common.common_fnc import fnChnagetype
 from models.datasModel import datasModel
 
 # 현재 달 날짜 찾는지 아직 미정. 
@@ -37,11 +38,8 @@ class Junggu:
                     if numberCnt == linkCount:
                         break; 
                     
-                    # 날짜 중 08월이 아닌달 데이터 getString 
-                    # datelist = registrationdate[i].text.strip();
-                    # if datelist.split('-')[1] != '08':
-                    #     print("8월달 데이터가 아님.... :  {}".format(datelist));
-
+                    
+                    changeText = str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
@@ -49,7 +47,7 @@ class Junggu:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            fnChnagetype(changeText.strip()),
                             "중구문화재단",
                         )
                     );

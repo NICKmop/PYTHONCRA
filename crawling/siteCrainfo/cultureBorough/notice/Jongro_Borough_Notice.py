@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -14,7 +15,7 @@ class Jongro_notice:
         
         link = soupData.select('.sj > a');
         title = soupData.select('.sj > a');
-        registrationdate = soupData.select('tr > td:nth-child(4)');
+        registrationdate = soupData.select('.date1');
 
         linkCount = len(link) - 1;
 
@@ -31,7 +32,13 @@ class Jongro_notice:
             linkAttr = link[i].attrs.get('href');
             linkSub = linkAttr.split("('")[1];
             linkSubNt = linkSub.split("')")[0];
+
+            replregistY = registrationdate[i].text.replace("년",'-');
+            replregistM = replregistY.replace("월",'-');
+            replregistD = replregistM.replace("일",'');
             
+            changeText= str(replregistD.strip());
+
             firebase_con.updateModel( commonConstant_NAME.JONGRO_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.jongno.go.kr/portal/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000201&menuNo=1752&menuId=1752&nttId={}".format(linkSubNt),
@@ -39,7 +46,7 @@ class Jongro_notice:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "종로구청"
                 )
             )

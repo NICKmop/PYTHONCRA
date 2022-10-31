@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -31,7 +32,7 @@ class Songpa_notice:
                 else:
                     if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-
+                    changeText= str(registrationdate[i].text.replace('.','-'));
                     firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
@@ -39,7 +40,7 @@ class Songpa_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "송파구청",
                         )
                     );

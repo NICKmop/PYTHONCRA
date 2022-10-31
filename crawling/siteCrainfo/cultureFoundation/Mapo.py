@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -25,13 +26,9 @@ class Mapo:
             else:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
-            # linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('seq'));
             linkSp = link[i].attrs.get('seq');
 
-            # print(link[i].attrs.get('seq'));
-            # print(title[i].text.strip());
-            # print(registrationdate[i + 1].text);
-
+            changeText= str(registrationdate[i].text);
             firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,i,
                 datasModel.toJson(
                     "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
@@ -39,7 +36,7 @@ class Mapo:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "마포문화재단"
                 )
             )

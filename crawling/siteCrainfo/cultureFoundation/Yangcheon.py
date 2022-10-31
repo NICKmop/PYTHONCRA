@@ -44,7 +44,7 @@ class Yangcheon:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            registrationdate[i].text.strip().replace('.','-'),
                             "양천문화재단",
                         )
                     );

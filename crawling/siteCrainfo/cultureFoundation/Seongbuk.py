@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -34,7 +35,7 @@ class Seongbuk:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    
+                    changeText= str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),
@@ -42,7 +43,7 @@ class Seongbuk:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            fnChnagetype(changeText.strip()),
                             "성북문화재단",
                         )
                     );

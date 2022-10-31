@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -38,7 +39,7 @@ class Gwanak_notice:
             linkSubNt = linkSub.split(")")[0];
 
             linkSubts = linkSubNt.split(",");
-            
+            changeText = str(registrationdate[i].text);
             firebase_con.updateModel( commonConstant_NAME.GWANAK_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),
@@ -46,7 +47,7 @@ class Gwanak_notice:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "관악구청"
                 )
             )

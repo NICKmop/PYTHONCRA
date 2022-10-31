@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -29,6 +30,7 @@ class Gwanak:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
+                    changeText= str(registrationdate[i].text.strip());
                      
                     firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,i,
                         datasModel.toJson(
@@ -37,7 +39,7 @@ class Gwanak:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            fnChnagetype(changeText.strip()),
                             "관악문화재단",
                         )
                     );

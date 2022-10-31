@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -33,6 +34,7 @@ class Gnagbuk:
                 if title[i].text.strip() == '':
                     continue;
                 else:
+                    changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
                     firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(
                             # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
@@ -42,7 +44,7 @@ class Gnagbuk:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "강북문화재단",
                         )
                     );

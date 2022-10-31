@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -29,7 +30,7 @@ class Nowon_notice:
             linkSub = linkAttr.split("('")[1];
             linkSubNt = linkSub.split("')")[0];
             # linkSubts = linkSubNt.split(",");
-            
+            changeText= str(registrationdate[i].text);
             firebase_con.updateModel( commonConstant_NAME.NOWON_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={}&q_estnColumn1=11&q_rowPerPage=10&q_currPage={}&q_sortName=&q_sortOrder=&q_searchKeyTy=sj___1002&q_searchVal=&".format(linkSubNt,cnt),
@@ -37,7 +38,7 @@ class Nowon_notice:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text,
+                    fnChnagetype(changeText.strip()),
                     "노원구청"
                 )
             )

@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -8,7 +9,7 @@ class Seocho_notice:
     def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
         numberCnt = max(cntNumber);
-
+        print("numberCnt : {} ". format(numberCnt));
         url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=57&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -33,7 +34,7 @@ class Seocho_notice:
                         break;
 
                     # print(link[i].attrs.get('href'));
-                    
+                    changeText= str(registrationdate[i].text.replace('.','-'));
                     firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),
@@ -41,7 +42,7 @@ class Seocho_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "서초구청",
                         )
                     );

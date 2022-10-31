@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -18,7 +19,6 @@ class Gwangzin_notice:
             link = soup.select('.s > a');
             title = soup.select('.s > a');
             registrationdate = soup.select('.date');
-            print(link);
             linkCount = len(link) - 1;
 
             for i in range(len(link)):
@@ -30,7 +30,7 @@ class Gwangzin_notice:
                 else:
                     if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-
+                    changeText= str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gwangjin.go.kr{}".format(link[i].attrs.get('href')),
@@ -38,7 +38,7 @@ class Gwangzin_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "광진구청",
                         )
                     );

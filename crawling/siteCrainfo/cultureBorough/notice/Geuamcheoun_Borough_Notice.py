@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -33,6 +34,7 @@ class Geuamcheoun_notice:
 
                     # print(link[i].attrs.get('href').removeprefix('.'));
                     linkrep = link[i].attrs.get('href').replace('.','',1);
+                    changeText = str(registrationdate[i].text.replace('.', '-'));
                     
                     firebase_con.updateModel(commonConstant_NAME.GEUAMCHEOUN_NAME,numberCnt,
                         datasModel.toJson(
@@ -41,7 +43,7 @@ class Geuamcheoun_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
+                            fnChnagetype(changeText.strip()),
                             "금천구청",
                         )
                     );

@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -25,6 +26,7 @@ class Seongdong:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
             linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('onclick'));
+            changeText= str(registrationdate[i].text);
 
             firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,i,
                 datasModel.toJson(
@@ -33,7 +35,7 @@ class Seongdong:
                     "",
                     title[i].text.strip(),
                     "",
-                    registrationdate[i].text.strip(),
+                    fnChnagetype(changeText.strip()),
                     "성동문화재단"
                 )
             )

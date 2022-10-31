@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -32,7 +33,7 @@ class Seocho:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    
+                    changeText= str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                         datasModel.toJson(
                             "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),
@@ -40,7 +41,7 @@ class Seocho:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text.strip(),
+                            fnChnagetype(changeText.strip()),
                             "서초문화재단",
                         )
                     );

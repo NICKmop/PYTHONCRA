@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -34,6 +35,7 @@ class Yangcheon_notice:
                 linkSubNt = linkSub.split(")")[0];
 
                 linkSubts = linkSubNt.split(",");
+                changeText= str(registrationdate[i].text.replace('.','-'));
 
                 firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,numberCnt,
                     datasModel.toJson(
@@ -42,8 +44,8 @@ class Yangcheon_notice:
                         "",
                         title[i].text.strip(),
                         "",
-                        registrationdate[i].text,
-                        "양천구_공지사항",
+                        fnChnagetype(changeText.strip()),
+                        "양천구청",
                     )
                 );
             
