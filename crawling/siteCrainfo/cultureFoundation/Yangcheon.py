@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -7,6 +9,9 @@ from models.datasModel import datasModel
 class Yangcheon:
     def mainCra(cnt,numberCnt):
         print("Yangcheon Start");
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YANGCHEON_NAME);
+        maxCntNumber = max(cntNumber);
+
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
@@ -34,19 +39,23 @@ class Yangcheon:
                     print("Yangcheon Next Page : {}".format(cnt));
                     return Yangcheon.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break; 
-                    
-                    firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://yfac.kr/main/contents.do?{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            registrationdate[i].text.strip().replace('.','-'),
-                            "양천문화재단",
-                        )
-                    );
+                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    #     break; 
+                    if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
+                        break;
+                    else:
+                        maxCntNumber += 1;
+                        changeText = registrationdate[i].text.strip().replace('.','-');
+                        firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://yfac.kr/main/contents.do?{}".format(link[i].attrs.get('href')),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "양천문화재단",
+                            )
+                        );
         else : 
             print(response.status_code)

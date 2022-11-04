@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -7,6 +8,9 @@ import common.common_fnc  as com
 
 class Geuamcheoun:
     def mainCra(cnt,numberCnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GEUAMCHEOUN_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://gcfac.or.kr/board/free';
         soupData = com.pageconnect(cnt, url, "javascript:pagingUtil.pageSubmit('{}')".format(cnt));
         
@@ -26,20 +30,24 @@ class Geuamcheoun:
                 if numberCnt == commonConstant_NAME.STOPCUOUNT:
                     break;
                     
-            linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
-            # print(title[i].text.strip());
-            
-            changeText= str(registrationdate[i].text.split(":")[1].replace(' ', ''));
+                if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, title[i].text.strip()) == 1):
+                    break;
+                else:
+                    maxCntNumber += 1;
+                    linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
+                    # print(title[i].text.strip());
+                    
+                    changeText= str(registrationdate[i].text.split(":")[1].replace(' ', ''));
 
-            firebase_con.updateModel( commonConstant_NAME.GEUAMCHEOUN_NAME,i,
-                datasModel.toJson(
-                    "https://gcfac.or.kr/board/freeDetail?notice_gb=&board_seq={}&gcfac_menu_cd=&currRow=1&scType=all&srch_input=".format(linkSp),
-                    i,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    fnChnagetype(changeText.strip()),
-                    "금천문화재단"
-                )
-            )
+                    firebase_con.updateModel( commonConstant_NAME.GEUAMCHEOUN_NAME,maxCntNumber,
+                        datasModel.toJson(
+                            "https://gcfac.or.kr/board/freeDetail?notice_gb=&board_seq={}&gcfac_menu_cd=&currRow=1&scType=all&srch_input=".format(linkSp),
+                            maxCntNumber,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "금천문화재단"
+                        )
+                    )
             

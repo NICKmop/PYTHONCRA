@@ -63,12 +63,20 @@ if __name__ == '__main__':
     if __package__ is None:
         import sys
         from os import path
-        print(path.dirname( path.dirname( path.abspath(__file__) ) ));
+        # print(path.dirname( path.dirname( path.abspath(__file__) ) ));
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
         # 재단
         try:
+            # 데이터 다시 크롤링 필요
             # Yeongdeungpo.mainCra(1,0);
             # Yeongdeungpo_notice.mainCra(1);
+            
+            # Dobong.mainCra(1,0); 
+            # Dobong_notice.mainCra(1);
+
+             # 데이터 다시 크롤링 필요
+            # Mapo.mainCra(1,0);
+            # Mapo_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
             
@@ -81,9 +89,6 @@ if __name__ == '__main__':
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
 
-            # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
-
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
 
@@ -92,7 +97,6 @@ if __name__ == '__main__':
 
             # Jongro.mainCra(1,0);
             # Jongro_notice.mainCra(1);
-# ------------------------------------
 
             # Gwanak.mainCra(0,0);
             # Gwanak_notice.mainCra(1);
@@ -103,16 +107,14 @@ if __name__ == '__main__':
             # Dongjak.mainCra(1,0);
             # Dongjak_notice.mainCra(1);
 
-            # Seongbuk.mainCra(1,0);
+            # 여기부터 작업 시작.
+            Seongbuk.mainCra(1,0);
 
-            Junggu.mainCra(1,0);
-            Junggu_notice.mainCra(1);
+            # Junggu.mainCra(1,0);
+            # Junggu_notice.mainCra(1);
 
             # Eunpyeng.mainCra(1,0);
             # Eunpyeng_notice.mainCra(1);
-
-            # Dobong.mainCra(1,0); 
-            # Dobong_notice.mainCra(1);
 
             # Dongdaemun.mainCra(1,0);
             # Dongdaemun_notice.mainCra(1);
@@ -143,15 +145,22 @@ if __name__ == '__main__':
             
             # Seoul.mainCra(1,0);
             # Seodaemun.mainCra(1,0);
-
         except ConnectionError as conerror:
             print(conerror);
 
     else:
         # 재단
         try:
+            # 크롤링 다시 확인 필요
             # Yeongdeungpo.mainCra(1,0);
             # Yeongdeungpo_notice.mainCra(1);
+
+            Dobong.mainCra(1,0);
+            Dobong_notice.mainCra(1);
+
+            # 데이터 다시 크롤링 필요
+            # Mapo.mainCra(1,0);
+            # Mapo_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
 
@@ -164,9 +173,6 @@ if __name__ == '__main__':
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
 
-            # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
-
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
 
@@ -176,7 +182,6 @@ if __name__ == '__main__':
             # Jongro.mainCra(1,0);
             # Jongro_notice.mainCra(1);
 
-# ------------------------------------
             # Gwanak.mainCra(0,0);
             # Gwanak_notice.mainCra(1);
 
@@ -188,14 +193,11 @@ if __name__ == '__main__':
 
             # Seongbuk.mainCra(1,0);
 
-            Junggu.mainCra(1,0);
-            Junggu_notice.mainCra(1);
+            # Junggu.mainCra(1,0);
+            # Junggu_notice.mainCra(1);
 
             # Eunpyeng.mainCra(1,0);
             # Eunpyeng_notice.mainCra(1);
-
-            # Dobong.mainCra(1,0);
-            # Dobong_notice.mainCra(1);
 
             # Dongdaemun.mainCra(1,0);
             # Dongdaemun_notice.mainCra(1);
@@ -223,10 +225,8 @@ if __name__ == '__main__':
             # 크롤링 확인 필요 부분
             # 서울시는 따로 적용 필요
             # Gangbuk_notice.mainCra(1);
-
             # Seoul.mainCra(1,0); 링크 한번 확인 필요
             # Seodaemun.mainCra(1,0);
-            
         except ConnectionError as conerror:
             print(conerror);
         

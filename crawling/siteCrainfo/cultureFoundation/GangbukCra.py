@@ -1,14 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gnagbuk:
     def mainCra(cnt,numberCnt):
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
+
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'http://www.gbcf.or.kr/load.asp?subPage=510&searchValue=&searchType=&cate=&page={}&board_md=list'.format(cnt);
         response = requests.get(url);
 
@@ -28,25 +31,29 @@ class Gnagbuk:
                     print("Gnagbuk Next Page : {}".format(cnt));
                     return Gnagbuk.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
-                
-                if title[i].text.strip() == '':
-                    continue;
-                else:
-                    changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
-                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
-                        datasModel.toJson(
-                            # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
-                            # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
-                            "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "강북문화재단",
-                        )
-                    );
+                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    #     break;
+
+                    if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
+                            break;
+                    else:
+                        if title[i].text.strip() == '':
+                            continue;
+                        else:
+                            maxCntNumber += 1;
+                            changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
+                            firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
+                                    # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
+                                    "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "강북문화재단",
+                                )
+                            );
         else : 
             print(response.status_code)

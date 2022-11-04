@@ -28,10 +28,10 @@ class Seongdong:
             linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('onclick'));
             changeText= str(registrationdate[i].text);
 
-            firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,i,
+            firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,numberCnt,
                 datasModel.toJson(
                     "https://www.sdfac.or.kr/kor/sdfac/board/noti_view.do?page={}&b_idx={}&bbs_id=noti&article_category=&searchCnd=3&searchWrd=".format(cnt , linkSp),
-                    i,
+                    numberCnt,
                     "",
                     title[i].text.strip(),
                     "",

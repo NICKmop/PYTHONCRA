@@ -1,5 +1,6 @@
 import requests
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -30,9 +31,12 @@ class Mapo_notice:
                     print(commonConstant_NAME.MAPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Mapo_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     
+                    if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                        break;
+
                     changeText = str(registrationdate[i].text.replace('.','-'));
                     firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
                         datasModel.toJson(

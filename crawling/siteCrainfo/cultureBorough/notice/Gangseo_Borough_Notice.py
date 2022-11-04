@@ -38,7 +38,6 @@ class Gangseo_notice:
                             "",
                             title[i].text.strip(),
                             "",
-                            registrationdate[i].text,
                             fnChnagetype(changeText.strip()),
                             "강서구청",
                         )

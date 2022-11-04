@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -31,18 +32,20 @@ class Gangnam_notice:
             else:
                 if numberCnt == 40:
                     break;
+                if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
+                    break;
                     
-            linkSp = link[i].attrs.get('href');
-            changeText = str(registrationdate[i].text);
-            firebase_con.updateModel( commonConstant_NAME.GANGNAM_NAME,numberCnt,
-                datasModel.toJson(
-                    "https://www.gangnam.go.kr{}".format(linkSp),
-                    numberCnt,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    fnChnagetype(changeText.strip()),
-                    "강남구청"
+                linkSp = link[i].attrs.get('href');
+                changeText = str(registrationdate[i].text);
+                firebase_con.updateModel( commonConstant_NAME.GANGNAM_NAME,numberCnt,
+                    datasModel.toJson(
+                        "https://www.gangnam.go.kr{}".format(linkSp),
+                        numberCnt,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        fnChnagetype(changeText.strip()),
+                        "강남구청"
+                    )
                 )
-            )
             

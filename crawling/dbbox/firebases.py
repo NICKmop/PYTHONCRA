@@ -30,18 +30,18 @@ class firebase_con:
             return spdataList;
         else:
             print(u'No such document!')
-    
-    def selecTitle(name, center_name):
+
+    def selectModelValueNumber(name):
         spdataList = [];
         db = firestore.client();
         doc_ref = db.collection(u'crawlingData').document(name);
         doc = doc_ref.get();
-        originData = doc.to_dict().values();
-
-        for i in originData:
-            if(center_name == i['center_name ']):
+        if doc.exists:
+            originData = doc.to_dict().values();
+            for i in originData:
                 spdataList.append(i['title'].strip());
-                # print(i['title'].strip());
-            
-        return spdataList;
+
+            return spdataList;
+        else:
+            print(u'No such document!')        
 

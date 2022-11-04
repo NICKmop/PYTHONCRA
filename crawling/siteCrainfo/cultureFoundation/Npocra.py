@@ -33,17 +33,20 @@ class Npocra:
                     if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_ONE:
                         break;
                 
-                changeText= str(registrationdate[i].text);
-                firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
-                    datasModel.toJson(
-                        link[i].attrs.get('href'),
-                        numberCnt,
-                        "",
-                        title[i].text.strip(),
-                        "",
-                        fnChnagetype(changeText.strip()),
-                        "서울NPO지원센터",
-                    )
-                );
+                changeText= str(registrationdate[i].text.replace('.','-'));
+                if(changeText != '날짜'):
+                    firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
+                        datasModel.toJson(
+                            link[i].attrs.get('href'),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "서울NPO지원센터",
+                        )
+                    );
+                else:
+                    numberCnt = 0;
         else : 
             print(response.status_code)

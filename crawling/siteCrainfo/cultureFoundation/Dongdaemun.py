@@ -31,14 +31,15 @@ class Dongdaemun:
             else:
                 linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
                 changeText= str(registrationdate[i].text);
-                firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,i,
-                    datasModel.toJson(
-                        "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
-                        i,
-                        "",
-                        title[i].text.strip(),
-                        "",
-                        fnChnagetype(changeText.strip()),
-                        "동대문문화재단"
+                if(changeText != '등록일'):
+                    firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,i,
+                        datasModel.toJson(
+                            "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
+                            i,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "동대문문화재단"
+                        )
                     )
-                )

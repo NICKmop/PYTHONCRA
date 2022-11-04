@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -26,7 +27,9 @@ class Yangcheon_notice:
                 print(commonConstant_NAME.YANGCHEON_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                 return Yangcheon_notice.mainCra(cnt);
             else:
-                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                #     break;
+                if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
                     break;
                 # print("reg : ", registrationdate[i].text);
                 # print("title : ", title[i].text.strip());

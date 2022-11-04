@@ -1,5 +1,6 @@
 import requests
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -19,33 +20,38 @@ class Yeongdeungpo_notice:
             link = soup.select('.p-subject > a');
             title = soup.select('.p-subject > a');
             registrationdate = soup.select('td:nth-child(4)');
-
-            # print(registrationdate);
+            checkValue = soup.select('td:nth-child(1)');
             linkCount = len(link) - 1;
 
             for i in range(len(link)):
                 numberCnt += 1;
+
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.YEONGDEUNGPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Yeongdeungpo_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
 
+                    if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, title[i].text.strip()) == 1):
+                        break;
+                        
                     changeText= str(registrationdate[i].text.replace('.','-'));
 
-                    firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.ydp.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "영등포구청",
-                        )
-                    );
+                    if(checkValue[i].text != '공지'):
+                        firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.ydp.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "영등포구청",
+                            )
+                        );
+                        
         else : 
             print(response.status_code)
             

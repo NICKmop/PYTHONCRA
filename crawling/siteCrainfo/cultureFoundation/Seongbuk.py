@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnCompareTitle
 from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
@@ -9,6 +10,8 @@ class Seongbuk:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEONGBUK_NAME);
+        maxCntNumber = max(cntNumber);
 
         numberCnt = numberCnt;
         cnt  = cnt; # 1
@@ -35,17 +38,33 @@ class Seongbuk:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    changeText= str(registrationdate[i].text);
-                    firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "성북문화재단",
-                        )
-                    );
+                    if(fnCompareTitle(commonConstant_NAME.SEONGBUK_NAME, title[i].text.strip()) == 1):
+                            break;
+                    else:
+                    # changeText= str(registrationdate[i].text);
+                    # firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,numberCnt,
+                    #     datasModel.toJson(
+                    #         "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),
+                    #         numberCnt,
+                    #         "",
+                    #         title[i].text.strip(),
+                    #         "",
+                    #         fnChnagetype(changeText.strip()),
+                    #         "성북문화재단",
+                    #     )
+                    # );
+                        maxCntNumber += 1;
+                        changeText= str(registrationdate[i].text);
+                        firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "성북문화재단",
+                            )
+                        );
         else : 
             print(response.status_code)

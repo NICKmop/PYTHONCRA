@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnCompareTitle
 from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
@@ -7,10 +8,10 @@ from models.datasModel import datasModel
 
 class Gangnam:
     def mainCra(cnt,numberCnt):
-        numberCnt = numberCnt;
-        cnt  = cnt;
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGNAM_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(cnt);
-        
         response = requests.get(url);
 
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -30,20 +31,24 @@ class Gangnam:
                     print("Gangnam Next Page : {}".format(cnt));
                     return Gangnam.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    #     break;
+                    if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
                         break;
-                    changeText= str(registrationdate[i].text);
-                    
-                    firebase_con.updateModel(commonConstant_NAME.GANGNAM_NAME,i,
-                        datasModel.toJson(
-                            "https://www.gangnam.go.kr/{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "강남문화재단",
-                        )
-                    );
+                    else:
+                        maxCntNumber += 1;
+                        changeText= str(registrationdate[i].text);
+                        
+                        firebase_con.updateModel(commonConstant_NAME.GANGNAM_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.gangnam.go.kr/{}".format(link[i].attrs.get('href')),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "강남문화재단",
+                            )
+                        );
         else : 
             print(response.status_code);

@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -29,26 +30,28 @@ class Gwanak_notice:
                 print("Gwanak_notice Next Page : {}".format(cnt));
                 return Gwanak_notice.mainCra(cnt),
             else:
-                if numberCnt == 41:
+                # if numberCnt == 41:
+                #     break;
+                if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
                     break;
-            # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
-            linkAttr = link[i].attrs.get('onclick');
-            # print(linkAttr);
-            
-            linkSub = linkAttr.split("(")[1];
-            linkSubNt = linkSub.split(")")[0];
+                # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
+                linkAttr = link[i].attrs.get('onclick');
+                # print(linkAttr);
+                
+                linkSub = linkAttr.split("(")[1];
+                linkSubNt = linkSub.split(")")[0];
 
-            linkSubts = linkSubNt.split(",");
-            changeText = str(registrationdate[i].text);
-            firebase_con.updateModel( commonConstant_NAME.GWANAK_NAME,numberCnt,
-                datasModel.toJson(
-                    "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),
-                    numberCnt,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    fnChnagetype(changeText.strip()),
-                    "관악구청"
+                linkSubts = linkSubNt.split(",");
+                changeText = str(registrationdate[i].text.replace('.','-'));
+                firebase_con.updateModel( commonConstant_NAME.GWANAK_NAME,numberCnt,
+                    datasModel.toJson(
+                        "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),
+                        numberCnt,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        fnChnagetype(changeText.strip()),
+                        "관악구청"
+                    )
                 )
-            )
             

@@ -18,7 +18,7 @@ class Eunpyeng_notice:
             # 타이틀 ,기관, 링크, 등록일, 번호
             link = soup.select('.p-subject > a');
             title = soup.select('.p-subject > a');
-            registrationdate = soup.select('td:nth-child(4)');
+            registrationdate = soup.select('td:nth-child(5)');
 
             # print(registrationdate);
             linkCount = len(link) - 1;
@@ -33,18 +33,21 @@ class Eunpyeng_notice:
                     if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
 
-                    changeText = str(registrationdate[i].text);
-                    firebase_con.updateModel(commonConstant_NAME.EUNPYENG_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.ep.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "은평구청",
-                        )
-                    );
+                    print(registrationdate);
+
+                    changeText = str(registrationdate[i].text.replace('.','-'));
+                    if(changeText != '등록일'):
+                        firebase_con.updateModel(commonConstant_NAME.EUNPYENG_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.ep.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "은평구청",
+                            )
+                        );
         else : 
             print(response.status_code)
             

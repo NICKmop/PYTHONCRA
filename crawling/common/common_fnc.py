@@ -52,34 +52,16 @@ def pageconnect(pageNumber, url, script):
     soup = BeautifulSoup(driver1(browser,pageNumber, url, script), 'html.parser');
     return soup;
 
-def fnCompareTitle(name,title,centerName):
-    # compareTitle = firebase_con.selecTitle(name,centerName);
-    compareTitle = '';
-    localMaxNumber = firebase_con.selectModelKeyNumber(name);
-    maxlocalCnter = "{}_{}".format(name ,str(max(localMaxNumber)));
-
-    db = firestore.client();
-    doc_ref = db.collection(u'crawlingData').document(name);
-    doc = doc_ref.get();
-    if doc.exists:
-        originData = doc.to_dict();
-        # print(len(originData));
-        for k,v in originData.items():
-            if(k == maxlocalCnter):
-                if(v['title'] == title):
-                    break;
-    print("break;;");
-    
-                # compareTitle = v;
-        # for i in originData:
-        #     if(i == maxlocalCnter):
-        #         print(doc.to_dict().values());
-    # for i in range(len(compareTitle)):
-    #     if(title == compareTitle[i]):
-    #         print(compareTitle[i]);
-    #         break;
-    #     else:
-    #         if(title == compareTitle[i]):
-    #             print("true title : {}".format(title));
+def fnCompareTitle(name, title):
+    dupltitleList = [];
+    cntTitle = firebase_con.selectModelValueNumber(name);
+    for i in cntTitle:
+        # print("i : {}".format(i));
+        # print("title : {}".format(title));
+        if(i == title):
+            print("i : {}".format(i));
+            print("title : {}".format(title));
+            dupltitleList.append(title);
+            return 1;
 
   

@@ -1,13 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 
 class Gwanak:
     def mainCra(cnt, numberCnt):
-        print("GWANAK : {}".format(cnt));
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANAK_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);
         response = requests.get(url);
 
@@ -30,18 +33,22 @@ class Gwanak:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    changeText= str(registrationdate[i].text.strip());
-                     
-                    firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,i,
-                        datasModel.toJson(
-                            "https://www.gfac.or.kr/html/notify/{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "관악문화재단",
-                        )
-                    );
+                    if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                        break;
+                    else:
+                        maxCntNumber += 1;
+                        changeText= str(registrationdate[i].text.strip());
+                        
+                        firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.gfac.or.kr/html/notify/{}".format(link[i].attrs.get('href')),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "관악문화재단",
+                            )
+                        );
         else : 
             print(response.status_code)

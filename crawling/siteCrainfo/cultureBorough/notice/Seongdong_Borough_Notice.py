@@ -32,7 +32,7 @@ class Seongdong_notice:
                 else:
                     if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    changeText= str(registrationdate[i].text);
+                    changeText= str(registrationdate[i].text.replace('.', '-'));
                     firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.sd.go.kr/main{}".format(link[i].attrs.get('href').replace('.','',1)),

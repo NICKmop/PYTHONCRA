@@ -1,9 +1,12 @@
+from multiprocessing.sharedctypes import Value
+from exceptiongroup import catch
 import requests
 from bs4 import BeautifulSoup
+from common.common_fnc import fnCompareTitle
+from common.common_fnc import fnChnagetype
 from siteCrainfo.cultureBorough.notice.Yeongdeungpo_Borough_Notice import Yeongdeungpo_notice
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
-from common.common_fnc import fnCompareTitle
 from models.datasModel import datasModel
 
 class Yeongdeungpo:
@@ -11,9 +14,8 @@ class Yeongdeungpo:
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
-        # 최근 숫자 확인후 STOP
-        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
-        # print("cntNumber ; {}".format(max(cntNumber)));
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
+        maxCntNumber = max(cntNumber);
 
         url = 'https://www.ydpcf.or.kr/board.do?bid=1&p={}'.format(cnt);
         response = requests.get(url);
@@ -26,45 +28,51 @@ class Yeongdeungpo:
             link = soup.select('ul.board-list-wrap > li > ul.board-body > li.board-subject > a');
             title = soup.select('ul.board-list-wrap > li > ul.board-body > li.board-subject > a');
             registrationdate = soup.select('ul.board-list-wrap > li > ul.board-body > li.board-date'); # board-date
-                
-            # 카테고리 구분
             checkPassValue = soup.select("ul.board-list-wrap > li > ul.board-body > li.board-cat");
-            # 크롤링 하려는 링크 숫자
+
             linkCount = len(link);
-            # 문화재단내의 값중 동인 한게 있는지 체크 
-            
-            
-            # print(len(compareTitle));
-            # print(linkCount);
 
             for i in range(linkCount):
                 if(checkPassValue[i].text != '공지사항'):
-                    # compareVale = fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME ,title[i].text.strip(), '영등포문화재단')
-                    # print(compareVale);
-
                     numberCnt += 1;
+
                     if linkCount == i + 1:
                         cnt += 1;
-
 
                         print("Yeongdeungpo Next Page : {}".format(cnt));
                         return Yeongdeungpo.mainCra(cnt, numberCnt);
                     else:
-                        if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                            break; 
-                        
-                        print(registrationdate[i].text.strip().split('|')[1].strip().replace('.','-'));
+                        changeText= str(registrationdate[i].text.strip().split('|')[1].strip().replace('.','-'));
+                        # 기존 저장되어 있는 제목과 부딫 힐 경우 다음 함수로 이동
+                        if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, title[i].text.strip()) == 1):
+                            break;
+                        else:
+                            maxCntNumber += 1;
+                            firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "https://www.ydpcf.or.kr/{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "영등포문화재단",
+                                )
+                            );
 
-                        firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
-                            datasModel.toJson(
-                                "https://www.ydpcf.or.kr/{}".format(link[i].attrs.get('href')),
-                                numberCnt,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                registrationdate[i].text.strip().split('|')[1].strip().replace('.','-'),
-                                "영등포문화재단",
-                            )
-                        );
+                        # 기존 데이터 초기화시 크롤링 데이터 개수 지정
+                        # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                        #     break; 
+                        # firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
+                        #     datasModel.toJson(
+                        #         "https://www.ydpcf.or.kr/{}".format(link[i].attrs.get('href')),
+                        #         numberCnt,
+                        #         "",
+                        #         title[i].text.strip(),
+                        #         "",
+                        #         fnChnagetype(changeText.strip()),
+                        #         "영등포문화재단",
+                        #     )
+                        # );
         else : 
             print(response.status_code)
