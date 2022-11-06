@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -32,17 +33,19 @@ class Housingseoul:
                 else:
                     if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         break;
-                changeText= str(registrationdate[i].text.strip());
-                firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
-                    datasModel.toJson(
-                        'https://housing.seoul.go.kr{}'.format(link[i].attrs.get('href')),
-                        numberCnt,
-                        "",
-                        title[i].text.strip(),
-                        "",
-                        fnChnagetype(changeText),
-                        "서울주거포털",
-                    )
-                );
+                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                        break;
+                    changeText= str(registrationdate[i].text.strip());
+                    firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
+                        datasModel.toJson(
+                            'https://housing.seoul.go.kr{}'.format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText),
+                            "서울주거포털",
+                        )
+                    );
         else : 
             print(response.status_code)

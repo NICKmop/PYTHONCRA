@@ -1,4 +1,5 @@
 import requests
+from common.common_fnc import fnCompareTitle
 from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
@@ -29,7 +30,9 @@ class Junggu_notice:
                     print(commonConstant_NAME.JUNGGU_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Junggu_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
+                    if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
                         break;
                     
                     # print("link Data : {}".format(link[i].attrs.get('href')));

@@ -1,4 +1,5 @@
 import re
+from common.common_fnc import fnCompareTitle
 from common.common_fnc import fnChnagetype
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
@@ -7,6 +8,9 @@ import common.common_fnc  as com
 
 class Seongdong:
     def mainCra(cnt,numberCnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEONGDONG_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://www.sdfac.or.kr/kor/sdfac/board/noti_list.do?gotoMenuNo=06010000';
         soupData = com.pageconnect(cnt, url, "setPage({})".format(cnt));
         
@@ -23,19 +27,24 @@ class Seongdong:
                 print("Seongdong Next Page : {}".format(cnt));
                 return Seongdong.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                #     break;
+                if(fnCompareTitle(commonConstant_NAME.SEONGDONG_NAME, title[i].text.strip()) == 1):
                     break;
-            linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('onclick'));
-            changeText= str(registrationdate[i].text);
+                else:
+                    maxCntNumber += 1;
 
-            firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,numberCnt,
-                datasModel.toJson(
-                    "https://www.sdfac.or.kr/kor/sdfac/board/noti_view.do?page={}&b_idx={}&bbs_id=noti&article_category=&searchCnd=3&searchWrd=".format(cnt , linkSp),
-                    numberCnt,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    fnChnagetype(changeText.strip()),
-                    "성동문화재단"
-                )
-            )
+                    linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('onclick'));
+                    changeText= str(registrationdate[i].text);
+
+                    firebase_con.updateModel( commonConstant_NAME.SEONGDONG_NAME,maxCntNumber,
+                        datasModel.toJson(
+                            "https://www.sdfac.or.kr/kor/sdfac/board/noti_view.do?page={}&b_idx={}&bbs_id=noti&article_category=&searchCnd=3&searchWrd=".format(cnt , linkSp),
+                            maxCntNumber,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "성동문화재단"
+                        )
+                    )

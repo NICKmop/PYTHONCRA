@@ -1,5 +1,6 @@
 import requests
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -7,6 +8,9 @@ from bs4 import BeautifulSoup
 
 class Jungnang_notice:
     def mainCra(cnt,numberCnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://www.jungnang.go.kr/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex={}'.format(cnt);
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -28,18 +32,23 @@ class Jungnang_notice:
                 else:
                     if numberCnt == commonConstant_NAME.STOPCUOUNT:
                         break;
-                    changeText = str(registrationdate[i].text);
-                    firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "중랑구청",
-                        )
-                    );
+                    if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
+                        break;
+                    else:
+                        maxCntNumber += 1;
+                        
+                        changeText = str(registrationdate[i].text);
+                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "중랑구청",
+                            )
+                        );
         else : 
             print(response.status_code)
             

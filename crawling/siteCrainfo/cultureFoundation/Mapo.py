@@ -34,19 +34,20 @@ class Mapo:
                 linkSp = link[i].attrs.get('seq');
                 if(registrationdate[i].text != '작성일'):
                     changeText= str(registrationdate[i].text);
-
                     if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
-                        firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "마포문화재단"
-                            )
+                    firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "마포문화재단"
                         )
+                    )
+                else:
+                    numberCnt -= 1;

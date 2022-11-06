@@ -74,17 +74,16 @@ if __name__ == '__main__':
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
 
-             # 데이터 다시 크롤링 필요
-            # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
+            # Seocho.mainCra(1,0);
+            # Seocho_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
             
+            # Mapo.mainCra(1,0);
+            # Mapo_notice.mainCra(1);
+
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
-
-            # Seocho.mainCra(1,0);
-            # Seocho_notice.mainCra(1);
 
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
@@ -107,8 +106,7 @@ if __name__ == '__main__':
             # Dongjak.mainCra(1,0);
             # Dongjak_notice.mainCra(1);
 
-            # 여기부터 작업 시작.
-            Seongbuk.mainCra(1,0);
+            # Seongbuk.mainCra(1,0);
 
             # Junggu.mainCra(1,0);
             # Junggu_notice.mainCra(1);
@@ -130,11 +128,12 @@ if __name__ == '__main__':
 
             # Nowon_notice.mainCra(1,0);
 
-            # Youngsan_notice.mainCra(1,0);
+            Youngsan_notice.mainCra(1,0);
 
             # Jungnang_notice.mainCra(1,0);
 
             # Npocra.mainCra(1,0);
+            # 중복값 체크 필요. -> 현재 109번쨰 항목으로
             # Youthseoul.mainCra(1);
             # Sbaseoul.mainCra(1);
             # Housingseoul.mainCra(1);
@@ -142,7 +141,6 @@ if __name__ == '__main__':
             #서울시는 따로 진행 
             # 크롤링 확인 필요 부분
             # Gangbuk_notice.mainCra(1);
-            
             # Seoul.mainCra(1,0);
             # Seodaemun.mainCra(1,0);
         except ConnectionError as conerror:

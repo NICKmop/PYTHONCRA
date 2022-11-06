@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -7,6 +8,9 @@ import common.common_fnc  as com
 
 class Dongdaemun:
     def mainCra(cnt,numberCnt):
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGDAEMUN_NAME);
+        maxCntNumber = max(cntNumber);
+
         url = 'https://www.ddmac.or.kr/sub04/sub01.php';
         soupData = com.pageconnect(cnt, url, "javascript:pageNum('frm01','{}')".format(cnt));
         
@@ -23,23 +27,26 @@ class Dongdaemun:
                 print("Dongdaemun Next Page : {}".format(cnt));
                 return Dongdaemun.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                #     break;
+                if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):
                     break;
-
-            if title[i].text.strip() == '':
-                continue;
-            else:
-                linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
-                changeText= str(registrationdate[i].text);
-                if(changeText != '등록일'):
-                    firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,i,
-                        datasModel.toJson(
-                            "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
-                            i,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "동대문문화재단"
-                        )
-                    )
+                else:
+                    maxCntNumber += 1;
+                    if title[i].text.strip() == '':
+                        continue;
+                    else:
+                        linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
+                        changeText= str(registrationdate[i].text);
+                        if(changeText != '등록일'):
+                            firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "동대문문화재단"
+                                )
+                            )

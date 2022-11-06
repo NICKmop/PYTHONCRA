@@ -10,6 +10,7 @@ class Seocho_notice:
     def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
         numberCnt = max(cntNumber);
+
         print("numberCnt : {} ". format(numberCnt));
         url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=57&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
         response = requests.get(url);

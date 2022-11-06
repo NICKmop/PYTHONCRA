@@ -38,17 +38,18 @@ class Mapo_notice:
                         break;
 
                     changeText = str(registrationdate[i].text.replace('.','-'));
-                    firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.mapo.go.kr{}".format(link[i].attrs.get('href').replace('.','',1)),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "마포구청",
-                        )
-                    );
+                    if(title[i].text.strip() != ''):
+                        firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.mapo.go.kr{}".format(link[i].attrs.get('href').replace('.','',1)),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "마포구청",
+                            )
+                        );
         else : 
             print(response.status_code)
             

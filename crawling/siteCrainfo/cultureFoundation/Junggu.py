@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from models.datasModel import datasModel
 
 # 현재 달 날짜 찾는지 아직 미정. 
@@ -11,6 +12,8 @@ class Junggu:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGGU_NAME);
+        maxCntNumber = max(cntNumber);
 
         numberCnt = numberCnt;
         cnt  = cnt; # 1
@@ -24,6 +27,7 @@ class Junggu:
             link = soup.select('tbody > tr > td.text-left > a');
             title = soup.select('tbody > tr > td.text-left > a');
             registrationdate = soup.select('tbody > tr > td:nth-child(4)');
+            checkValue = soup.select('.onlyPc > a');
 
 
             linkCount = len(link) - 1;
@@ -35,21 +39,27 @@ class Junggu:
                     print("Junggu Next Page : {}".format(cnt));
                     return Junggu.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == linkCount:
-                        break; 
-                    
+                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    #     break; 
                     
                     changeText = str(registrationdate[i].text);
-                    firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "중구문화재단",
-                        )
-                    );
+                    if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
+                        break;
+                    else:
+                        maxCntNumber += 1;
+                        if(checkValue[i].text.strip() != '공지'):
+                            firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "중구문화재단",
+                                )
+                            );
+                    # else:
+                    #     numberCnt = 0;
         else : 
             print(response.status_code)

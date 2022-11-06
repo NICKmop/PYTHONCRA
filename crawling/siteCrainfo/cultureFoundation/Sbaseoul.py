@@ -1,5 +1,6 @@
 import re
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -28,29 +29,31 @@ class Sbaseoul:
             else:
                 if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                     break;
+                if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                    break;
 
-            linkAttr = link[i].attrs.get('onclick');
-            print("origin Link : {}".format(linkAttr));
+                linkAttr = link[i].attrs.get('onclick');
+                print("origin Link : {}".format(linkAttr));
 
-            if linkAttr == None:
-                pass;
-            else:
-                linkSub = linkAttr.split("(")[1];
-                linkSubNt = linkSub.split(")")[0];
-                linkSubts = linkSubNt.split(",");
-                # print("linkSubts : {}".format(linkSubts[0]));
-                # print("result : {}".format("https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"',''))))
-                changeText= str(registrationdate[i].text);
+                if linkAttr == None:
+                    pass;
+                else:
+                    linkSub = linkAttr.split("(")[1];
+                    linkSubNt = linkSub.split(")")[0];
+                    linkSubts = linkSubNt.split(",");
+                    # print("linkSubts : {}".format(linkSubts[0]));
+                    # print("result : {}".format("https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"',''))))
+                    changeText= str(registrationdate[i].text);
 
-                firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
-                    datasModel.toJson(
-                        "https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"','')),
-                        numberCnt,
-                        "",
-                        title[i].text.strip(),
-                        "",
-                        fnChnagetype(changeText.strip()),
-                        "SBA지원센터"
+                    firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"','')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "SBA지원센터"
+                        )
                     )
-                )
             
