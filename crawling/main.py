@@ -68,25 +68,63 @@ if __name__ == '__main__':
         # 재단
         try:
             # 데이터 다시 크롤링 필요
-            # Yeongdeungpo.mainCra(1,0);
-            # Yeongdeungpo_notice.mainCra(1);
-            
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
 
-            # Seocho.mainCra(1,0);
-            # Seocho_notice.mainCra(1);
+            # Dongdaemun.mainCra(1,0);
+            # Dongdaemun_notice.mainCra(1);
+
+            # Dongjak.mainCra(1,0);
+            # Dongjak_notice.mainCra(1);
+
+            # Eunpyeng.mainCra(1,0);
+            # Eunpyeng_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
-            
-            # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
+
+            # Gangdong_notice.mainCra(1,0);
+
+            # Gangnam.mainCra(0,0);
+            # Gangnam_notice.mainCra(1);
+
+            # Gangseo_notice.mainCra(1,0);
+
+            # Geuamcheoun.mainCra(1,0);
+            # Geuamcheoun_notice.mainCra(1);
+
+            # Guro_notice.mainCra(1,0);
+
+            # Gwanak.mainCra(0,0);
+            # Gwanak_notice.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
 
-            # Geuamcheoun.mainCra(1,0);
-            # Geuamcheoun_notice.mainCra(1);
+            # Jongro.mainCra(1,0);
+            # Jongro_notice.mainCra(1);
+
+            # Junggu.mainCra(1,0);
+            # Junggu_notice.mainCra(1);
+
+            # Jungnang_notice.mainCra(1,0);
+
+            # Mapo.mainCra(1,0);
+            # Mapo_notice.mainCra(1);
+
+            # Nowon_notice.mainCra(1,0);
+
+            # Seocho.mainCra(1,0);
+            # Seocho_notice.mainCra(1);
+
+            # Seongbuk.mainCra(1,0);
+
+            # Seongdong.mainCra(1,0);
+            # Seongdong_notice.mainCra(1);
+
+            # Npocra.mainCra(1,0);
+            # Youthseoul.mainCra(1);
+            # Sbaseoul.mainCra(1);
+            # Housingseoul.mainCra(1);
 
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
@@ -94,49 +132,10 @@ if __name__ == '__main__':
             # Yangcheon.mainCra(1,0);
             # Yangcheon_notice.mainCra(1);
 
-            # Jongro.mainCra(1,0);
-            # Jongro_notice.mainCra(1);
-
-            # Gwanak.mainCra(0,0);
-            # Gwanak_notice.mainCra(1);
-
-            # Gangnam.mainCra(0,0);
-            # Gangnam_notice.mainCra(1);
-
-            # Dongjak.mainCra(1,0);
-            # Dongjak_notice.mainCra(1);
-
-            # Seongbuk.mainCra(1,0);
-
-            # Junggu.mainCra(1,0);
-            # Junggu_notice.mainCra(1);
-
-            # Eunpyeng.mainCra(1,0);
-            # Eunpyeng_notice.mainCra(1);
-
-            # Dongdaemun.mainCra(1,0);
-            # Dongdaemun_notice.mainCra(1);
-
-            # Seongdong.mainCra(1,0);
-            # Seongdong_notice.mainCra(1);
-
-            # Gangdong_notice.mainCra(1,0);
-
-            # Gangseo_notice.mainCra(1,0);
-
-            # Guro_notice.mainCra(1,0);
-
-            # Nowon_notice.mainCra(1,0);
+            # Yeongdeungpo.mainCra(1,0);
+            # Yeongdeungpo_notice.mainCra(1);
 
             Youngsan_notice.mainCra(1,0);
-
-            # Jungnang_notice.mainCra(1,0);
-
-            # Npocra.mainCra(1,0);
-            # 중복값 체크 필요. -> 현재 109번쨰 항목으로
-            # Youthseoul.mainCra(1);
-            # Sbaseoul.mainCra(1);
-            # Housingseoul.mainCra(1);
 
             #서울시는 따로 진행 
             # 크롤링 확인 필요 부분

@@ -39,6 +39,8 @@ class Nowon_notice:
                     linkSub = linkAttr.split("('")[1];
                     linkSubNt = linkSub.split("')")[0];
                     changeText= str(registrationdate[i].text);
+                    # print("title : {}".format(title[i].text.strip()));
+                    # break;
                     firebase_con.updateModel( commonConstant_NAME.NOWON_NAME,maxCntNumber,
                         datasModel.toJson(
                             "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={}&q_estnColumn1=11&q_rowPerPage=10&q_currPage={}&q_sortName=&q_sortOrder=&q_searchKeyTy=sj___1002&q_searchVal=&".format(linkSubNt,cnt),

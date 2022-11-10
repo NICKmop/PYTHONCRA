@@ -21,6 +21,7 @@ class Gangseo_notice:
             link = soup.select('tr > td > a');
             title = soup.select('tr > td > a');
             registrationdate = soup.select('td:nth-child(4)');
+            noticeCheck = soup.select('td:nth-child(1)');
             
             linkCount = len(link) - 1;
 
@@ -33,23 +34,27 @@ class Gangseo_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
+                    if(noticeCheck[i].text.strip() != ''):
+                        if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
+                            break;
+                        else:
+                            maxCntNumber += 1;
 
-                        changeText = str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "강서구청",
-                            )
-                        );
+                            changeText = str(registrationdate[i].text);
+                            firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "강서구청",
+                                )
+                            );
+                    else:
+                        print("none blank : {}".format(title[i].text.strip()));
+                    
         else : 
             print(response.status_code)
             

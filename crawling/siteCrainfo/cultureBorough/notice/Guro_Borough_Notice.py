@@ -30,10 +30,15 @@ class Guro_notice:
                     print(commonConstant_NAME.GURO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Guro_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     # 기존 저장되어 있는 제목과 부딫 힐 경우 다음 함수로 이동
-                    if(fnCompareTitle(commonConstant_NAME.GURO_NAME, title[i].text.strip()) == 1):
+                    if('NEW' in title[i].text.strip()):
+                        replaceString = title[i].text.strip().replace('NEW', '').strip();
+                    else:
+                        replaceString = title[i].text.strip();
+
+                    if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
@@ -44,7 +49,7 @@ class Guro_notice:
                                 "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
                                 maxCntNumber,
                                 "",
-                                title[i].text.strip(),
+                                replaceString,
                                 "",
                                 fnChnagetype(changeText.strip()),
                                 "구로구청",

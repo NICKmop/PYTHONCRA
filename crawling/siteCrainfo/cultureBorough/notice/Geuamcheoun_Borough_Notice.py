@@ -32,8 +32,13 @@ class Geuamcheoun_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
+                    if('새글' in title[i].text.strip()):
+                        replaceString = title[i].text.strip().replace('새글', '').strip();
+                    else:
+                        replaceString = title[i].text.strip();
 
-                    if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, title[i].text.strip()) == 1):
+
+                    if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, replaceString) == 1):
                         break;
                     # print(link[i].attrs.get('href').removeprefix('.'));
                     linkrep = link[i].attrs.get('href').replace('.','',1);
@@ -44,7 +49,7 @@ class Geuamcheoun_notice:
                             "https://www.geumcheon.go.kr/portal{}".format(linkrep),
                             numberCnt,
                             "",
-                            title[i].text.strip(),
+                            replaceString,
                             "",
                             fnChnagetype(changeText.strip()),
                             "금천구청",

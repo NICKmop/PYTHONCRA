@@ -56,12 +56,11 @@ def fnCompareTitle(name, title):
     dupltitleList = [];
     cntTitle = firebase_con.selectModelValueNumber(name);
     for i in cntTitle:
-        # print("i : {}".format(i));
-        # print("title : {}".format(title));
         if(i == title):
-            print("i : {}".format(i));
-            print("title : {}".format(title));
+            print("true i : {}".format(i));
+            print("true title : {}".format(title));
             dupltitleList.append(title);
             return 1;
+
 
   

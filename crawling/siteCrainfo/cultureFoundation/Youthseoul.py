@@ -32,14 +32,19 @@ class Youthseoul:
                     print(commonConstant_NAME.DOBONG_BOROUGH_NOTICE, "Next Page : {}".format(cnt));
                     return Youthseoul.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                     #     break;
                     # print("청년몽땅정보통 : {}".format(title[i].text.strip()));
-                    if "[기본공지]" in title[i].text.strip():
-                        subStringTitle = title[i].text.strip()[6:];
-                    
+                    # print("title no subString : {}".format(title[i].text.strip()));
+                    # print("title yes subString : {}".format(title[i].text.strip()[6:]))
 
-                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringTitle) == 1):
+                    if('[기본공지]' in title[i].text.strip()):
+                        subStringText = title[i].text.strip()[6:].strip();
+                    else:
+                        subStringText = title[i].text.strip();
+                    
+                    # break;
+                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
                         break;
 
                     changeText= str(registrationdate[i].text);
@@ -49,7 +54,7 @@ class Youthseoul:
                             'https://youth.seoul.go.kr{}'.format(link[i].attrs.get('href')),
                             numberCnt,
                             "",
-                            subStringTitle,
+                            subStringText,
                             "",
                             fnChnagetype(changeText.strip()),
                             "청년몽땅정보통",

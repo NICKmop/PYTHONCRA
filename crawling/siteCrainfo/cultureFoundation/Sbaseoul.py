@@ -10,7 +10,7 @@ class Sbaseoul:
     def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         numberCnt = max(cntNumber);
-        print("NUMBER CNT : {}".format(numberCnt));
+
         url = 'https://www.sba.seoul.kr/Pages/CustomerCenter/Notice.aspx';
         soupData = com.pageconnect(cnt, url, "javascript:pageMove({})".format(cnt));
         
@@ -27,8 +27,8 @@ class Sbaseoul:
                 print(commonConstant_NAME.SBASEOUL_NAME,"Next Page : {}".format(cnt));
                 return Sbaseoul.mainCra(cnt),
             else:
-                if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
-                    break;
+                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                #     break;
                 if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
                     break;
 

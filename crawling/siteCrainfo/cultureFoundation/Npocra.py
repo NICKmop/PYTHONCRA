@@ -13,7 +13,7 @@ class Npocra:
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         maxCntNumber = max(cntNumber);
 
-        url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&amp;page={}'.format(cnt);
+        url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page={}'.format(cnt);
         
         response = requests.get(url);
         if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -26,7 +26,8 @@ class Npocra:
             registrationdate = soup.select('.date');
             checkValue = soup.select('td:nth-child(3)')
             
-            linkCount = len(link) ;
+            linkCount = len(link) - 1;
+            print(linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
@@ -37,7 +38,7 @@ class Npocra:
                     print("Npocra Next Page : {}".format(cnt));
                     return Npocra.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_ONE:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
                     #     break;
 
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
@@ -45,6 +46,7 @@ class Npocra:
                     else:
                         maxCntNumber += 1;
                         changeText= str(registrationdate[i+1].text.replace('.','-'));
+
                         if(checkValue[i].text.strip() != 'NPO지원센터'):
                             firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber,
                                 datasModel.toJson(
@@ -57,7 +59,7 @@ class Npocra:
                                     "서울NPO지원센터",
                                 )
                             );
-                        else:
-                            numberCnt = 0;
+                        # else:
+                        #     numberCnt -= 1;
         else : 
             print(response.status_code)

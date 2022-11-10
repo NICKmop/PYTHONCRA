@@ -33,20 +33,26 @@ class Songpa_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip()) == 1):
+                    if('NEW' in title[i].text.strip()):
+                        replaceString = title[i].text.strip().replace('NEW', '').strip();
+                    else:
+                        replaceString = title[i].text.strip();
+
+                    if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, replaceString) == 1):
                         break;
-                    changeText= str(registrationdate[i].text.replace('.','-'));
-                    firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
-                        datasModel.toJson(
-                            "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
-                            numberCnt,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "송파구청",
-                        )
-                    );
+                    else:
+                        changeText= str(registrationdate[i].text.replace('.','-'));
+                        firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
+                                numberCnt,
+                                "",
+                                replaceString,
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "송파구청",
+                            )
+                        );
         else : 
             print(response.status_code)
             

@@ -26,8 +26,8 @@ class Dobong:
                 print("Dobong Next Page : {}".format(cnt));
                 return Dobong.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                    break;
+                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                #     break;
                     
                 if title[i].text.strip() == '':
                     continue;

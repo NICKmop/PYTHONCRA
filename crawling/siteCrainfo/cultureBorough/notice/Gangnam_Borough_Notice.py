@@ -30,8 +30,8 @@ class Gangnam_notice:
                 print("Gangnam_notice Next Page : {}".format(cnt));
                 return Gangnam_notice.mainCra(cnt),
             else:
-                if numberCnt == 40:
-                    break;
+                # if numberCnt == 40:
+                #     break;
                 if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
                     break;
                     
