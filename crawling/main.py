@@ -1,3 +1,4 @@
+import functions_framework
 # 재단
 from siteCrainfo.cultureFoundation.Seoul import Seoul
 from siteCrainfo.cultureFoundation.Seodaemun import Seodaemun
@@ -59,6 +60,8 @@ from siteCrainfo.cultureBorough.otherInstitutions.Dongdaemun_Borough_Other_Insti
 from siteCrainfo.cultureBorough.otherInstitutions.Dongjak_Borough_Other_Institutions import Dongjak_Institutions
 from siteCrainfo.cultureBorough.otherInstitutions.Mapo_Borough_Other_Institutions import Mapo_Institutions
 
+# @functions_framework.http
+# def runningCra(request):
 if __name__ == '__main__':
     if __package__ is None:
         import sys
@@ -67,7 +70,6 @@ if __name__ == '__main__':
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
         # 재단
         try:
-            # 데이터 다시 크롤링 필요
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
 
@@ -124,7 +126,7 @@ if __name__ == '__main__':
             # Npocra.mainCra(1,0);
             # Youthseoul.mainCra(1);
             # Sbaseoul.mainCra(1);
-            # Housingseoul.mainCra(1);
+            Housingseoul.mainCra(1);
 
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
@@ -135,7 +137,7 @@ if __name__ == '__main__':
             # Yeongdeungpo.mainCra(1,0);
             # Yeongdeungpo_notice.mainCra(1);
 
-            Youngsan_notice.mainCra(1,0);
+            # Youngsan_notice.mainCra(1,0);
 
             #서울시는 따로 진행 
             # 크롤링 확인 필요 부분
@@ -226,4 +228,5 @@ if __name__ == '__main__':
             # Seodaemun.mainCra(1,0);
         except ConnectionError as conerror:
             print(conerror);
+    
         

@@ -38,8 +38,8 @@ class Npocra:
                     print("Npocra Next Page : {}".format(cnt));
                     return Npocra.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
-                    #     break;
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
+                        break;
 
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
                         break;
@@ -59,7 +59,7 @@ class Npocra:
                                     "서울NPO지원센터",
                                 )
                             );
-                        # else:
-                        #     numberCnt -= 1;
+                    # else:
+                    #     numberCnt -= 1;
         else : 
             print(response.status_code)

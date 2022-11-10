@@ -10,9 +10,9 @@ class Sbaseoul:
     def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         numberCnt = max(cntNumber);
-
+        
         url = 'https://www.sba.seoul.kr/Pages/CustomerCenter/Notice.aspx';
-        soupData = com.pageconnect(cnt, url, "javascript:pageMove({})".format(cnt));
+        soupData = com.pageconnect(cnt, url, "javascript:pageMove('{}')".format(cnt));
         
         link = soupData.select('.undefined');
         title = soupData.select('.undefined');
@@ -25,15 +25,15 @@ class Sbaseoul:
             if linkCount == i:
                 cnt += 1;
                 print(commonConstant_NAME.SBASEOUL_NAME,"Next Page : {}".format(cnt));
-                return Sbaseoul.mainCra(cnt),
+                # return Sbaseoul.mainCra(cnt),
             else:
                 # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                 #     break;
+
                 if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
                     break;
 
                 linkAttr = link[i].attrs.get('onclick');
-                print("origin Link : {}".format(linkAttr));
 
                 if linkAttr == None:
                     pass;
@@ -41,8 +41,6 @@ class Sbaseoul:
                     linkSub = linkAttr.split("(")[1];
                     linkSubNt = linkSub.split(")")[0];
                     linkSubts = linkSubNt.split(",");
-                    # print("linkSubts : {}".format(linkSubts[0]));
-                    # print("result : {}".format("https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"',''))))
                     changeText= str(registrationdate[i].text);
 
                     firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,

@@ -42,8 +42,7 @@ class Youthseoul:
                         subStringText = title[i].text.strip()[6:].strip();
                     else:
                         subStringText = title[i].text.strip();
-                    
-                    # break;
+                        
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
                         break;
 
