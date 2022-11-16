@@ -27,7 +27,7 @@ class Jongro_notice:
                 print("Jongro_notice Next Page : {}".format(cnt));
                 return Jongro_notice.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                 #     break; 
                 if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
                     break;

@@ -95,8 +95,8 @@ if __name__ == '__main__':
 
             # Guro_notice.mainCra(1,0);
 
-            Gwanak.mainCra(0,0);
-            Gwanak_notice.mainCra(1);
+            # Gwanak.mainCra(0,0);
+            # Gwanak_notice.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
@@ -122,11 +122,6 @@ if __name__ == '__main__':
             # Seongdong.mainCra(1,0);
             # Seongdong_notice.mainCra(1);
 
-            # Npocra.mainCra(1,0);
-            # Youthseoul.mainCra(1);
-            # Sbaseoul.mainCra(1);
-            # Housingseoul.mainCra(1);
-
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
 
@@ -137,6 +132,11 @@ if __name__ == '__main__':
             # Yeongdeungpo_notice.mainCra(1);
 
             # Youngsan_notice.mainCra(1,0);
+
+            Npocra.mainCra(1,0);
+            Youthseoul.mainCra(1);
+            Sbaseoul.mainCra(1);
+            Housingseoul.mainCra(1);
 
             #서울시는 따로 진행 
             # 페이지 옮기는 부분이 문제.

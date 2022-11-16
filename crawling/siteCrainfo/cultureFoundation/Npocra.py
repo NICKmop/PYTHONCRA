@@ -12,7 +12,7 @@ class Npocra:
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         maxCntNumber = max(cntNumber);
-        print("maxCntNumber : {}".format(maxCntNumber));
+
         url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page={}'.format(cnt);
         
         response = requests.get(url);
@@ -36,28 +36,29 @@ class Npocra:
                     print("Npocra Next Page : {}".format(cnt));
                     return Npocra.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
-                        break;
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
+                    #     break;
 
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
+
                         changeText= str(registrationdate[i+1].text.replace('.','-'));
-                        print(maxCntNumber);
+                        if(checkValue[i].text.strip() == 'NPO지원센터'):
+                            numberCnt -= 1;
+                        
                         if(checkValue[i].text.strip() != 'NPO지원센터'):
-                            firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber -1,
+                            firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     link[i].attrs.get('href'),
-                                    maxCntNumber -1,
+                                    maxCntNumber,
                                     "",
                                     title[i].text.strip(),
                                     "",
                                     fnChnagetype(changeText.strip()),
                                     "서울NPO지원센터",
                                 )
-                            );
-                    # else:
-                    #     numberCnt -= 1;
+                            );  
         else : 
             print(response.status_code)

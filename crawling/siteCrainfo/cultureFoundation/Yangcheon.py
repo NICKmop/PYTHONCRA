@@ -8,15 +8,11 @@ from models.datasModel import datasModel
 
 class Yangcheon:
     def mainCra(cnt,numberCnt):
-        print("Yangcheon Start");
+        requests.packages.urllib3.disable_warnings()
+        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YANGCHEON_NAME);
         maxCntNumber = max(cntNumber);
 
-        requests.packages.urllib3.disable_warnings()
-        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
         url = 'https://yfac.kr/main/contents.do?v_page={}&&a_num=48342159'.format(cnt);
         response = requests.get(url);
 
@@ -39,7 +35,7 @@ class Yangcheon:
                     print("Yangcheon Next Page : {}".format(cnt));
                     return Yangcheon.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break; 
                     if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
                         break;

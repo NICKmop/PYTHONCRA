@@ -33,7 +33,7 @@ class Gwangzin:
                     print(commonConstant_NAME.GWANGZIN_NAME," Next Page : {}".format(cnt));
                     return Gwangzin.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
 
                     if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip()) == 1):

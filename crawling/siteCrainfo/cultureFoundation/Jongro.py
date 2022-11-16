@@ -34,8 +34,8 @@ class Jongro:
                     print("Jongro Next Page : {}".format(cnt));
                     return Jongro.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break; 
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break; 
                     if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
                         break;
                     else:

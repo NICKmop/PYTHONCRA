@@ -31,7 +31,7 @@ class Songpa_notice:
                     print(commonConstant_NAME.SONGPA_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Songpa_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
                     if('NEW' in title[i].text.strip()):
                         replaceString = title[i].text.strip().replace('NEW', '').strip();

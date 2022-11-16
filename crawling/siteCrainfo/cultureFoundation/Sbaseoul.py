@@ -34,10 +34,9 @@ class Sbaseoul:
                     break;
 
                 linkAttr = link[i].attrs.get('onclick');
-
-                if linkAttr == None:
-                    pass;
-                else:
+                if(linkAttr == None):
+                    numberCnt -=1;
+                if(linkAttr != None):
                     linkSub = linkAttr.split("(")[1];
                     linkSubNt = linkSub.split(")")[0];
                     linkSubts = linkSubNt.split(",");

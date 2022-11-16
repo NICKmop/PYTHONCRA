@@ -13,8 +13,6 @@ class Seongbuk:
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEONGBUK_NAME);
         maxCntNumber = max(cntNumber);
 
-        numberCnt = numberCnt;
-        cnt  = cnt; # 1
         url = 'https://www.sbculture.or.kr/culture/bbs/BMSR00021/list.do?pageIndex={}&menuNo=500049&fDate=&tDate=&searchCondition=3&searchKeyword='.format(cnt);
         response = requests.get(url);
 
@@ -36,23 +34,11 @@ class Seongbuk:
                     print("Seongbuk Next Page : {}".format(cnt));
                     return Seongbuk.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     if(fnCompareTitle(commonConstant_NAME.SEONGBUK_NAME, title[i].text.strip()) == 1):
                             break;
                     else:
-                    # changeText= str(registrationdate[i].text);
-                    # firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,numberCnt,
-                    #     datasModel.toJson(
-                    #         "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),
-                    #         numberCnt,
-                    #         "",
-                    #         title[i].text.strip(),
-                    #         "",
-                    #         fnChnagetype(changeText.strip()),
-                    #         "성북문화재단",
-                    #     )
-                    # );
                         maxCntNumber += 1;
                         changeText= str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,maxCntNumber,

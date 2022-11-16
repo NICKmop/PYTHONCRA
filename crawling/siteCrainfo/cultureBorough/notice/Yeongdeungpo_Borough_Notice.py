@@ -31,7 +31,7 @@ class Yeongdeungpo_notice:
                     print(commonConstant_NAME.YEONGDEUNGPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Yeongdeungpo_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
 
                     if('NEW' in title[i].text.strip()):

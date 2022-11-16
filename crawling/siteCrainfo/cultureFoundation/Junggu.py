@@ -39,9 +39,11 @@ class Junggu:
                     print("Junggu Next Page : {}".format(cnt));
                     return Junggu.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break; 
-                    
+                    if(checkValue[i].text.strip() == '공지'):
+                        numberCnt -= 1;
+
                     changeText = str(registrationdate[i].text);
                     if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
                         break;

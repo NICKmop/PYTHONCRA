@@ -34,7 +34,7 @@ class Seocho:
                     print("Seocho Next Page : {}".format(cnt));
                     return Seocho.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
                             break;
@@ -52,16 +52,5 @@ class Seocho:
                                 "서초문화재단",
                             )
                         );
-                        # firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
-                        #     datasModel.toJson(
-                        #         "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),
-                        #         numberCnt,
-                        #         "",
-                        #         title[i].text.strip(),
-                        #         "",
-                        #         fnChnagetype(changeText.strip()),
-                        #         "서초문화재단",
-                        #     )
-                        # );
         else : 
             print(response.status_code)

@@ -27,7 +27,7 @@ class Songpa:
                 print("Songpa Next Page : {}".format(cnt));
                 return Songpa.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
                 if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip()) == 1):
                     break;

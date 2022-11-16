@@ -27,12 +27,10 @@ class Yangcheon_notice:
                 print(commonConstant_NAME.YANGCHEON_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                 return Yangcheon_notice.mainCra(cnt);
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                 #     break;
                 if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
                     break;
-                # print("reg : ", registrationdate[i].text);
-                # print("title : ", title[i].text.strip());
                 linkAttr = link[i].attrs.get('onclick')
                 linkSub = linkAttr.split("(")[1];
                 linkSubNt = linkSub.split(")")[0];

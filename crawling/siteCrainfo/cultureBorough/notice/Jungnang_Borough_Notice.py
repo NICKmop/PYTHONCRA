@@ -30,8 +30,8 @@ class Jungnang_notice:
                     print(commonConstant_NAME.JUNGNANG_NAME," Next Page : {}".format(cnt));
                     return Jungnang_notice.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
                         break;
                     else:

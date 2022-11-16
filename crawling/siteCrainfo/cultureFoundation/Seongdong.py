@@ -27,7 +27,7 @@ class Seongdong:
                 print("Seongdong Next Page : {}".format(cnt));
                 return Seongdong.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
                 if(fnCompareTitle(commonConstant_NAME.SEONGDONG_NAME, title[i].text.strip()) == 1):
                     break;

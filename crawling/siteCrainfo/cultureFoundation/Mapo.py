@@ -28,8 +28,11 @@ class Mapo:
                 print("Mapo Next Page : {}".format(cnt));
                 return Mapo.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
+
+                if(registrationdate[i].text == '작성일'):
+                    numberCnt -=1;
 
                 linkSp = link[i].attrs.get('seq');
                 
@@ -50,5 +53,3 @@ class Mapo:
                                 "마포문화재단"
                         )
                     )
-                else:
-                    numberCnt -= 1;
