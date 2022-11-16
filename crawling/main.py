@@ -1,4 +1,3 @@
-import functions_framework
 # 재단
 from siteCrainfo.cultureFoundation.Seoul import Seoul
 from siteCrainfo.cultureFoundation.Seodaemun import Seodaemun
@@ -60,8 +59,6 @@ from siteCrainfo.cultureBorough.otherInstitutions.Dongdaemun_Borough_Other_Insti
 from siteCrainfo.cultureBorough.otherInstitutions.Dongjak_Borough_Other_Institutions import Dongjak_Institutions
 from siteCrainfo.cultureBorough.otherInstitutions.Mapo_Borough_Other_Institutions import Mapo_Institutions
 
-# @functions_framework.http
-# def runningCra(request):
 if __name__ == '__main__':
     if __package__ is None:
         import sys
@@ -70,6 +67,10 @@ if __name__ == '__main__':
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
         # 재단
         try:
+            # Seodaemun.mainCra(1,0);
+
+            # Gnagbuk.mainCra(1,0);
+
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
 
@@ -81,8 +82,6 @@ if __name__ == '__main__':
 
             # Eunpyeng.mainCra(1,0);
             # Eunpyeng_notice.mainCra(1);
-
-            # Gnagbuk.mainCra(1,0);
 
             # Gangdong_notice.mainCra(1,0);
 
@@ -96,8 +95,8 @@ if __name__ == '__main__':
 
             # Guro_notice.mainCra(1,0);
 
-            # Gwanak.mainCra(0,0);
-            # Gwanak_notice.mainCra(1);
+            Gwanak.mainCra(0,0);
+            Gwanak_notice.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
@@ -126,7 +125,7 @@ if __name__ == '__main__':
             # Npocra.mainCra(1,0);
             # Youthseoul.mainCra(1);
             # Sbaseoul.mainCra(1);
-            Housingseoul.mainCra(1);
+            # Housingseoul.mainCra(1);
 
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
@@ -140,12 +139,13 @@ if __name__ == '__main__':
             # Youngsan_notice.mainCra(1,0);
 
             #서울시는 따로 진행 
-            # 크롤링 확인 필요 부분
+            # 페이지 옮기는 부분이 문제.
             # Gangbuk_notice.mainCra(1);
+             # 링크 크롤링 시 javascript함수로 되어 있어 URL 표기가 안됨.
+            #크롤 데이터가 안담김
             # Seoul.mainCra(1,0);
-            # Seodaemun.mainCra(1,0);
         except ConnectionError as conerror:
-            print(conerror);
+            print("conerror : {}".format(conerror));
 
     else:
         # 재단
@@ -227,6 +227,4 @@ if __name__ == '__main__':
             # Seoul.mainCra(1,0); 링크 한번 확인 필요
             # Seodaemun.mainCra(1,0);
         except ConnectionError as conerror:
-            print(conerror);
-    
-        
+            print("conError : {}".format(conerror));

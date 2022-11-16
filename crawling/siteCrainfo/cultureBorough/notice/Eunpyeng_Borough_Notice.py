@@ -31,7 +31,7 @@ class Eunpyeng_notice:
                     print(commonConstant_NAME.EUNPYENG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Eunpyeng_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
                         break;

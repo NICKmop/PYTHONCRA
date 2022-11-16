@@ -26,8 +26,11 @@ class Dobong:
                 print("Dobong Next Page : {}".format(cnt));
                 return Dobong.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
+
+                if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
+                    break;
                     
                 if title[i].text.strip() == '':
                     continue;
@@ -39,18 +42,17 @@ class Dobong:
                     linkSubts1 = linkSubts[0].replace("'",'');
                     linkSubts2 = linkSubts[1].replace("'",'');
                     changeText= str(registrationdate[i].text.strip());
-                    if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
-                            break;
-                    else:
-                        maxCntNumber += 1;
-                        firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "http://www.dbfac.or.kr/front/board/boardContentsView.do?miv_pageNo=&miv_pageSize=10&total_cnt=&LISTOP=&mode=W&contents_id={}&board_id={}&viewType=&cate_id=&searchkey=T&searchtxt=".format(linkSubts1, linkSubts2),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "도봉문화재단"
-                            )
+                    
+                    # else:
+                    maxCntNumber += 1;
+                    firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,maxCntNumber,
+                        datasModel.toJson(
+                            "http://www.dbfac.or.kr/front/board/boardContentsView.do?miv_pageNo=&miv_pageSize=10&total_cnt=&LISTOP=&mode=W&contents_id={}&board_id={}&viewType=&cate_id=&searchkey=T&searchtxt=".format(linkSubts1, linkSubts2),
+                            maxCntNumber,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "도봉문화재단"
                         )
+                    )

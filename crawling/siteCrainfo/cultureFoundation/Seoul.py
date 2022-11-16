@@ -9,9 +9,9 @@ class Seoul:
         url = 'https://www.sfac.or.kr/opensquare/notice/notice_list.do';
         soupData = com.pageconnect(cnt, url, "doBbsFPag({});return false;".format(cnt));
         
-        link = soupData.select('.cell');
-        title = soupData.select('.cell');
-        registrationdate = soupData.select('pc_cell');
+        link = soupData.select('.td:nth-child(2)');
+        title = soupData.select('.td:nth-child(2)');
+        registrationdate = soupData.select('td:nth-child(3)');
 
         print("link : {}".format(link));
         print("title : {}".format(title));
@@ -26,12 +26,12 @@ class Seoul:
                 print("Seoul Next Page : {}".format(cnt));
                 return Seoul.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
 
             # firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
             #     datasModel.toJson(
-            #         "http://ddmac.or.kr/sub04/sub01.php?type=view&uid={}".format(linkSp),
+            #         "https://www.sfac.or.kr/artspace/artspace/play_notice.do?cbIdx={}&bcIdx={}&type=".format(linkSp,),
             #         numberCnt,
             #         "",
             #         title[i].text.strip(),

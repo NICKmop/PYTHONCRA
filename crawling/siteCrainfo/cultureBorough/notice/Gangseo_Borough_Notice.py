@@ -34,6 +34,9 @@ class Gangseo_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
+                    if(noticeCheck[i].text.strip() == ''):
+                        numberCnt -= 1;
+
                     if(noticeCheck[i].text.strip() != ''):
                         if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
                             break;

@@ -27,8 +27,8 @@ class Geuamcheoun:
                 print("Geuamcheoun Next Page : {}".format(cnt));
                 return Geuamcheoun.mainCra(cnt, numberCnt),
             else:
-                if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                    break;
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                #     break;
                     
                 if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, title[i].text.strip()) == 1):
                     break;

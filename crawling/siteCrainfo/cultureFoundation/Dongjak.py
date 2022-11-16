@@ -35,11 +35,14 @@ class Dongjak:
                     print("Dongjak Next Page : {}".format(cnt));
                     return Dongjak.mainCra(cnt, numberCnt);
                 else:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
+
                     if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
-                
+                    
                         if title[i].text.strip() == '':
                             continue;
                         else:

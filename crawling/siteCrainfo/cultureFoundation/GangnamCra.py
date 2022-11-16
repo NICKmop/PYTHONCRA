@@ -31,7 +31,7 @@ class Gangnam:
                     print("Gangnam Next Page : {}".format(cnt));
                     return Gangnam.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
                         break;

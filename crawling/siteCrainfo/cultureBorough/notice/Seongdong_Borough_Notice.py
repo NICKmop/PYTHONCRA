@@ -33,15 +33,23 @@ class Seongdong_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
+                    if('NEW' in title[i].text.strip()):
+                        replaceString = title[i].text.strip().replace('NEW', '').strip();
+                    else:
+                        replaceString = title[i].text.strip();
+
                     if(fnCompareTitle(commonConstant_NAME.SEONGDONG_NAME, title[i].text.strip()) == 1):
                         break;
+
                     changeText= str(registrationdate[i].text.replace('.', '-'));
+
+
                     firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.sd.go.kr/main{}".format(link[i].attrs.get('href').replace('.','',1)),
                             numberCnt,
                             "",
-                            title[i].text.strip(),
+                            replaceString,
                             "",
                             fnChnagetype(changeText.strip()),
                             "성동구청",

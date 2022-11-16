@@ -27,7 +27,7 @@ class Eunpyeng:
                 print("Eunpyeng Next Page : {}".format(cnt));
                 return Eunpyeng.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
 
                 if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
@@ -35,21 +35,21 @@ class Eunpyeng:
                 else:
                     maxCntNumber += 1;
 
-                if title[i].text.strip() == '':
-                        continue;
-                else:
-                    changeText= str(registrationdate[i + 1].text);
-                    linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
-                    firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,maxCntNumber,
-                        datasModel.toJson(
-                            "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
-                            maxCntNumber,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "은평문화재단"
+                    if title[i].text.strip() == '':
+                            continue;
+                    else:
+                        changeText= str(registrationdate[i + 1].text);
+                        linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
+                        firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "은평문화재단"
+                            )
                         )
-                    )
 
             

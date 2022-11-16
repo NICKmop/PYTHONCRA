@@ -40,6 +40,8 @@ class Youthseoul:
 
                     if('[기본공지]' in title[i].text.strip()):
                         subStringText = title[i].text.strip()[6:].strip();
+                    elif('새글' in title[i].text.strip()):
+                        subStringText = title[i].text.strip().replace('새글', '').strip();
                     else:
                         subStringText = title[i].text.strip();
                         

@@ -31,8 +31,8 @@ class Gwanak:
                     print("Gwanak Next Page : {}".format(cnt));
                     return Gwanak.mainCra(cnt, numberCnt);
                 else:
-                    if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                        break;
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
                         break;
                     else:

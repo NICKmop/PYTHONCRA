@@ -30,13 +30,13 @@ class Geuamcheoun_notice:
                     print(commonConstant_NAME.GEUAMCHEOUN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Geuamcheoun_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
+
                     if('새글' in title[i].text.strip()):
                         replaceString = title[i].text.strip().replace('새글', '').strip();
                     else:
                         replaceString = title[i].text.strip();
-
 
                     if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, replaceString) == 1):
                         break;

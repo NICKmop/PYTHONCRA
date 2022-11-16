@@ -32,6 +32,8 @@ class Dongjak_notice:
                     print(commonConstant_NAME.DONGJAK_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Dongjak_notice.mainCra(cnt);
                 else:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                    #     break;
                     if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
                         break;
 

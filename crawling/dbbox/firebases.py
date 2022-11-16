@@ -5,8 +5,8 @@ from firebase_admin import firestore
    
 class firebase_con:
     cred = credentials.Certificate('/Users/yeon/StudioProjects/pythoncra/crawling/dbbox/dbcurd-67641-firebase-adminsdk-ax50d-0e1098879e.json')
+    # cred = credentials.Certificate('./dbcurd-67641-firebase-adminsdk-ax50d-0e1098879e.json')
     firebase_admin.initialize_app(cred,{ 'databaseURL' : 'https://dbcurd-67641-default-rtdb.firebaseio.com/'});
-
 
     def updateModel(name,i,values):
         db = firestore.client();

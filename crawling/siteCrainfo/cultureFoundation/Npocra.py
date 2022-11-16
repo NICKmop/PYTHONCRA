@@ -12,7 +12,7 @@ class Npocra:
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         maxCntNumber = max(cntNumber);
-
+        print("maxCntNumber : {}".format(maxCntNumber));
         url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page={}'.format(cnt);
         
         response = requests.get(url);
@@ -25,9 +25,7 @@ class Npocra:
             title = soup.select('.title');
             registrationdate = soup.select('.date');
             checkValue = soup.select('td:nth-child(3)')
-            
             linkCount = len(link) - 1;
-            print(linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
@@ -46,12 +44,12 @@ class Npocra:
                     else:
                         maxCntNumber += 1;
                         changeText= str(registrationdate[i+1].text.replace('.','-'));
-
+                        print(maxCntNumber);
                         if(checkValue[i].text.strip() != 'NPO지원센터'):
-                            firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber,
+                            firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber -1,
                                 datasModel.toJson(
                                     link[i].attrs.get('href'),
-                                    maxCntNumber,
+                                    maxCntNumber -1,
                                     "",
                                     title[i].text.strip(),
                                     "",

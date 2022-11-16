@@ -1,5 +1,6 @@
 import requests
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
@@ -28,10 +29,13 @@ class Gangbuk_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.GANGBUK_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Gangbuk_notice.mainCra(cnt);
+                    # return Gangbuk_notice.mainCra(cnt);
                 else:
-                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
+                    if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
                         break;
+
                     changeText = str(registrationdate[i].text);
                     firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(

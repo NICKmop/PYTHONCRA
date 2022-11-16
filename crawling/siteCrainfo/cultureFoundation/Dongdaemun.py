@@ -27,8 +27,9 @@ class Dongdaemun:
                 print("Dongdaemun Next Page : {}".format(cnt));
                 return Dongdaemun.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.STOPCUOUNT:
+                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break;
+
                 if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):
                     break;
                 else:
@@ -38,6 +39,8 @@ class Dongdaemun:
                     else:
                         linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
                         changeText= str(registrationdate[i].text);
+                        if(changeText == '등록일'):
+                            numberCnt -= 1;
                         if(changeText != '등록일'):
                             firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,maxCntNumber,
                                 datasModel.toJson(

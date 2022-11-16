@@ -8,7 +8,6 @@ from models.datasModel import datasModel
 
 class Gnagbuk:
     def mainCra(cnt,numberCnt):
-
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
         maxCntNumber = max(cntNumber);
 
