@@ -109,29 +109,29 @@ if __name__ == '__main__':
 
             # Jungnang_notice.mainCra(1,0);
 
-            # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
+            Mapo.mainCra(1,0);
+            Mapo_notice.mainCra(1);
 
-            # Nowon_notice.mainCra(1,0);
+            Nowon_notice.mainCra(1,0);
 
-            # Seocho.mainCra(1,0);
-            # Seocho_notice.mainCra(1);
+            Seocho.mainCra(1,0);
+            Seocho_notice.mainCra(1);
 
-            # Seongbuk.mainCra(1,0);
+            Seongbuk.mainCra(1,0);
 
-            # Seongdong.mainCra(1,0);
-            # Seongdong_notice.mainCra(1);
+            Seongdong.mainCra(1,0);
+            Seongdong_notice.mainCra(1);
 
-            # Songpa.mainCra(1,0);
-            # Songpa_notice.mainCra(1);
+            Songpa.mainCra(1,0);
+            Songpa_notice.mainCra(1);
 
-            # Yangcheon.mainCra(1,0);
-            # Yangcheon_notice.mainCra(1);
+            Yangcheon.mainCra(1,0);
+            Yangcheon_notice.mainCra(1);
 
-            # Yeongdeungpo.mainCra(1,0);
-            # Yeongdeungpo_notice.mainCra(1);
+            Yeongdeungpo.mainCra(1,0);
+            Yeongdeungpo_notice.mainCra(1);
 
-            # Youngsan_notice.mainCra(1,0);
+            Youngsan_notice.mainCra(1,0);
 
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);

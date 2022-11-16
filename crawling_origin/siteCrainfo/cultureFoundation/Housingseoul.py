@@ -31,10 +31,10 @@ class Housingseoul:
                     print(commonConstant_NAME.HOUSINGSEOUL_NANE, "Next Page : {}".format(cnt));
                     return Housingseoul.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         break;
+                    # if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                    #     break;
                     changeText= str(registrationdate[i].text.strip());
                     firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
                         datasModel.toJson(

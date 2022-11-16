@@ -8,8 +8,8 @@ import common.common_fnc  as com
 
 class Songpa:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SONGPA_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SONGPA_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.songpafac.or.kr/notice_list.do';
         soupData = com.pageconnect(cnt, url, "fn_paging('{}')".format(cnt));
@@ -27,24 +27,24 @@ class Songpa:
                 print("Songpa Next Page : {}".format(cnt));
                 return Songpa.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                #     break;
-                if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
-                else:
-                    maxCntNumber += 1;
-                    linkSp = link[i].attrs.get('href').split('Page');
-                    linkSub = re.sub(r'[^0-9]','',linkSp[0]);
-                    
-                    changeText= str(registrationdate[i].text);
-                    firebase_con.updateModel( commonConstant_NAME.SONGPA_NAME,maxCntNumber,
-                        datasModel.toJson(
-                            "https://www.songpafac.or.kr/notice_view.do?brd_seq={}&curPage=&searchtype=&keyword=".format(cnt , linkSub),
-                            maxCntNumber,
-                            "",
-                            title[i].text.strip(),
-                            "",
-                            fnChnagetype(changeText.strip()),
-                            "송파문화재단"
-                        )
+                # if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip()) == 1):
+                #     break;
+                # else:
+                #     maxCntNumber += 1;
+                linkSp = link[i].attrs.get('href').split('Page');
+                linkSub = re.sub(r'[^0-9]','',linkSp[0]);
+                
+                changeText= str(registrationdate[i].text);
+                firebase_con.updateModel( commonConstant_NAME.SONGPA_NAME,numberCnt,
+                    datasModel.toJson(
+                        "https://www.songpafac.or.kr/notice_view.do?brd_seq={}&curPage=&searchtype=&keyword=".format(cnt , linkSub),
+                        numberCnt,
+                        "",
+                        title[i].text.strip(),
+                        "",
+                        fnChnagetype(changeText.strip()),
+                        "송파문화재단"
                     )
+                )

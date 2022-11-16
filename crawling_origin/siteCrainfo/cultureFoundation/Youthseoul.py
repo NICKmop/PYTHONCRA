@@ -32,10 +32,10 @@ class Youthseoul:
                     print(commonConstant_NAME.DOBONG_BOROUGH_NOTICE, "Next Page : {}".format(cnt));
                     return Youthseoul.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                         break;
+                    # if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
+                    #     break;
 
                     if('[기본공지]' in title[i].text.strip()):
                         subStringText = title[i].text.strip()[6:].strip();

@@ -8,8 +8,8 @@ from models.datasModel import datasModel
 
 class Gwanak:
     def mainCra(cnt, numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANAK_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANAK_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);
         response = requests.get(url);
@@ -31,24 +31,23 @@ class Gwanak:
                     print("Gwanak Next Page : {}".format(cnt));
                     return Gwanak.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText= str(registrationdate[i].text.strip());
-                        
-                        firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.gfac.or.kr/html/notify/{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "관악문화재단",
-                            )
-                        );
+                    # if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText= str(registrationdate[i].text.strip());
+                    firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.gfac.or.kr/html/notify/{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "관악문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

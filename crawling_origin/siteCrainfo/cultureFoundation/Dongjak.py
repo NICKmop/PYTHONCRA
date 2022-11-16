@@ -11,8 +11,8 @@ class Dongjak:
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGJAK_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGJAK_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.idfac.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);
         response = requests.get(url);
@@ -35,28 +35,28 @@ class Dongjak:
                     print("Dongjak Next Page : {}".format(cnt));
                     return Dongjak.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-
-                    if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
+
+                    # if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
                     
-                        if title[i].text.strip() == '':
-                            continue;
-                        else:
-                            changeText= str(registrationdate[i].text.replace('.','-'));
-                            firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    link[i].attrs.get('href'),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "동작문화재단",
-                                )
-                            );
+                    if title[i].text.strip() == '':
+                        continue;
+                    else:
+                        changeText= str(registrationdate[i].text.replace('.','-'));
+                        firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
+                            datasModel.toJson(
+                                link[i].attrs.get('href'),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "동작문화재단",
+                            )
+                        );
         else : 
             print(response.status_code)

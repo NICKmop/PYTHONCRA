@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup
 
 class Gangdong_notice:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGDONG_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGDONG_NAME);
+        # maxCntNumber = max(cntNumber);
         url = 'https://www.gangdong.go.kr/web/newportal/bbs/b_068?cp={}&pageSize=20&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=b_068&baNotice=false&baCommSelec=false&baOpenDay=true&baUse=true'.format(cnt);
         response = requests.get(url);
 
@@ -31,25 +31,25 @@ class Gangdong_notice:
                     print(commonConstant_NAME.GANGDONG_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Gangdong_notice.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
+                    # if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
                     
-                        changeText = str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.GANGDONG_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.gangdong.go.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "강동구청",
-                            )
-                        );  
+                    changeText = str(registrationdate[i].text);
+                    firebase_con.updateModel(commonConstant_NAME.GANGDONG_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.gangdong.go.kr{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "강동구청",
+                        )
+                    );  
         else : 
             print(response.status_code)
             

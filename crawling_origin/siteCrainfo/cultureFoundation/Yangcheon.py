@@ -10,8 +10,8 @@ class Yangcheon:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YANGCHEON_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YANGCHEON_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://yfac.kr/main/contents.do?v_page={}&&a_num=48342159'.format(cnt);
         response = requests.get(url);
@@ -26,7 +26,6 @@ class Yangcheon:
             registrationdate = soup.select('tbody > tr > td:nth-child(4)');
 
             linkCount = len(link) - 1;
-            print("linkCount : ", linkCount);
 
             for i in range(len(link)):
                 numberCnt += 1;
@@ -35,23 +34,23 @@ class Yangcheon:
                     print("Yangcheon Next Page : {}".format(cnt));
                     return Yangcheon.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break; 
-                    if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText = registrationdate[i].text.strip().replace('.','-');
-                        firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://yfac.kr/main/contents.do?{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "양천문화재단",
-                            )
-                        );
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        break; 
+                    # if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText = registrationdate[i].text.strip().replace('.','-');
+                    firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://yfac.kr/main/contents.do?{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "양천문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

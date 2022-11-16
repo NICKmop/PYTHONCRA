@@ -10,8 +10,8 @@ class Jongro:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JONGRO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JONGRO_NAME);
+        # maxCntNumber = max(cntNumber);
         
         url = 'https://www.jfac.or.kr/site/main/archive/post/category/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD?cp={}&catId=25'.format(cnt);
         response = requests.get(url);
@@ -36,21 +36,21 @@ class Jongro:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break; 
-                    if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText= str(registrationdate[i].text.strip());
-                        firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText),
-                                "종로문화재단",
-                            )
-                        );
+                    # if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText= str(registrationdate[i].text.strip());
+                    firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText),
+                            "종로문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

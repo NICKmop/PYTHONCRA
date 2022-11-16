@@ -31,10 +31,10 @@ class Mapo_notice:
                     print(commonConstant_NAME.MAPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Mapo_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         break;
+                    # if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                    #     break;
 
                     if(title[i].text.strip() == ''):
                         numberCnt -= 1;

@@ -10,8 +10,8 @@ class Seocho:
     def mainCra(cnt,numberCnt):
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'http://www.seochocf.or.kr/site/main/archive/post/category/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD?cp={}&sortDirection=DESC&catId=7&metaCode1=GENERAL'.format(cnt);
         response = requests.get(url);
@@ -34,23 +34,23 @@ class Seocho:
                     print("Seocho Next Page : {}".format(cnt));
                     return Seocho.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
-                            break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText= str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "서초문화재단",
-                            )
-                        );
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        break;
+                    # if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
+                    #         break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText= str(registrationdate[i].text);
+                    firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "서초문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

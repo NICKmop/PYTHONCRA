@@ -31,16 +31,16 @@ class Yeongdeungpo_notice:
                     print(commonConstant_NAME.YEONGDEUNGPO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Yeongdeungpo_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                    #     break;
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                        break;
 
                     if('NEW' in title[i].text.strip()):
                         replaceString = title[i].text.strip().replace('NEW', '').strip();
                     else:
                         replaceString = title[i].text.strip();
 
-                    if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString) == 1):
-                        break;
+                    # if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString) == 1):
+                    #     break;
 
                     changeText= str(registrationdate[i].text.replace('.','-'));
 

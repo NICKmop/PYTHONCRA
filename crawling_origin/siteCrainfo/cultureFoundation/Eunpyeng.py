@@ -8,8 +8,8 @@ import common.common_fnc  as com
 
 class Eunpyeng:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.EUNPYENG_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.EUNPYENG_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.efac.or.kr/sub06/sub01.php';
 
@@ -27,29 +27,29 @@ class Eunpyeng:
                 print("Eunpyeng Next Page : {}".format(cnt));
                 return Eunpyeng.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                #     break;
-
-                if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
-                else:
-                    maxCntNumber += 1;
 
-                    if title[i].text.strip() == '':
-                            continue;
-                    else:
-                        changeText= str(registrationdate[i + 1].text);
-                        linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
-                        firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "은평문화재단"
-                            )
+                # if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
+                #     break;
+                # else:
+                #     maxCntNumber += 1;
+
+                if title[i].text.strip() == '':
+                        continue;
+                else:
+                    changeText= str(registrationdate[i + 1].text);
+                    linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
+                    firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.efac.or.kr/sub06/sub01.php?type=view&uid={}".format(linkSp),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "은평문화재단"
                         )
+                    )
 
             

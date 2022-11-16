@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 
 class Dongjak_notice:
     def mainCra(cnt):
-
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGJAK_NAME);
         numberCnt = max(cntNumber);
 
@@ -32,10 +31,10 @@ class Dongjak_notice:
                     print(commonConstant_NAME.DONGJAK_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Dongjak_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         break;
+                    # if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
+                    #     break;
 
                     # print("linkK:::: ", link[i].attrs.get('href'));
                     changeText = str(registrationdate[i].text);

@@ -27,10 +27,10 @@ class Jongro_notice:
                 print("Jongro_notice Next Page : {}".format(cnt));
                 return Jongro_notice.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                #     break; 
-                if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
-                    break;
+                if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                    break; 
+                # if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
+                #     break;
 
                 linkAttr = link[i].attrs.get('href');
                 linkSub = linkAttr.split("('")[1];

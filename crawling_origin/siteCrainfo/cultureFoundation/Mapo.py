@@ -9,8 +9,8 @@ import common.common_fnc  as com
 # 보류
 class Mapo:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.MAPO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.MAPO_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.mfac.or.kr/communication/notice_all_list.jsp';
         soupData = com.pageconnect(cnt, url, "javascript:submitPage({})".format(cnt));
@@ -28,8 +28,8 @@ class Mapo:
                 print("Mapo Next Page : {}".format(cnt));
                 return Mapo.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                #     break;
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    break;
 
                 if(registrationdate[i].text == '작성일'):
                     numberCnt -=1;
@@ -38,18 +38,18 @@ class Mapo:
                 
                 if(registrationdate[i].text != '작성일'):
                     changeText= str(registrationdate[i].text);
-                    if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
-                        firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "마포문화재단"
-                        )
+                    # if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "마포문화재단"
                     )
+                )

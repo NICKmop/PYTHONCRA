@@ -31,28 +31,28 @@ class Songpa_notice:
                     print(commonConstant_NAME.SONGPA_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Songpa_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                    #     break;
+                    if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                        break;
                     if('NEW' in title[i].text.strip()):
                         replaceString = title[i].text.strip().replace('NEW', '').strip();
                     else:
                         replaceString = title[i].text.strip();
 
-                    if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, replaceString) == 1):
-                        break;
-                    else:
-                        changeText= str(registrationdate[i].text.replace('.','-'));
-                        firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
-                            datasModel.toJson(
-                                "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
-                                numberCnt,
-                                "",
-                                replaceString,
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "송파구청",
-                            )
-                        );
+                    # if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, replaceString) == 1):
+                    #     break;
+                    # else:
+                    changeText= str(registrationdate[i].text.replace('.','-'));
+                    firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),
+                            numberCnt,
+                            "",
+                            replaceString,
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "송파구청",
+                        )
+                    );
         else : 
             print(response.status_code)
             

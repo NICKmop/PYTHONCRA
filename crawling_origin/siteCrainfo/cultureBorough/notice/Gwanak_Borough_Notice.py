@@ -30,10 +30,10 @@ class Gwanak_notice:
                 print("Gwanak_notice Next Page : {}".format(cnt));
                 return Gwanak_notice.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                #     break;
-                if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     break;
+                # if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                #     break;
                 # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
                 linkAttr = link[i].attrs.get('onclick');
                 # print(linkAttr);

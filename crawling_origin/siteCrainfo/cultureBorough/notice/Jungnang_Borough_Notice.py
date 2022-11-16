@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 
 class Jungnang_notice:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.jungnang.go.kr/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex={}'.format(cnt);
         response = requests.get(url);
@@ -30,25 +30,25 @@ class Jungnang_notice:
                     print(commonConstant_NAME.JUNGNANG_NAME," Next Page : {}".format(cnt));
                     return Jungnang_notice.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
+                    # if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
                         
-                        changeText = str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "중랑구청",
-                            )
-                        );
+                    changeText = str(registrationdate[i].text);
+                    firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "중랑구청",
+                        )
+                    );
         else : 
             print(response.status_code)
             

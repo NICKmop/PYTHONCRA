@@ -30,10 +30,10 @@ class Gangnam_notice:
                 print("Gangnam_notice Next Page : {}".format(cnt));
                 return Gangnam_notice.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                #     break;
-                if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     break;
+                # if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
+                #     break;
                     
                 linkSp = link[i].attrs.get('href');
                 changeText = str(registrationdate[i].text);

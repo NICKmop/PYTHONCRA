@@ -10,8 +10,8 @@ import datetime
 
 class Gwangzin:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANGZIN_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GWANGZIN_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'http://www.naruart.or.kr/bbs/board.php?bo_table=notice&page={}'.format(cnt);
         response = requests.get(url);
@@ -33,24 +33,24 @@ class Gwangzin:
                     print(commonConstant_NAME.GWANGZIN_NAME," Next Page : {}".format(cnt));
                     return Gwangzin.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
-
-                    if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip()) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
-                        cngdate = registrationdate[i].text.replace('.','-');
-                        firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                link[i].attrs.get('href'),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype("20"+cngdate),
-                                "광진문화재단",
-                            )
-                        );
+
+                    # if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    cngdate = registrationdate[i].text.replace('.','-');
+                    firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
+                        datasModel.toJson(
+                            link[i].attrs.get('href'),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype("20"+cngdate),
+                            "광진문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

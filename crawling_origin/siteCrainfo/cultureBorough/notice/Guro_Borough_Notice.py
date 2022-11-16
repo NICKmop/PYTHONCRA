@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 
 class Guro_notice:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GURO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GURO_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=662&&pageUnit=10&key=1790&pageIndex={}'.format(cnt);
         response = requests.get(url);
@@ -30,31 +30,32 @@ class Guro_notice:
                     print(commonConstant_NAME.GURO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                     return Guro_notice.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
                     # 기존 저장되어 있는 제목과 부딫 힐 경우 다음 함수로 이동
                     if('NEW' in title[i].text.strip()):
                         replaceString = title[i].text.strip().replace('NEW', '').strip();
                     else:
                         replaceString = title[i].text.strip();
 
-                    if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString) == 1):
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         break;
-                    else:
-                        maxCntNumber += 1;
 
-                        changeText = str(registrationdate[i].text.replace('.','-'));
-                        firebase_con.updateModel(commonConstant_NAME.GURO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
-                                maxCntNumber,
-                                "",
-                                replaceString,
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "구로구청",
-                            )
-                        );
+                    # if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+
+                    changeText = str(registrationdate[i].text.replace('.','-'));
+                    firebase_con.updateModel(commonConstant_NAME.GURO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),
+                            numberCnt,
+                            "",
+                            replaceString,
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "구로구청",
+                        )
+                    );
         else : 
             print(response.status_code)
             

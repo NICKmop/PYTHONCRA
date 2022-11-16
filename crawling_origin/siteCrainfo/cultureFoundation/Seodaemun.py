@@ -8,8 +8,8 @@ import common.common_fnc  as com
 
 class Seodaemun:
     def mainCra(cnt, numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEODAEMUN_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEODAEMUN_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.sdm.go.kr/news/news/notice.do';
         soupData = com.pageconnect(cnt, url, "javascript:goPage({})".format(cnt));
@@ -29,11 +29,11 @@ class Seodaemun:
                 print(commonConstant_NAME.SEODAEMUN_NAME,"Next Page : {}".format(cnt));
                 # return Seodaemun.mainCra(cnt,numberCnt),
             else:
-                # if numberCnt == 2:
-                #     break;
-
-                if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
+
+                # if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip()) == 1):
+                #     break;
 
                 linkAttr = link[i].attrs.get('onclick');
                 if(noticeCheckValue[i].text.strip() != ''):
@@ -44,12 +44,12 @@ class Seodaemun:
                         # linkSubNt = linkSub.split(")")[0];
                         # linkSubts = linkSubNt.split(",");
                         changeText = registrationdate[i].text.strip().replace('.','-');
-                        maxCntNumber += 1;
-                        firebase_con.updateModel( commonConstant_NAME.SEODAEMUN_NAME,maxCntNumber,
+                        # maxCntNumber += 1;
+                        firebase_con.updateModel( commonConstant_NAME.SEODAEMUN_NAME,numberCnt,
                             datasModel.toJson(
                                 # "https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"','')),
                                 'https://www.sdm.go.kr/news/news/notice.do',
-                                maxCntNumber,
+                                numberCnt,
                                 "",
                                 title[i].text.strip(),
                                 "",

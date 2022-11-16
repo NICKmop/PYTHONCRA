@@ -8,8 +8,8 @@ from models.datasModel import datasModel
 
 class Gnagbuk:
     def mainCra(cnt,numberCnt):
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'http://www.gbcf.or.kr/load.asp?subPage=510&searchValue=&searchType=&cate=&page={}&board_md=list'.format(cnt);
         response = requests.get(url);
@@ -30,29 +30,29 @@ class Gnagbuk:
                     print("Gnagbuk Next Page : {}".format(cnt));
                     return Gnagbuk.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.STOPCUOUNT:
-                    #     break;
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        break;
 
-                    if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
-                            break;
-                    else:
-                        if title[i].text.strip() == '':
-                            continue;
-                        else:
-                            maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
-                            firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
-                                    # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
-                                    "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "강북문화재단",
-                                )
-                            );
+                    # if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
+                    #         break;
+                    # else:
+                    if title[i].text.strip() == '':
+                        continue;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
+                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
+                        datasModel.toJson(
+                            # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
+                            # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
+                            "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "강북문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)

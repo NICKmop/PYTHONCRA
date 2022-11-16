@@ -27,11 +27,11 @@ class Sbaseoul:
                 print(commonConstant_NAME.SBASEOUL_NAME,"Next Page : {}".format(cnt));
                 # return Sbaseoul.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                #     break;
-
-                if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     break;
+
+                # if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                #     break;
 
                 linkAttr = link[i].attrs.get('onclick');
                 if(linkAttr == None):

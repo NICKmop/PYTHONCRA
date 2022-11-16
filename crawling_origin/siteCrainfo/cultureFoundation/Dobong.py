@@ -8,8 +8,8 @@ import common.common_fnc  as com
 class Dobong:
     def mainCra(cnt,numberCnt):
 
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'http://www.dbfac.or.kr/front/board/boardContentsListPage.do?board_id=1';
         soupData = com.pageconnect(cnt, url, "go_Page({})".format(cnt));
@@ -26,11 +26,11 @@ class Dobong:
                 print("Dobong Next Page : {}".format(cnt));
                 return Dobong.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                #     break;
-
-                if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     break;
+
+                # if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
+                #     break;
                     
                 if title[i].text.strip() == '':
                     continue;
@@ -44,11 +44,11 @@ class Dobong:
                     changeText= str(registrationdate[i].text.strip());
                     
                     # else:
-                    maxCntNumber += 1;
-                    firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,maxCntNumber,
+                    # maxCntNumber += 1;
+                    firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,numberCnt,
                         datasModel.toJson(
                             "http://www.dbfac.or.kr/front/board/boardContentsView.do?miv_pageNo=&miv_pageSize=10&total_cnt=&LISTOP=&mode=W&contents_id={}&board_id={}&viewType=&cate_id=&searchkey=T&searchtxt=".format(linkSubts1, linkSubts2),
-                            maxCntNumber,
+                            numberCnt,
                             "",
                             title[i].text.strip(),
                             "",

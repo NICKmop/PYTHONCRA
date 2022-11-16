@@ -14,8 +14,8 @@ class Yeongdeungpo:
         requests.packages.urllib3.disable_warnings()
         requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
 
-        cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
-        maxCntNumber = max(cntNumber);
+        # cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
+        # maxCntNumber = max(cntNumber);
 
         url = 'https://www.ydpcf.or.kr/board.do?bid=1&p={}'.format(cnt);
         response = requests.get(url);
@@ -41,24 +41,24 @@ class Yeongdeungpo:
                     return Yeongdeungpo.mainCra(cnt, numberCnt);
                 else:
 
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break; 
+                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        break; 
                     # 기존 저장되어 있는 제목과 부딫 힐 경우 다음 함수로 이동
-                    if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText= str(registrationdate[i].text.strip().split('|')[1].strip().replace('.','-'));
-                        firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.ydpcf.or.kr/{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "영등포문화재단",
-                            )
-                        );
+                    # if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, title[i].text.strip()) == 1):
+                    #     break;
+                    # else:
+                    #     maxCntNumber += 1;
+                    changeText= str(registrationdate[i].text.strip().split('|')[1].strip().replace('.','-'));
+                    firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.ydpcf.or.kr/{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "영등포문화재단",
+                        )
+                    );
         else : 
             print(response.status_code)
