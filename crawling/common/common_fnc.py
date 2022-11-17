@@ -52,14 +52,25 @@ def pageconnect(pageNumber, url, script):
     return soup;
 
 def fnCompareTitle(name, title):
+    # changeDate = fnChnagetype(date);
     dupltitleList = [];
     cntTitle = firebase_con.selectModelValueNumber(name);
+    # cntData = firebase_con.selectModelValueNumber(name)[1];
+
     for i in cntTitle:
         if(i == title):
-            print("true i : {}".format(i));
-            print("true title : {}".format(title));
+            print("{} Firebase title : {}".format(name,i));
+            print("{} webCra title : {}".format(name,title));
             dupltitleList.append(title);
             return 1;
+
+    # for i in zip(cntTitle , cntData):
+    #     print(i[0]);
+    #     if(i[0] == title):
+        #     print("{} Firebase title : {}".format(name,i));
+        #     print("{} webCra title : {}".format(name,title));
+        #     dupltitleList.append(title);
+        #     return 1;
 
 
   

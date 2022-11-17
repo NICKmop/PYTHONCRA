@@ -33,6 +33,7 @@ class firebase_con:
 
     def selectModelValueNumber(name):
         spdataList = [];
+        spdataDateList = [];
         db = firestore.client();
         doc_ref = db.collection(u'crawlingData').document(name);
         doc = doc_ref.get();
@@ -40,8 +41,10 @@ class firebase_con:
             originData = doc.to_dict().values();
             for i in originData:
                 spdataList.append(i['title'].strip());
+                # spdataDateList.append(i['registrationdate']);
 
             return spdataList;
+            # return spdataList,spdataDateList;
         else:
             print(u'No such document!')        
 

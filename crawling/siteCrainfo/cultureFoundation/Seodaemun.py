@@ -20,7 +20,6 @@ class Seodaemun:
         noticeCheckValue = soupData.select('tr > td:nth-child(1)');
         linkCount = len(link);
 
-
         for i in range(len(link)):
             numberCnt += 1;
 

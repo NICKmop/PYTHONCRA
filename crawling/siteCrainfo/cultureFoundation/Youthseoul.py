@@ -34,8 +34,7 @@ class Youthseoul:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
-                        break;
+                    
 
                     if('[기본공지]' in title[i].text.strip()):
                         subStringText = title[i].text.strip()[6:].strip();
@@ -46,6 +45,9 @@ class Youthseoul:
                         subStringText = title[i].text.strip().replace('새글', '').strip();
                     else:
                         subStringText = title[i].text.strip();
+                    
+                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
+                        break;
 
                     if(checkValue[i].text.strip != '상단고정'):
                         changeText= str(registrationdate[i].text);
