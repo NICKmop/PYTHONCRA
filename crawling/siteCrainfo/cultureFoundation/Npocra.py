@@ -36,7 +36,7 @@ class Npocra:
                     print("Npocra Next Page : {}".format(cnt));
                     return Npocra.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_TWO:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                     #     break;
 
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):

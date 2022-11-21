@@ -6,6 +6,9 @@ from firebase_admin import firestore
 from common.common_constant import commonConstant_NAME
 from dbbox.firebases import firebase_con
 from datetime import datetime
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import requests
 
 def loggingdata(data):
     today = date.today();
@@ -24,6 +27,28 @@ def loggingdata(data):
     logger.addHandler(file_handler);
 
     logger.info(data);
+
+def pageconnectLoadUrl(url):
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
+    browser.implicitly_wait(15);
+    browser.get(url);
+    time.sleep(3);
+    html = browser.page_source;
+    return html;
+
+def pageClickEvent(url):
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
+    browser.implicitly_wait(15);
+    browser.get(url);
+
+    # browser.find_element_by_class_name('btn_more _more').click();
+    # elem = browser.find_element(By.CLASS_NAME, 'btn_more _more');
+    elem = browser.find_element(By.CSS_SELECTOR, 'a._more');
+    elem.click();
 
 def pageReload(driver, pageNumber, script):
     time.sleep(2);
@@ -47,6 +72,8 @@ def pageconnect(pageNumber, url, script):
     browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     browser.get(url);
+
+    time.sleep(2);
 
     soup = BeautifulSoup(driver1(browser,pageNumber, url, script), 'html.parser');
     return soup;

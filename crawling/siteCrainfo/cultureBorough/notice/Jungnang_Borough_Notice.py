@@ -7,9 +7,9 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Jungnang_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
-        maxCntNumber = max(cntNumber);
+        numberCnt = max(cntNumber);
 
         url = 'https://www.jungnang.go.kr/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex={}'.format(cnt);
         response = requests.get(url);
@@ -28,20 +28,18 @@ class Jungnang_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.JUNGNANG_NAME," Next Page : {}".format(cnt));
-                    return Jungnang_notice.mainCra(cnt, numberCnt);
+                    return Jungnang_notice.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
                         break;
                     else:
-                        maxCntNumber += 1;
-                        
                         changeText = str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
+                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
+                                numberCnt,
                                 "",
                                 title[i].text.strip(),
                                 "",

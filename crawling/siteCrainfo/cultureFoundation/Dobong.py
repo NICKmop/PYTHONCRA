@@ -7,7 +7,6 @@ import common.common_fnc  as com
 
 class Dobong:
     def mainCra(cnt,numberCnt):
-
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YEONGDEUNGPO_NAME);
         maxCntNumber = max(cntNumber);
 
@@ -22,12 +21,12 @@ class Dobong:
         for i in range(len(link)):
             numberCnt += 1;
             if linkCount == i:
-                cnt += 10;
+                cnt += 1;
                 print("Dobong Next Page : {}".format(cnt));
-                return Dobong.mainCra(cnt, numberCnt),
+                # return Dobong.mainCra(cnt, numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                #     break;
+                if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    break;
 
                 if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
                     break;
@@ -43,7 +42,6 @@ class Dobong:
                     linkSubts2 = linkSubts[1].replace("'",'');
                     changeText= str(registrationdate[i].text.strip());
                     
-                    # else:
                     maxCntNumber += 1;
                     firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,maxCntNumber,
                         datasModel.toJson(

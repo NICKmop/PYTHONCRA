@@ -31,7 +31,7 @@ class Housingseoul:
                     print(commonConstant_NAME.HOUSINGSEOUL_NANE, "Next Page : {}".format(cnt));
                     return Housingseoul.mainCra(cnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
                         break;

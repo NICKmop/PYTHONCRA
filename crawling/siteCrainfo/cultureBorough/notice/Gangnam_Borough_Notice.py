@@ -8,7 +8,6 @@ import common.common_fnc  as com
 
 class Gangnam_notice:
     def mainCra(cnt):
-        
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGNAM_NAME);
         numberCnt = max(cntNumber);
 

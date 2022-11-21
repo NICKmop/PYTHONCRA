@@ -4,7 +4,11 @@ from siteCrainfo.cultureFoundation.Seodaemun import Seodaemun
 from siteCrainfo.cultureFoundation.Youthseoul import Youthseoul
 from siteCrainfo.cultureFoundation.Sbaseoul import Sbaseoul 
 from siteCrainfo.cultureFoundation.Housingseoul import Housingseoul 
+from siteCrainfo.cultureFoundation.Seoultourism import Seoultourism  
 from siteCrainfo.cultureFoundation.Dobong import Dobong
+from siteCrainfo.cultureFoundation.Guro import Guro
+from siteCrainfo.cultureFoundation.Gangdong import Gangdong
+from siteCrainfo.cultureFoundation.Gangseo import Gangseo
 from siteCrainfo.cultureFoundation.Geuamcheoun import Geuamcheoun
 from siteCrainfo.cultureFoundation.Eunpyeng import Eunpyeng
 from siteCrainfo.cultureFoundation.GwanakCra import Gwanak
@@ -18,6 +22,7 @@ from siteCrainfo.cultureFoundation.Yangcheon import Yangcheon
 from siteCrainfo.cultureFoundation.Yeongdeungpo import Yeongdeungpo
 from siteCrainfo.cultureFoundation.Jongro import Jongro
 from siteCrainfo.cultureFoundation.Junggu import Junggu
+from siteCrainfo.cultureFoundation.Jungnang import Jungnang
 from siteCrainfo.cultureFoundation.Dongdaemun import Dongdaemun
 from siteCrainfo.cultureFoundation.Mapo import Mapo
 from siteCrainfo.cultureFoundation.Seongdong import Seongdong
@@ -34,6 +39,7 @@ from siteCrainfo.cultureBorough.notice.Guro_Borough_Notice import Guro_notice
 from siteCrainfo.cultureBorough.notice.Geuamcheoun_Borough_Notice import Geuamcheoun_notice
 from siteCrainfo.cultureBorough.notice.Nowon_Borough_Notice import Nowon_notice
 from siteCrainfo.cultureBorough.notice.Dobong_Borough_Notice import Dobong_notice
+from siteCrainfo.cultureBorough.notice.Seodaemun_Borough_Notice import Seodaemun_notice
 from siteCrainfo.cultureBorough.notice.Dongdaemun_Borough_Notice import Dongdaemun_notice
 from siteCrainfo.cultureBorough.notice.Dongjak_Borough_Notice import Dongjak_notice
 from siteCrainfo.cultureBorough.notice.Mapo_Borough_Notice import Mapo_notice
@@ -67,12 +73,30 @@ if __name__ == '__main__':
         sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ));
         # 재단
         try:
-            # Seodaemun.mainCra(1,0);
+            # Jungnang.mainCra(1,0);
+            # Jungnang_notice.mainCra(1);
 
-            # Gnagbuk.mainCra(1,0);
+            # Youngsan_notice.mainCra(1,0);
+
+            # Gangnam.mainCra(1,0);
+            # Gangnam_notice.mainCra(1);
+
+            # Guro.mainCra(1,0);
+            # Guro_notice.mainCra(1);
+
+            # Gangseo.mainCra(0);
+            # Gangseo_notice.mainCra(1);
+
+            # Gangdong.mainCra(1,0);
+            # Gangdong_notice.mainCra(1);
 
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
+
+            # Seodaemun.mainCra(1,0);
+            # Seodaemun_notice.mainCra(1);
+
+            # Gnagbuk.mainCra(1,0);
 
             # Dongdaemun.mainCra(1,0);
             # Dongdaemun_notice.mainCra(1);
@@ -83,17 +107,8 @@ if __name__ == '__main__':
             # Eunpyeng.mainCra(1,0);
             # Eunpyeng_notice.mainCra(1);
 
-            # Gangdong_notice.mainCra(1,0);
-
-            # Gangnam.mainCra(0,0);
-            # Gangnam_notice.mainCra(1);
-
-            # Gangseo_notice.mainCra(1,0);
-
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
-
-            # Guro_notice.mainCra(1,0);
 
             # Gwanak.mainCra(0,0);
             # Gwanak_notice.mainCra(1);
@@ -106,8 +121,6 @@ if __name__ == '__main__':
 
             # Junggu.mainCra(1,0);
             # Junggu_notice.mainCra(1);
-
-            # Jungnang_notice.mainCra(1,0);
 
             # Mapo.mainCra(1,0);
             # Mapo_notice.mainCra(1);
@@ -131,12 +144,11 @@ if __name__ == '__main__':
             # Yeongdeungpo.mainCra(1,0);
             # Yeongdeungpo_notice.mainCra(1);
 
-            # Youngsan_notice.mainCra(1,0);
-
             Npocra.mainCra(1,0);
             Youthseoul.mainCra(1);
             Sbaseoul.mainCra(1);
             Housingseoul.mainCra(1);
+            Seoultourism.mainCra(1);
 
             #서울시는 따로 진행 
             # 페이지 옮기는 부분이 문제.
@@ -204,8 +216,10 @@ if __name__ == '__main__':
             # Seongdong.mainCra(1,0);
             # Seongdong_notice.mainCra(1);
 
+            # Gangdong_notice.mainCra(1);
             # Gangdong_notice.mainCra(1,0);
 
+            # Gangseo.mainCra(0);
             # Gangseo_notice.mainCra(1,0);
 
             # Guro_notice.mainCra(1,0);
@@ -214,7 +228,6 @@ if __name__ == '__main__':
 
             # Youngsan_notice.mainCra(1,0);
 
-            # Jungnang_notice.mainCra(1,0);
 
             # Npocra.mainCra(1,0);
             # Youthseoul.mainCra(1);

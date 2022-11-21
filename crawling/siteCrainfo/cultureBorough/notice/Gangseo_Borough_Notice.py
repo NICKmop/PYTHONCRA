@@ -7,9 +7,9 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Gangseo_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGSEO_NAME);
-        maxCntNumber = max(cntNumber);
+        numberCnt = max(cntNumber);
 
         url = 'https://www.gangseo.seoul.kr/gs040101?curPage={}'.format(cnt);
         response = requests.get(url);
@@ -30,7 +30,7 @@ class Gangseo_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Gangseo_notice.mainCra(cnt, numberCnt);
+                    return Gangseo_notice.mainCra(cnt);
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
@@ -40,21 +40,18 @@ class Gangseo_notice:
                     if(noticeCheck[i].text.strip() != ''):
                         if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
                             break;
-                        else:
-                            maxCntNumber += 1;
-
-                            changeText = str(registrationdate[i].text);
-                            firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "강서구청",
-                                )
-                            );
+                        changeText = str(registrationdate[i].text);
+                        firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "강서구청",
+                            )
+                        );
                     else:
                         print("none blank : {}".format(title[i].text.strip()));
                     

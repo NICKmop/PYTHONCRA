@@ -10,7 +10,6 @@ class Gangnam:
     def mainCra(cnt,numberCnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGNAM_NAME);
         maxCntNumber = max(cntNumber);
-
         url = 'https://www.gangnam.go.kr/office/gfac/board/gfac_notice/list.do?mid=gfac_notice&pgno={}&keyfield=BDM_MAIN_TITLE&keyword='.format(cnt);
         response = requests.get(url);
 
@@ -21,34 +20,36 @@ class Gangnam:
             title = soup.select('td.align-l');
             link = soup.select('td:nth-child(2) > a');
             registrationdate = soup.select('tr > td:nth-child(5)');
+            checkValue = soup.select('tr > td:nth-child(1)');
 
             linkCount = len(link) - 1;
 
             for i in range(len(link)):
-                numberCnt += 1;
                 if linkCount == i:
                     cnt += 1;
                     print("Gangnam Next Page : {}".format(cnt));
                     return Gangnam.mainCra(cnt, numberCnt);
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
-                    #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
-                        break;
-                    else:
-                        maxCntNumber += 1;
-                        changeText= str(registrationdate[i].text);
-                        
-                        firebase_con.updateModel(commonConstant_NAME.GANGNAM_NAME,maxCntNumber,
-                            datasModel.toJson(
-                                "https://www.gangnam.go.kr/{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "강남문화재단",
-                            )
-                        );
+                    if(checkValue[i].text.strip() != '공지'):
+                        numberCnt += 1;
+                        if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
+                            break;
+                        if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
+                            break;
+                        else:
+                            maxCntNumber += 1;
+                            changeText= str(registrationdate[i].text);
+                            
+                            firebase_con.updateModel(commonConstant_NAME.GANGNAM_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "https://www.gangnam.go.kr/{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "강남문화재단",
+                                )
+                            );
         else : 
             print(response.status_code);

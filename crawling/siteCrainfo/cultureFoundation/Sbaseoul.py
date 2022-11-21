@@ -27,7 +27,7 @@ class Sbaseoul:
                 print(commonConstant_NAME.SBASEOUL_NAME,"Next Page : {}".format(cnt));
                 # return Sbaseoul.mainCra(cnt),
             else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
                 #     break;
 
                 if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
@@ -50,7 +50,7 @@ class Sbaseoul:
                             title[i].text.strip(),
                             "",
                             fnChnagetype(changeText.strip()),
-                            "SBA지원센터"
+                            "서울산업진흥원"
                         )
                     )
             
