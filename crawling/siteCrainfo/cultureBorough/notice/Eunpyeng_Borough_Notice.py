@@ -23,7 +23,6 @@ class Eunpyeng_notice:
 
             # print(registrationdate);
             linkCount = len(link) - 1;
-
             for i in range(len(link)):
                 numberCnt += 1;
                 if linkCount == i:
