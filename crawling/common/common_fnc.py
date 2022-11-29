@@ -9,6 +9,7 @@ from datetime import datetime
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import requests
+from requests_toolbelt import MultipartEncoder
 
 def loggingdata(data):
     today = date.today();
@@ -33,8 +34,11 @@ def pageconnectLoadUrl(url):
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
     browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
+    
     browser.get(url);
+    
     time.sleep(3);
+    
     html = browser.page_source;
     return html;
 
@@ -44,11 +48,6 @@ def pageClickEvent(url):
     browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     browser.get(url);
-
-    # browser.find_element_by_class_name('btn_more _more').click();
-    # elem = browser.find_element(By.CLASS_NAME, 'btn_more _more');
-    elem = browser.find_element(By.CSS_SELECTOR, 'a._more');
-    elem.click();
 
 def pageReload(driver, pageNumber, script):
     time.sleep(2);
@@ -63,6 +62,12 @@ def fnChnagetype(text):
     dt_obj = datetime.strptime(text,'%Y-%m-%d')
     return dt_obj;
     
+def post(url, field_data) :
+    m = MultipartEncoder(fields=field_data)
+    headers = {'Content-Type' : m.content_type}
+    res = requests.post(url, headers=headers, data=m)
+    return res.status_code, res.json()
+
 def pageconnect(pageNumber, url, script):
     if pageNumber is None:
         pageNumber = 0;
@@ -73,7 +78,7 @@ def pageconnect(pageNumber, url, script):
     browser.implicitly_wait(15);
     browser.get(url);
 
-    time.sleep(2);
+    time.sleep(3);
 
     soup = BeautifulSoup(driver1(browser,pageNumber, url, script), 'html.parser');
     return soup;

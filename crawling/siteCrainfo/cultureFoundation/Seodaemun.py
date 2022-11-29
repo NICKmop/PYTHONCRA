@@ -53,7 +53,7 @@ class Seodaemun:
                                 title[i].text.strip(),
                                 "",
                                 fnChnagetype(changeText.strip()),
-                                "서대문문화재단"
+                                "서대문공단"
                             )
                         )
             

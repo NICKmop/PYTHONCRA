@@ -1,59 +1,65 @@
-import re
-from common.common_fnc import fnCompareTitle
+import requests
 from common.common_fnc import fnChnagetype
+from common.common_fnc import fnCompareTitle
 from dbbox.firebases import firebase_con
 from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
-import common.common_fnc  as com
+from bs4 import BeautifulSoup
 
 class Seoultourism:
     def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOUL_NAME);
         numberCnt = max(cntNumber);
 
-        url = 'https://www.seoul.go.kr/realmnews/in/list.do';
-        soupData = com.pageconnect(cnt, url, "javascript:fnPagingMove({});".format(cnt));
-        
-        link = soupData.select('.item > a');
-        title = soupData.select('.tbx > .subject');
-        registrationdate = soupData.select('.tbx > .date');
+        url = 'https://www.sto.or.kr/unitrcrit?curPage={}'.format(cnt);
+        response = requests.get(url);
 
-        linkCount = len(link) - 1;
+        if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
+            html = response.text;
+            soup = BeautifulSoup(html, 'html.parser')
 
-        for i in range(len(link)):
-            numberCnt += 1;
-            changeText= str(registrationdate[i].text.split(' ')[0]);
-            if linkCount == i:
-                cnt += 1;
+            link = soup.select('.od-row > a');
+            title = soup.select('.od-row > a');
+            registrationdate = soup.select('.col4');
 
-                firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
-                datasModel.toJson(
-                    link[i].attrs.get('href'),
-                    numberCnt,
-                    "",
-                    title[i].text.strip(),
-                    "",
-                    fnChnagetype(changeText.strip()),
-                    "서울관광재단"
+            linkCount = len(link) - 1;
+
+            for i in range(len(link)):
+                numberCnt += 1;
+                changeText= str(registrationdate[i].text.strip());
+                if linkCount == i:
+                    cnt += 1;
+
+                    firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
+                        datasModel.toJson(
+                            "https://www.sto.or.kr{}".format(link[i].attrs.get('href')),
+                            numberCnt,
+                            "",
+                            title[i].text.strip(),
+                            "",
+                            fnChnagetype(changeText),
+                            "서울관광재단"
+                        )
                     )
-                )
-                print("Seoultourism Next Page : {}".format(cnt));
-                return Seoultourism.mainCra(cnt),
-            else:
-                # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_EIGHT:
-                #     break;
-                
-                if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
-                    break;
-
-                firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
-                    datasModel.toJson(
-                        link[i].attrs.get('href'),
-                        numberCnt,
-                        "",
-                        title[i].text.strip(),
-                        "",
-                        fnChnagetype(changeText.strip()),
-                        "서울관광재단"
-                    )
-                )
+                    print("Seoultourism Next Page : {}".format(cnt));
+                    return Seoultourism.mainCra(cnt),
+                else:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_EIGHT:
+                    #     break;
+                    if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                        break;
+                    
+                    if(changeText == '작성일'):
+                        numberCnt -= 1;
+                    if(changeText != '작성일'):
+                        firebase_con.updateModel( commonConstant_NAME.SEOUL_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.sto.or.kr{}".format(link[i].attrs.get('href')),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText),
+                                "서울관광재단"
+                            )
+                        )

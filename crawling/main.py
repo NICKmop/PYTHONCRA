@@ -6,6 +6,8 @@ from siteCrainfo.cultureFoundation.Sbaseoul import Sbaseoul
 from siteCrainfo.cultureFoundation.Housingseoul import Housingseoul 
 from siteCrainfo.cultureFoundation.Seoultourism import Seoultourism  
 from siteCrainfo.cultureFoundation.Dobong import Dobong
+from siteCrainfo.cultureFoundation.Nowon import Nowon
+from siteCrainfo.cultureFoundation.Yongsan import Youngsan
 from siteCrainfo.cultureFoundation.Guro import Guro
 from siteCrainfo.cultureFoundation.Gangdong import Gangdong
 from siteCrainfo.cultureFoundation.Gangseo import Gangseo
@@ -76,7 +78,7 @@ if __name__ == '__main__':
             # Jungnang.mainCra(1,0);
             # Jungnang_notice.mainCra(1);
 
-            # Youngsan_notice.mainCra(1,0);
+            # Youngsan_notice.mainCra(1);
 
             # Gangnam.mainCra(1,0);
             # Gangnam_notice.mainCra(1);
@@ -97,6 +99,7 @@ if __name__ == '__main__':
             # Seodaemun_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
+            # Gangbuk_notice.mainCra(1);
 
             # Dongdaemun.mainCra(1,0);
             # Dongdaemun_notice.mainCra(1);
@@ -123,9 +126,10 @@ if __name__ == '__main__':
             # Junggu_notice.mainCra(1);
 
             # Mapo.mainCra(1,0);
-            # Mapo_notice.mainCra(1);
+            Mapo_notice.mainCra(1);
 
-            # Nowon_notice.mainCra(1,0);
+            # Nowon.mainCra(1,0);
+            # Nowon_notice.mainCra(1);
 
             # Seocho.mainCra(1,0);
             # Seocho_notice.mainCra(1);
@@ -144,18 +148,19 @@ if __name__ == '__main__':
             # Yeongdeungpo.mainCra(1,0);
             # Yeongdeungpo_notice.mainCra(1);
 
-            Npocra.mainCra(1,0);
-            Youthseoul.mainCra(1);
-            Sbaseoul.mainCra(1);
-            Housingseoul.mainCra(1);
-            Seoultourism.mainCra(1);
+            # Npocra.mainCra(1,0);
+            # Youthseoul.mainCra(1);
+            # Sbaseoul.mainCra(1);
+            # Housingseoul.mainCra(1);
+            # Seoultourism.mainCra(1);
 
             #서울시는 따로 진행 
             # 페이지 옮기는 부분이 문제.
-            # Gangbuk_notice.mainCra(1);
              # 링크 크롤링 시 javascript함수로 되어 있어 URL 표기가 안됨.
             #크롤 데이터가 안담김
             # Seoul.mainCra(1,0);
+            #Younsan.mainCra(1,0); 확인 필요.
+
         except ConnectionError as conerror:
             print("conerror : {}".format(conerror));
 
@@ -174,6 +179,7 @@ if __name__ == '__main__':
             # Mapo_notice.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
+            # Gangbuk_notice.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
@@ -227,7 +233,6 @@ if __name__ == '__main__':
             # Nowon_notice.mainCra(1,0);
 
             # Youngsan_notice.mainCra(1,0);
-
 
             # Npocra.mainCra(1,0);
             # Youthseoul.mainCra(1);

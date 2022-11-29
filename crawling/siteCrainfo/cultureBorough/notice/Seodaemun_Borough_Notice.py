@@ -47,7 +47,7 @@ class Seodaemun_notice:
                                     title[i].text.strip(),
                                     "",
                                     fnChnagetype(changeText.strip()),
-                                    "서대문공단",
+                                    "서대문구청",
                                 )
                             );
         else : 

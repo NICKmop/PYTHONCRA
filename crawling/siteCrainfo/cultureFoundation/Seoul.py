@@ -7,10 +7,10 @@ import common.common_fnc  as com
 class Seoul:
     def mainCra(cnt,numberCnt):
         url = 'https://www.sfac.or.kr/opensquare/notice/notice_list.do';
-        soupData = com.pageconnect(cnt, url, "doBbsFPag({});return false;".format(cnt));
-        
-        link = soupData.select('.td:nth-child(2)');
-        title = soupData.select('.td:nth-child(2)');
+        soupData = com.pageconnect(cnt, url, "javascript:doBbsFPag({});return false;".format(cnt));
+        print(soupData);
+        link = soupData.select('.cell');
+        title = soupData.select('.cell');
         registrationdate = soupData.select('td:nth-child(3)');
 
         print("link : {}".format(link));
@@ -22,7 +22,7 @@ class Seoul:
         for i in range(len(link)):
             numberCnt += 1;
             if linkCount == i:
-                cnt += 10;
+                cnt += 1;
                 print("Seoul Next Page : {}".format(cnt));
                 return Seoul.mainCra(cnt, numberCnt),
             else:

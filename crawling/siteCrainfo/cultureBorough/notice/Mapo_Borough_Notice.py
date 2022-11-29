@@ -17,8 +17,9 @@ class Mapo_notice:
             html = response.text;
             soup = BeautifulSoup(html, 'html.parser')
             # 타이틀 ,기관, 링크, 등록일, 번호
-            link = soup.select('.val_m > a');
-            title = soup.select('.val_m > a');
+            checkValue = soup.select('td:nth-child(1)');
+            link = soup.select('.tal_l_i > a');
+            title = soup.select('.tal_l_i > a');
             registrationdate = soup.select('td:nth-child(5)');
 
             # print(registrationdate);
@@ -33,6 +34,7 @@ class Mapo_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
+                    # print(checkValue[i].text.strip());
                     if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
                         break;
 
@@ -41,7 +43,7 @@ class Mapo_notice:
 
                     changeText = str(registrationdate[i].text.replace('.','-'));
 
-                    if(title[i].text.strip() != ''):
+                    if(checkValue[i].text.strip() != ''):
                         firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.mapo.go.kr{}".format(link[i].attrs.get('href').replace('.','',1)),

@@ -44,21 +44,21 @@ class Npocra:
                     else:
                         maxCntNumber += 1;
 
-                        changeText= str(registrationdate[i+1].text.replace('.','-'));
-                        if(checkValue[i].text.strip() == 'NPO지원센터'):
-                            numberCnt -= 1;
-                        
-                        if(checkValue[i].text.strip() != 'NPO지원센터'):
-                            firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    link[i].attrs.get('href'),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "서울NPO지원센터",
-                                )
-                            );  
+                    changeText= str(registrationdate[i+1].text.replace('.','-'));
+                    if(checkValue[i].text.strip() == 'NPO지원센터'):
+                        numberCnt -= 1;
+                    
+                    if(checkValue[i].text.strip() != 'NPO지원센터'):
+                        firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                link[i].attrs.get('href'),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "서울NPO지원센터",
+                            )
+                        );  
         else : 
             print(response.status_code)

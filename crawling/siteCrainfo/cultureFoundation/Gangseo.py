@@ -15,6 +15,7 @@ class Gangseo:
 
         url = 'https://kcc2000.modoo.at/?link=2glkcxv4'
         soup = BeautifulSoup(pageconnectLoadUrl(url), 'html.parser');
+        
         # 타이틀 ,기관, 링크, 등록일, 번호
         title = soup.select('.tit');
         link = soup.select('span[data-message-no]')

@@ -7,9 +7,9 @@ from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
 class Youngsan_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YOUNGSAN_NAME);
-        maxCntNumber = max(cntNumber);
+        numberCnt = max(cntNumber);
 
         url = 'https://www.yongsan.go.kr/portal/bbs/B0000041/list.do?menuNo=200228&pageIndex={}'.format(cnt);
         response = requests.get(url);
@@ -30,19 +30,18 @@ class Youngsan_notice:
                 if linkCount == i:
                     cnt += 1;
                     print(commonConstant_NAME.YOUNGSAN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                    return Youngsan_notice.mainCra(cnt, numberCnt);
+                    return Youngsan_notice.mainCra(cnt);
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
                     if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip()) == 1):
                         break;
                     else:
-                        maxCntNumber += 1;
                         changeText= str(registrationdate[i].text);
-                        firebase_con.updateModel(commonConstant_NAME.YOUNGSAN_NAME,maxCntNumber,
+                        firebase_con.updateModel(commonConstant_NAME.YOUNGSAN_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.yongsan.go.kr{}".format(link[i].attrs.get('href')),
-                                maxCntNumber,
+                                numberCnt,
                                 "",
                                 title[i].text.strip(),
                                 "",

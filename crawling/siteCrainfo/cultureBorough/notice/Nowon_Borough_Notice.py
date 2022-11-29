@@ -7,9 +7,9 @@ from models.datasModel import datasModel
 import common.common_fnc  as com
 
 class Nowon_notice:
-    def mainCra(cnt,numberCnt):
+    def mainCra(cnt):
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.NOWON_NAME);
-        maxCntNumber = max(cntNumber);
+        numberCnt = max(cntNumber);
 
         url = 'https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1001&q_estnColumn1=11';
         soupData = com.pageconnect(cnt, url, "opMovePage({});return false;".format(cnt));
@@ -25,7 +25,7 @@ class Nowon_notice:
             if linkCount == i:
                 cnt += 1;
                 print("Nowon_notice Next Page : {}".format(cnt));
-                return Nowon_notice.mainCra(cnt, numberCnt),
+                return Nowon_notice.mainCra(cnt),
             else:
                 # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                 #     break; 
@@ -33,17 +33,15 @@ class Nowon_notice:
                 if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
                     break;
                 else:
-                    maxCntNumber += 1;
-                    
                     linkAttr = link[i].attrs.get('onclick');
                     linkSub = linkAttr.split("('")[1];
                     linkSubNt = linkSub.split("')")[0];
                     changeText= str(registrationdate[i].text);
 
-                    firebase_con.updateModel( commonConstant_NAME.NOWON_NAME,maxCntNumber,
+                    firebase_con.updateModel( commonConstant_NAME.NOWON_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_bbscttSn={}&q_estnColumn1=11&q_rowPerPage=10&q_currPage={}&q_sortName=&q_sortOrder=&q_searchKeyTy=sj___1002&q_searchVal=&".format(linkSubNt,cnt),
-                            maxCntNumber,
+                            numberCnt,
                             "",
                             title[i].text.strip(),
                             "",
