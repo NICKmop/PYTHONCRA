@@ -1,3 +1,4 @@
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time, logging
@@ -11,28 +12,35 @@ from selenium.webdriver.common.keys import Keys
 import requests
 from requests_toolbelt import MultipartEncoder
 
+current_working_directory = os.getcwd();
+
 def loggingdata(data):
-    today = date.today();
+    try:
+        today = date.today();
 
-    logger = logging.getLogger();
-    logger.setLevel(logging.INFO);
-    
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        logger = logging.getLogger();
+        logger.setLevel(logging.INFO);
+        
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
-    stream_handler = logging.StreamHandler();
-    stream_handler.setFormatter(formatter);
-    logger.addHandler(stream_handler);
+        stream_handler = logging.StreamHandler();
+        stream_handler.setFormatter(formatter);
+        logger.addHandler(stream_handler);
 
-    file_handler = logging.FileHandler('/Users/yeon/StudioProjects/pythoncra/crawling/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
-    file_handler.setFormatter(formatter);
-    logger.addHandler(file_handler);
-
-    logger.info(data);
+        file_handler = logging.FileHandler(current_working_directory+'/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
+        # file_handler = logging.FileHandler('/Users/yeon/StudioProjects/pythoncra/crawling/siteLog/{}.log'.format(today.strftime('%Y-%m-%d')));
+        file_handler.setFormatter(formatter);
+        logger.addHandler(file_handler);
+        logger.info(data);
+        
+    except Exception as header:
+        print("pass : {}".fromat(header));
 
 def pageconnectLoadUrl(url):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
+    browser = webdriver.Chrome(current_working_directory+'/chromedriver', options=options);
+    # browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     
     browser.get(url);
@@ -45,7 +53,8 @@ def pageconnectLoadUrl(url):
 def pageClickEvent(url):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
+    browser = webdriver.Chrome(current_working_directory+'/chromedriver', options=options);
+    # browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     browser.get(url);
 
@@ -74,7 +83,8 @@ def pageconnect(pageNumber, url, script):
     
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
+    browser = webdriver.Chrome(current_working_directory+'/chromedriver', options=options);
+    # browser = webdriver.Chrome('/Users/yeon/StudioProjects/pythoncra/crawling/chromedriver', options=options);
     browser.implicitly_wait(15);
     browser.get(url);
 
@@ -93,6 +103,7 @@ def fnCompareTitle(name, title):
         if(i == title):
             print("{} Firebase title : {}".format(name,i));
             print("{} webCra title : {}".format(name,title));
+            loggingdata(name);
             dupltitleList.append(title);
             return 1;
 

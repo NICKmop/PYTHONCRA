@@ -1,0 +1,358 @@
+2022-12-04 17:20:23,493 - INFO - JUNGNANG
+2022-12-04 17:20:24,689 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2022-12-04 17:20:25,395 - INFO - JUNGNANG
+2022-12-04 17:20:25,395 - INFO - JUNGNANG
+2022-12-04 17:20:27,739 - INFO - YONGSAN
+2022-12-04 17:20:27,739 - INFO - YONGSAN
+2022-12-04 17:20:27,739 - INFO - YONGSAN
+2022-12-04 17:20:29,161 - INFO - GANGNAM
+2022-12-04 17:20:29,161 - INFO - GANGNAM
+2022-12-04 17:20:29,161 - INFO - GANGNAM
+2022-12-04 17:20:29,161 - INFO - GANGNAM
+2022-12-04 17:21:11,618 - INFO - GANGNAM
+2022-12-04 17:21:11,618 - INFO - GANGNAM
+2022-12-04 17:21:11,618 - INFO - GANGNAM
+2022-12-04 17:21:11,618 - INFO - GANGNAM
+2022-12-04 17:21:11,618 - INFO - GANGNAM
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:17,405 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:19,741 - INFO - GURO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:47,180 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:50,231 - INFO - GANGSEO
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:52,465 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:21:54,273 - INFO - GANGDONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:10,731 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:12,903 - INFO - DOBONG
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:30,468 - INFO - SEODAEMUN
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:22:31,180 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Sun, 04 Dec 2022 08:22:31 GMT\r\nContent-Type: text/html\r\nContent-Length: 41099\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDASDAQRQC=IGPLEEGBJLHNACLBIHHJCEML; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:48,433 - INFO - SEODAEMUN
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:23:50,225 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:04,011 - INFO - GANGBUK
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:18,521 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:20,119 - INFO - DONGDAEMUN
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:21,207 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:24,292 - INFO - DONGJAK
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
+2022-12-04 17:24:37,610 - INFO - EUNPYENG
