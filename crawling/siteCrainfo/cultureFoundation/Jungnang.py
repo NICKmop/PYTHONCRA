@@ -15,29 +15,32 @@ class Jungnang:
             maxCntNumber = max(cntNumber);
 
             url = 'https://www.jnfac.or.kr/mbbs/index.php?board_id=bbs02&cate=&find=&search=&ltype=&page=2&page={}'.format(cnt);
-            
+            print("url : {}".format(url));
             response = requests.get(url);
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser');
 
                 # 타이틀 ,기관, 링크, 등록일, 번호
-                link = soup.select('.subject');
-                title = soup.select('.subject');
+                link = soup.select('.subject > span > a');
+                title = soup.select('.subject > span > a');
                 registrationdate = soup.select('td:nth-child(4)');
                 checkValue = soup.select('td:nth-child(1)');
 
                 linkCount = len(link) - 1;
+
                 for i in range(len(link)):
                     changeText= str(registrationdate[i].text);
                     numberCnt += 1;
 
                     if linkCount == i:
                         cnt += 1;
-                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
+                        maxCntNumber += 1;
+                        
+                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
                             datasModel.toJson(
                                 'https://www.jnfac.or.kr/{}'.format(link[i].attrs.get('href')),
-                                numberCnt,
+                                maxCntNumber,
                                 "",
                                 title[i].text.strip(),
                                 "",
@@ -49,8 +52,8 @@ class Jungnang:
                         print("Jungnang Next Page : {}".format(cnt));
                         return Jungnang.mainCra(cnt, numberCnt);
                     else:
-                        if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                            break;  
+                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        #     break;  
 
                         if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
                             break;

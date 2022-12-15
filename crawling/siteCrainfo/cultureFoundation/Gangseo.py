@@ -35,6 +35,11 @@ class Gangseo:
                         break;
                     else:
                         maxCntNumber += 1;
+                        if('새글' in title[i].text.strip()):
+                            replaceString = title[i].text.strip().replace('새글', '').strip();
+                        else:
+                            replaceString = title[i].text.strip();
+                            
                         if('시간 전' not in registrationdate[i].text):
                             print(" True : {}".format(registrationdate[i].text));
                             changeText = str(registrationdate[i].text.replace('.','-'));
@@ -44,7 +49,7 @@ class Gangseo:
                                     "https://kcc2000.modoo.at/?link=2glkcxv4&messageNo={}&mode=view&query=&queryType=0&myList=0&page=1".format(link[i].attrs.get('data-message-no')),
                                     maxCntNumber,
                                     "",
-                                    title[i].text.strip(),
+                                    replaceString,
                                     "",
                                     fnChnagetype(changeText.strip()),
                                     "강서문화원",

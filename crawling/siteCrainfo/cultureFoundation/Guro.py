@@ -13,6 +13,7 @@ class Guro:
             maxCntNumber = max(cntNumber);
             url = 'https://www.guroartsvalley.or.kr/user/board/mn011801.do?page={}'.format(cnt);
             response = requests.get(url);
+            # response = requests.post()
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;

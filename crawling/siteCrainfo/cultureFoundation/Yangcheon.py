@@ -15,7 +15,7 @@ class Yangcheon:
             maxCntNumber = max(cntNumber);
 
             url = 'https://yfac.kr/main/contents.do?v_page={}&&a_num=48342159'.format(cnt);
-            response = requests.get(url);
+            response = requests.get(url, verify=False);
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
@@ -45,7 +45,7 @@ class Yangcheon:
                             changeText = registrationdate[i].text.strip().replace('.','-');
                             firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,maxCntNumber,
                                 datasModel.toJson(
-                                    "https://yfac.kr/main/contents.do?{}".format(link[i].attrs.get('href')),
+                                    "https://yfac.kr/main/contents.do{}".format(link[i].attrs.get('href')),
                                     maxCntNumber,
                                     "",
                                     title[i].text.strip(),

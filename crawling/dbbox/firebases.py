@@ -5,9 +5,11 @@ from firebase_admin import firestore
 import os
 
 class firebase_con:
+    ubuntuPath = '/home/ubuntu/Stproject/pythoncra/crawling';
     current_working_directory = os.getcwd();
+
     cred = credentials.Certificate(current_working_directory+'/dbbox/dbcurd-67641-firebase-adminsdk-ax50d-0e1098879e.json')
-    # cred = credentials.Certificate('/pythoncra/crawling/dbbox/dbcurd-67641-firebase-adminsdk-ax50d-0e1098879e.json')
+    # cred = credentials.Certificate(ubuntuPath+'/dbbox/dbcurd-67641-firebase-adminsdk-ax50d-0e1098879e.json')
     firebase_admin.initialize_app(cred,{ 'databaseURL' : 'https://dbcurd-67641-default-rtdb.firebaseio.com/'});
 
     def updateModel(name,i,values):

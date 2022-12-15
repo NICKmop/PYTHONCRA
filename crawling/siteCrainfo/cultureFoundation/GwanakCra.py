@@ -13,7 +13,7 @@ class Gwanak:
             maxCntNumber = max(cntNumber);
 
             url = 'https://www.gfac.or.kr/html/notify/notify11.html?page={}&sub=0'.format(cnt);
-            response = requests.get(url);
+            response = requests.get(url, verify=False);
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
