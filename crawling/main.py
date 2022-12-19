@@ -105,14 +105,14 @@ if __name__ == '__main__':
             # Dongjak.mainCra(1,0);
             # Dongjak_notice.mainCra(1);
 
-            Eunpyeng.mainCra(1,0);
-            Eunpyeng_notice.mainCra(1);
+            # Eunpyeng.mainCra(1,0);
+            # Eunpyeng_notice.mainCra(1);
 
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
 
-            Gwanak.mainCra(0,0);
-            Gwanak_notice.mainCra(1);
+            # Gwanak.mainCra(0,0);
+            # Gwanak_notice.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
@@ -134,25 +134,25 @@ if __name__ == '__main__':
 
             # Seongbuk.mainCra(1,0);
 
-            Seongdong.mainCra(1,0);
-            Seongdong_notice.mainCra(1);
+            # Seongdong.mainCra(1,0);
+            # Seongdong_notice.mainCra(1);
 
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
 
-            # Yangcheon.mainCra(1,0);
-            # Yangcheon_notice.mainCra(1);
+            Yangcheon.mainCra(1,0);
+            Yangcheon_notice.mainCra(1);
 
-            # Yeongdeungpo.mainCra(1,0);
-            # Yeongdeungpo_notice.mainCra(1);
+            Yeongdeungpo.mainCra(1,0);
+            Yeongdeungpo_notice.mainCra(1);
 
-            # Npocra.mainCra(1,0);
-            # Youthseoul.mainCra(1);
-            # Sbaseoul.mainCra(1);
-            # Housingseoul.mainCra(1);
-            # Seoultourism.mainCra(1);
+            Npocra.mainCra(1,0);
+            Youthseoul.mainCra(1);
+            Sbaseoul.mainCra(1);
+            Housingseoul.mainCra(1);
+            Seoultourism.mainCra(1);
 
-            # Seodaemun.mainCra(1,0);
+            Seodaemun.mainCra(1,0);
 
             # $ is not defiend
             # Seodaemun_notice.mainCra(1);

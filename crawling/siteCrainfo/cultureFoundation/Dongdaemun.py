@@ -19,17 +19,23 @@ class Dongdaemun:
             title = soupData.select('.board1');
             registrationdate = soupData.select('td:nth-child(6)');
 
+            test = soupData.select('tr:nth-child(3)');
+            
+            print(test);
+
+            # linkCount = len(link);
             linkCount = len(link) - 1;
             for i in range(len(link)):
                 numberCnt += 1;
+
                 if linkCount == i:
                     # javascript:pageNum('frm01','200');
                     cnt += 10;
                     print("Dongdaemun Next Page : {}".format(cnt));
                     return Dongdaemun.mainCra(cnt, numberCnt),
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                    #     break;
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                        # break;
 
                     if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):
                         break;
@@ -40,8 +46,9 @@ class Dongdaemun:
                         else:
                             linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
                             changeText= str(registrationdate[i].text);
-                            if(changeText == '등록일'):
-                                numberCnt -= 1;
+
+                            # if(changeText == '등록일'):
+                            #     numberCnt -= 1;
                             if(changeText != '등록일'):
                                 firebase_con.updateModel( commonConstant_NAME.DONGDAEMUN_NAME,maxCntNumber,
                                     datasModel.toJson(

@@ -20,10 +20,9 @@ class Seodaemun:
                 link = soup.select('tr > td:nth-child(2) > a');
                 title = soup.select('tr > td:nth-child(2) > a');
                 registrationdate = soup.select('tr > td:nth-child(4)');
-                checkValue = soup.select("tr > td:nth-child(1)");
+                # checkValue = soup.select("tr > td:nth-child(1)");
                 
                 linkCount = len(link) - 1;
-
                 for i in range(len(link)):
                     numberCnt += 1;
                     if linkCount == i:
@@ -36,20 +35,20 @@ class Seodaemun:
                         if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip()) == 1):
                             break;
                         else:
-                            if(checkValue[i].text.strip() != ''):
-                                maxCntNumber += 1;
-                                changeText = str(registrationdate[i].text.replace('.','-'));
-                                firebase_con.updateModel(commonConstant_NAME.SEODAEMUN_NAME,maxCntNumber,
-                                    datasModel.toJson(
-                                        "https://www.sscmc.or.kr/info/notice/{}".format(link[i].attrs.get('href')),
-                                        maxCntNumber,
-                                        "",
-                                        title[i].text.strip(),
-                                        "",
-                                        fnChnagetype(changeText.strip()),
-                                        "서대문공단",
-                                    )
-                                );
+                            # if(checkValue[i].text.strip() != ''):
+                            maxCntNumber += 1;
+                            changeText = str(registrationdate[i].text.replace('.','-'));
+                            firebase_con.updateModel(commonConstant_NAME.SEODAEMUN_NAME,maxCntNumber,
+                                datasModel.toJson(
+                                    "https://www.sscmc.or.kr/info/notice/{}".format(link[i].attrs.get('href')),
+                                    maxCntNumber,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "서대문공단",
+                                )
+                            );
             else : 
                 print(response.status_code)
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:

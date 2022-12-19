@@ -11,10 +11,10 @@ class Seocho_notice:
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
             numberCnt = max(cntNumber);
-
-            print("numberCnt : {} ". format(numberCnt));
+            
             url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=57&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
             response = requests.get(url);
+
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser')
@@ -23,34 +23,36 @@ class Seocho_notice:
                 title = soup.select('.title > a');
                 registrationdate = soup.select('td:nth-child(4)');
 
-                # print(registrationdate);
+                checknotice = soup.select("tr");
+
                 linkCount = len(link) - 1;
-
                 for i in range(len(link)):
-                    numberCnt += 1;
-                    if linkCount == i:
-                        cnt += 1;
-                        print(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                        return Seocho_notice.mainCra(cnt);
-                    else:
-                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                        #     break;
-                        if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
-                            break;
+                    if(checknotice[i].attrs.get("class") == None):
+                        numberCnt += 1;
+                        if linkCount == i:
+                            cnt += 1;
+                            print(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
+                            return Seocho_notice.mainCra(cnt);
+                        else:
+                            # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                            #     break;
 
-                        # print(link[i].attrs.get('href'));
-                        changeText= str(registrationdate[i].text.replace('.','-'));
-                        firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
-                            datasModel.toJson(
-                                "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),
-                                numberCnt,
-                                "",
-                                title[i].text.strip(),
-                                "",
-                                fnChnagetype(changeText.strip()),
-                                "서초구청",
-                            )
-                        );
+                            if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
+                                break;
+
+                            changeText= str(registrationdate[i].text.replace('.','-'));
+
+                            firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
+                                datasModel.toJson(
+                                    "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),
+                                    numberCnt,
+                                    "",
+                                    title[i].text.strip(),
+                                    "",
+                                    fnChnagetype(changeText.strip()),
+                                    "서초구청",
+                                )
+                            );
             else : 
                 print(response.status_code);
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:

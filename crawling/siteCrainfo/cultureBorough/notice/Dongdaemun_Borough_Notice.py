@@ -32,7 +32,7 @@ class Dongdaemun_notice:
                         print(commonConstant_NAME.DONGDAEMUN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Dongdaemun_notice.mainCra(cnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_SEVEN:
                         #     break;
                         
                         if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):

@@ -35,12 +35,12 @@ class Jungnang:
 
                     if linkCount == i:
                         cnt += 1;
-                        maxCntNumber += 1;
+                        # maxCntNumber += 1;
                         
-                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
+                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                             datasModel.toJson(
                                 'https://www.jnfac.or.kr/{}'.format(link[i].attrs.get('href')),
-                                maxCntNumber,
+                                numberCnt,
                                 "",
                                 title[i].text.strip(),
                                 "",
@@ -52,7 +52,7 @@ class Jungnang:
                         print("Jungnang Next Page : {}".format(cnt));
                         return Jungnang.mainCra(cnt, numberCnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                         #     break;  
 
                         if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):

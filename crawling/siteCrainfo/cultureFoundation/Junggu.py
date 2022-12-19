@@ -35,22 +35,19 @@ class Junggu:
 
                 for i in range(len(link)):
                     numberCnt += 1;
-                    if linkCount == i:
-                        cnt += 1;
-                        print("Junggu Next Page : {}".format(cnt));
-                        return Junggu.mainCra(cnt, numberCnt);
-                    else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        #     break; 
-                        if(checkValue[i].text.strip() == '공지'):
-                            numberCnt -= 1;
-
-                        changeText = str(registrationdate[i].text);
-                        if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
-                            break;
+                    if(checkValue[i].text.strip() != '공지'):
+                        if linkCount == i:
+                            cnt += 1;
+                            print("Junggu Next Page : {}".format(cnt));
+                            return Junggu.mainCra(cnt, numberCnt);
                         else:
-                            maxCntNumber += 1;
-                            if(checkValue[i].text.strip() != '공지'):
+                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                            #     break; 
+                            changeText = str(registrationdate[i].text);
+                            if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
+                                break;
+                            else:
+                                maxCntNumber += 1;
                                 firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,maxCntNumber,
                                     datasModel.toJson(
                                         "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
@@ -62,8 +59,8 @@ class Junggu:
                                         "중구문화재단",
                                     )
                                 );
-                        # else:
-                        #     numberCnt = 0;
+                            # else:
+                            #     numberCnt = 0;
             else : 
                 print(response.status_code)
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:

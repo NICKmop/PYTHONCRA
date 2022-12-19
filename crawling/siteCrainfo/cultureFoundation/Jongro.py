@@ -25,34 +25,38 @@ class Jongro:
                 link = soup.select('tbody > tr > td.align-left > a');
                 title = soup.select('tbody > tr > td.align-left > a');
                 registrationdate = soup.select('tbody > tr > td:nth-child(5)');
+                
+                notice = soup.select('tbody > tr > .first');
 
                 linkCount = len(link) - 1;
 
                 for i in range(len(link)):
                     numberCnt += 1;
-                    if linkCount == i:
-                        cnt += 1;
-                        print("Jongro Next Page : {}".format(cnt));
-                        return Jongro.mainCra(cnt, numberCnt);
-                    else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        #     break; 
-                        if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
-                            break;
+                    if(notice[i].text.strip() != ''):
+                        if linkCount == i:
+                            cnt += 1;
+                            print("Jongro Next Page : {}".format(cnt));
+                            return Jongro.mainCra(cnt, numberCnt);
                         else:
-                            maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text.strip());
-                            firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText),
-                                    "종로문화재단",
-                                )
-                            );
+                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                            #     break; 
+
+                            if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
+                                break;
+                            else:
+                                maxCntNumber += 1;
+                                changeText= str(registrationdate[i].text.strip());
+                                firebase_con.updateModel(commonConstant_NAME.JONGRO_NAME,maxCntNumber,
+                                    datasModel.toJson(
+                                        "https://www.jfac.or.kr{}".format(link[i].attrs.get('href')),
+                                        maxCntNumber,
+                                        "",
+                                        title[i].text.strip(),
+                                        "",
+                                        fnChnagetype(changeText),
+                                        "종로문화재단",
+                                    )
+                                );
             else : 
                 print(response.status_code);
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:
