@@ -1,0 +1,888 @@
+2022-12-22 09:27:32,162 - INFO - JUNGNANG
+2022-12-22 09:27:33,070 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2022-12-22 09:27:33,855 - INFO - JUNGNANG
+2022-12-22 09:27:33,855 - INFO - JUNGNANG
+2022-12-22 09:31:24,962 - INFO - JUNGNANG
+2022-12-22 09:31:25,889 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2022-12-22 09:31:26,658 - INFO - JUNGNANG
+2022-12-22 09:31:26,658 - INFO - JUNGNANG
+2022-12-22 09:32:50,952 - INFO - GANGNAM
+2022-12-22 09:32:50,952 - INFO - GANGNAM
+2022-12-22 09:32:50,952 - INFO - GANGNAM
+2022-12-22 09:33:04,967 - INFO - GANGNAM
+2022-12-22 09:33:04,967 - INFO - GANGNAM
+2022-12-22 09:33:04,967 - INFO - GANGNAM
+2022-12-22 09:33:04,967 - INFO - GANGNAM
+2022-12-22 09:35:35,270 - INFO - JUNGNANG
+2022-12-22 09:35:36,691 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2022-12-22 09:35:37,388 - INFO - JUNGNANG
+2022-12-22 09:35:37,388 - INFO - JUNGNANG
+2022-12-22 09:36:35,122 - INFO - JUNGNANG
+2022-12-22 09:36:36,018 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2022-12-22 09:36:36,707 - INFO - JUNGNANG
+2022-12-22 09:36:36,707 - INFO - JUNGNANG
+2022-12-22 09:48:08,908 - INFO - GANGNAM
+2022-12-22 09:48:22,113 - INFO - GANGNAM
+2022-12-22 09:48:22,113 - INFO - GANGNAM
+2022-12-22 09:48:23,722 - INFO - GANGDONG
+2022-12-22 09:48:23,722 - INFO - GANGDONG
+2022-12-22 09:48:23,722 - INFO - GANGDONG
+2022-12-22 09:48:29,337 - INFO - GURO
+2022-12-22 09:48:29,337 - INFO - GURO
+2022-12-22 09:48:29,337 - INFO - GURO
+2022-12-22 09:48:29,337 - INFO - GURO
+2022-12-22 09:48:32,174 - INFO - GURO
+2022-12-22 09:48:32,174 - INFO - GURO
+2022-12-22 09:48:32,174 - INFO - GURO
+2022-12-22 09:48:32,174 - INFO - GURO
+2022-12-22 09:48:32,174 - INFO - GURO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:42,264 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:44,959 - INFO - GANGSEO
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:46,379 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:48,237 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:49,746 - INFO - GANGDONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:57,997 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:48:59,598 - INFO - DOBONG
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:01,341 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:10,377 - INFO - GANGBUK
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:19,520 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:22,296 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:25,173 - INFO - DONGDAEMUN
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:26,223 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:29,701 - INFO - DONGJAK
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:41,780 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:49:43,465 - INFO - GEUAMCHEOUN
+2022-12-22 09:52:16,041 - INFO - YONGSAN
+2022-12-22 09:52:17,832 - INFO - YONGSAN
+2022-12-22 09:52:17,832 - INFO - YONGSAN
+2022-12-22 09:52:19,361 - INFO - GANGNAM
+2022-12-22 09:52:19,361 - INFO - GANGNAM
+2022-12-22 09:52:19,361 - INFO - GANGNAM
+2022-12-22 09:52:32,509 - INFO - GANGNAM
+2022-12-22 09:52:32,509 - INFO - GANGNAM
+2022-12-22 09:52:32,509 - INFO - GANGNAM
+2022-12-22 09:52:32,509 - INFO - GANGNAM
+2022-12-22 09:52:34,296 - INFO - GANGDONG
+2022-12-22 09:52:34,296 - INFO - GANGDONG
+2022-12-22 09:52:34,296 - INFO - GANGDONG
+2022-12-22 09:52:34,296 - INFO - GANGDONG
+2022-12-22 09:52:34,296 - INFO - GANGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:14,526 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:29,114 - INFO - SEONGDONG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:37,003 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:41,826 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:44,559 - INFO - EUNPYENG
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:45,908 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:48,050 - INFO - GWANGZIN
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:50,006 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:56:59,915 - INFO - JONGRO
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:01,136 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:02,547 - INFO - JUNGGU
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:57:10,433 - INFO - MAPO
+2022-12-22 09:59:36,079 - INFO - YONGSAN
+2022-12-22 09:59:37,932 - INFO - YONGSAN
+2022-12-22 09:59:37,932 - INFO - YONGSAN
+2022-12-22 09:59:39,530 - INFO - GANGNAM
+2022-12-22 09:59:39,530 - INFO - GANGNAM
+2022-12-22 09:59:39,530 - INFO - GANGNAM
+2022-12-22 09:59:52,586 - INFO - GANGNAM
+2022-12-22 09:59:52,586 - INFO - GANGNAM
+2022-12-22 09:59:52,586 - INFO - GANGNAM
+2022-12-22 09:59:52,586 - INFO - GANGNAM
+2022-12-22 09:59:54,309 - INFO - GANGDONG
+2022-12-22 09:59:54,309 - INFO - GANGDONG
+2022-12-22 09:59:54,309 - INFO - GANGDONG
+2022-12-22 09:59:54,309 - INFO - GANGDONG
+2022-12-22 09:59:54,309 - INFO - GANGDONG
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:45,323 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:02:53,229 - INFO - NOWON
+2022-12-22 10:05:32,134 - INFO - YONGSAN
+2022-12-22 10:05:33,974 - INFO - YONGSAN
+2022-12-22 10:05:33,974 - INFO - YONGSAN
+2022-12-22 10:05:35,497 - INFO - GANGNAM
+2022-12-22 10:05:35,497 - INFO - GANGNAM
+2022-12-22 10:05:35,497 - INFO - GANGNAM
+2022-12-22 10:05:48,250 - INFO - GANGNAM
+2022-12-22 10:05:48,250 - INFO - GANGNAM
+2022-12-22 10:05:48,250 - INFO - GANGNAM
+2022-12-22 10:05:48,250 - INFO - GANGNAM
+2022-12-22 10:05:49,973 - INFO - GANGDONG
+2022-12-22 10:05:49,973 - INFO - GANGDONG
+2022-12-22 10:05:49,973 - INFO - GANGDONG
+2022-12-22 10:05:49,973 - INFO - GANGDONG
+2022-12-22 10:05:49,973 - INFO - GANGDONG
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:05:58,055 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:02,888 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:05,173 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:07,484 - INFO - MAPO
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:09,206 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:06:17,644 - INFO - NOWON
+2022-12-22 10:09:07,694 - INFO - YONGSAN
+2022-12-22 10:09:09,498 - INFO - YONGSAN
+2022-12-22 10:09:09,498 - INFO - YONGSAN
+2022-12-22 10:09:10,991 - INFO - GANGNAM
+2022-12-22 10:09:10,991 - INFO - GANGNAM
+2022-12-22 10:09:10,991 - INFO - GANGNAM
+2022-12-22 10:09:32,557 - INFO - NOWON
+2022-12-22 10:09:40,967 - INFO - NOWON
+2022-12-22 10:09:40,967 - INFO - NOWON
+2022-12-22 10:11:31,450 - INFO - SEONGBUK
+2022-12-22 10:11:31,450 - INFO - SEONGBUK
+2022-12-22 10:11:31,450 - INFO - SEONGBUK
+2022-12-22 10:11:38,882 - INFO - SONGPA
+2022-12-22 10:11:38,882 - INFO - SONGPA
+2022-12-22 10:11:38,882 - INFO - SONGPA
+2022-12-22 10:11:38,882 - INFO - SONGPA
+2022-12-22 10:11:41,035 - INFO - SONGPA
+2022-12-22 10:11:41,035 - INFO - SONGPA
+2022-12-22 10:11:41,035 - INFO - SONGPA
+2022-12-22 10:11:41,035 - INFO - SONGPA
+2022-12-22 10:11:41,035 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:43,280 - INFO - SONGPA
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:44,517 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:11:53,392 - INFO - YANGCHEON
+2022-12-22 10:15:26,474 - INFO - SEOCHO
+2022-12-22 10:15:28,126 - INFO - SEOCHO
+2022-12-22 10:15:28,126 - INFO - SEOCHO
+2022-12-22 10:15:29,862 - INFO - SEOCHO
+2022-12-22 10:15:29,862 - INFO - SEOCHO
+2022-12-22 10:15:29,862 - INFO - SEOCHO
+2022-12-22 10:15:31,943 - INFO - SEOCHO
+2022-12-22 10:15:31,943 - INFO - SEOCHO
+2022-12-22 10:15:31,943 - INFO - SEOCHO
+2022-12-22 10:15:31,943 - INFO - SEOCHO
+2022-12-22 10:15:33,346 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:33,346 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:33,346 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:33,346 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:33,346 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:35,035 - INFO - YEONGDEUNGPO
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:37,627 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:39,848 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:49,000 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:51,711 - INFO - SEOUL
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:15:52,188 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:15:52 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=PKMEKKFBDMEKKOABKIPPLNHK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:07,798 - INFO - SEODAEMUN
+2022-12-22 10:17:34,045 - INFO - NOWON
+2022-12-22 10:17:42,558 - INFO - NOWON
+2022-12-22 10:17:42,558 - INFO - NOWON
+2022-12-22 10:17:55,606 - INFO - SEOCHO
+2022-12-22 10:17:55,606 - INFO - SEOCHO
+2022-12-22 10:17:55,606 - INFO - SEOCHO
+2022-12-22 10:17:57,360 - INFO - SEOCHO
+2022-12-22 10:17:57,360 - INFO - SEOCHO
+2022-12-22 10:17:57,360 - INFO - SEOCHO
+2022-12-22 10:17:57,360 - INFO - SEOCHO
+2022-12-22 10:17:59,118 - INFO - SEOCHO
+2022-12-22 10:17:59,118 - INFO - SEOCHO
+2022-12-22 10:17:59,118 - INFO - SEOCHO
+2022-12-22 10:17:59,118 - INFO - SEOCHO
+2022-12-22 10:17:59,118 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:00,867 - INFO - SEOCHO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:02,313 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:04,090 - INFO - YEONGDEUNGPO
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:06,780 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:09,042 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:18,465 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,218 - INFO - SEOUL
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:18:21,674 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Thu, 22 Dec 2022 01:18:21 GMT\r\nContent-Type: text/html\r\nContent-Length: 42525\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCSAARQQC=AOMEKKFBHCFIALDIEHEFOEOH; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 10:19:37,201 - INFO - SEODAEMUN
+2022-12-22 16:50:03,502 - INFO - YONGSAN
+2022-12-22 16:50:05,384 - INFO - YONGSAN
+2022-12-22 16:50:05,384 - INFO - YONGSAN
+2022-12-22 16:50:07,275 - INFO - NOWON
+2022-12-22 16:50:07,275 - INFO - NOWON
+2022-12-22 16:50:07,275 - INFO - NOWON
+2022-12-22 16:50:15,585 - INFO - NOWON
+2022-12-22 16:50:15,585 - INFO - NOWON
+2022-12-22 16:50:15,585 - INFO - NOWON
+2022-12-22 16:50:15,585 - INFO - NOWON

@@ -33,8 +33,8 @@ class Gangnam:
                     else:
                         if(checkValue[i].text.strip() != '공지'):
                             numberCnt += 1;
-                            if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
-                                break;
+                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
+                            #     break;
                             if(fnCompareTitle(commonConstant_NAME.GANGNAM_NAME, title[i].text.strip()) == 1):
                                 break;
                             else:

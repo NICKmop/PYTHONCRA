@@ -11,7 +11,7 @@ class Nowon:
         try:
             requests.packages.urllib3.disable_warnings()
             requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
-            cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEONGBUK_NAME);
+            cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.NOWON_NAME);
             maxCntNumber = max(cntNumber);
 
             url = 'https://nowonarts.kr/html/openspace/notice.php';
@@ -47,8 +47,8 @@ class Nowon:
                         print("Nowon Next Page : {}".format(cnt));
                         # return Nowon.mainCra(cnt, numberCnt);
                     else:
-                        if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                            break;
+                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        #     break;
                         if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
                                 break;
                         else:

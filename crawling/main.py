@@ -33,6 +33,7 @@ from siteCrainfo.cultureFoundation.Npocra import Npocra
 #자치구 
 from siteCrainfo.cultureBorough.notice.Gangnam_Borough_Notice import Gangnam_notice
 from siteCrainfo.cultureBorough.notice.Gangdong_Borough_Notice import Gangdong_notice
+from siteCrainfo.cultureBorough.notice.Gangdong_Borough_Notice_second import Gangdong_notice_second
 from siteCrainfo.cultureBorough.notice.Gangbuk_Borough_Notice import Gangbuk_notice
 from siteCrainfo.cultureBorough.notice.Gangseo_Borough_Notice import Gangseo_notice
 from siteCrainfo.cultureBorough.notice.Gwangzin_Borough_Notice import Gwangzin_notice
@@ -55,6 +56,24 @@ from siteCrainfo.cultureBorough.notice.Eunpyeng_Borough_Notice import Eunpyeng_n
 from siteCrainfo.cultureBorough.notice.Jongro_Borough_Notice import Jongro_notice
 from siteCrainfo.cultureBorough.notice.Junggu_Borough_Notice import Junggu_notice
 from siteCrainfo.cultureBorough.notice.Jungnang_Borough_Notice import Jungnang_notice
+
+# 자치구 행사
+from siteCrainfo.cultureBorough.notice.Gangnam_Borough_Notice_event import Gangnam_notice_event
+from siteCrainfo.cultureBorough.notice.Nowon_Borough_Notice_event import Nowon_notice_event
+from siteCrainfo.cultureBorough.notice.Dobong_Borough_Notice_event import Dobong_notice_event
+from siteCrainfo.cultureBorough.notice.Dongdaemun_Borough_Notice_event import Dongdaemun_notice_event
+from siteCrainfo.cultureBorough.notice.Dongjak_Borough_Notice_event import Dongjak_notice_event
+from siteCrainfo.cultureBorough.notice.Mapo_Borough_Notice_event import Mapo_notice_event
+from siteCrainfo.cultureBorough.notice.Seocho_Borough_Notice_event import Seocho_notice_event
+from siteCrainfo.cultureBorough.notice.Songpa_Borough_Notice_event import Songpa_notice_event
+from siteCrainfo.cultureBorough.notice.Yangcheon_Borough_Notice_event import Yangcheon_notice_event
+from siteCrainfo.cultureBorough.notice.Youngsan_Borough_Notice_event import Youngsan_notice_event
+
+# 자치구 교육 강좌
+from siteCrainfo.cultureBorough.notice.Mapo_Borough_Notice_education import Mapo_notice_education
+from siteCrainfo.cultureBorough.notice.Seocho_Borough_Notice_education import Seocho_notice_education
+from siteCrainfo.cultureBorough.notice.Eunpyeng_Borough_Notice_education import Eunpyeng_notice_education
+
 
 from siteCrainfo.cultureBorough.otherInstitutions.Gangnam_Borough_Other_Institutions import Gangnam_Institutions
 from siteCrainfo.cultureBorough.otherInstitutions.Gangdong_Borough_Other_Institutions import Gangdong_Institutions
@@ -79,10 +98,13 @@ if __name__ == '__main__':
             # Jungnang.mainCra(1,0);
             # Jungnang_notice.mainCra(1);
 
-            # Youngsan_notice.mainCra(1);
+            Youngsan.mainCra(1,0);
+            Youngsan_notice.mainCra(1);
+            Youngsan_notice_event.mainCra(1);
 
             # Gangnam.mainCra(1,0);
             # Gangnam_notice.mainCra(1);
+            # Gangnam_notice_event.mainCra(1);
 
             # Guro.mainCra(1,0);
             # Guro_notice.mainCra(1);
@@ -92,27 +114,35 @@ if __name__ == '__main__':
 
             # Gangdong.mainCra(1,0);
             # Gangdong_notice.mainCra(1);
+            # Gangdong_notice_second.mainCra(1);
 
             # Dobong.mainCra(1,0); 
             # Dobong_notice.mainCra(1);
+            # Dobong_notice_event.mainCra(1);
 
             # Gnagbuk.mainCra(1,0);
             # Gangbuk_notice.mainCra(1);
 
             # Dongdaemun.mainCra(1,0);
             # Dongdaemun_notice.mainCra(1);
+            # Dongdaemun_notice_event.mainCra(1);
 
             # Dongjak.mainCra(1,0);
             # Dongjak_notice.mainCra(1);
-
-            # Eunpyeng.mainCra(1,0);
-            # Eunpyeng_notice.mainCra(1);
+            # Dongjak_notice_event.mainCra(1);
 
             # Geuamcheoun.mainCra(1,0);
             # Geuamcheoun_notice.mainCra(1);
 
             # Gwanak.mainCra(0,0);
             # Gwanak_notice.mainCra(1);
+
+            # Seongdong.mainCra(1,0);
+            # Seongdong_notice.mainCra(1);
+
+            # Eunpyeng.mainCra(1,0);
+            # Eunpyeng_notice.mainCra(1);
+            # Eunpyeng_notice_education.mainCra(1);
 
             # Gwangzin.mainCra(1,0);
             # Gwangzin_notice.mainCra(1);
@@ -125,34 +155,37 @@ if __name__ == '__main__':
 
             # Mapo.mainCra(1,0);
             # Mapo_notice.mainCra(1);
+            # Mapo_notice_education.mainCra(1);
+            # Mapo_notice_event.mainCra(1);
 
-            # Nowon.mainCra(1,0);
-            # Nowon_notice.mainCra(1);
+            Nowon.mainCra(1,0);
+            Nowon_notice.mainCra(1);
+            Nowon_notice_event.mainCra(1);
 
             # Seocho.mainCra(1,0);
             # Seocho_notice.mainCra(1);
+            # Seocho_notice_education.mainCra(1);
+            # Seocho_notice_event.mainCra(1);
 
             # Seongbuk.mainCra(1,0);
 
-            # Seongdong.mainCra(1,0);
-            # Seongdong_notice.mainCra(1);
-
             # Songpa.mainCra(1,0);
             # Songpa_notice.mainCra(1);
+            # Songpa_notice_event.mainCra(1);
 
-            Yangcheon.mainCra(1,0);
-            Yangcheon_notice.mainCra(1);
+            # Yangcheon.mainCra(1,0);
+            # Yangcheon_notice.mainCra(1);
 
-            Yeongdeungpo.mainCra(1,0);
-            Yeongdeungpo_notice.mainCra(1);
+            # Yeongdeungpo.mainCra(1,0);
+            # Yeongdeungpo_notice.mainCra(1);
 
-            Npocra.mainCra(1,0);
-            Youthseoul.mainCra(1);
-            Sbaseoul.mainCra(1);
-            Housingseoul.mainCra(1);
-            Seoultourism.mainCra(1);
+            # Npocra.mainCra(1,0);
+            # Youthseoul.mainCra(1);
+            # Sbaseoul.mainCra(1);
+            # Housingseoul.mainCra(1);
+            # Seoultourism.mainCra(1);
 
-            Seodaemun.mainCra(1,0);
+            # Seodaemun.mainCra(1,0);
 
             # $ is not defiend
             # Seodaemun_notice.mainCra(1);
@@ -162,7 +195,6 @@ if __name__ == '__main__':
              # 링크 크롤링 시 javascript함수로 되어 있어 URL 표기가 안됨.
             #크롤 데이터가 안담김
             # Seoul.mainCra(1,0);
-            #Younsan.mainCra(1,0); 확인 필요.
 
         except ConnectionError as conerror:
             print("conerror : {}".format(conerror));

@@ -6,13 +6,15 @@ from common.common_constant import commonConstant_NAME
 from models.datasModel import datasModel
 from bs4 import BeautifulSoup
 
-class Seocho_notice:
+class Seocho_notice_event:
     def mainCra(cnt):
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.SEOCHO_NAME);
             numberCnt = max(cntNumber);
-            
-            url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=57&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
+
+            print("numberCnt : {}".format(numberCnt));
+
+            url = 'https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?pageIndex={}&cbIdx=59&searchMedia=&bcIdx=0&searchCondition=subCont&searchKeyword='.format(cnt);
             response = requests.get(url);
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
@@ -31,17 +33,20 @@ class Seocho_notice:
                         numberCnt += 1;
                         if linkCount == i:
                             cnt += 1;
-                            print(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
-                            return Seocho_notice.mainCra(cnt);
+                            print(commonConstant_NAME.SEOCHO_BOROUGH_NOTICE_EVENT," Next Page : {}".format(cnt));
+                            return Seocho_notice_event.mainCra(cnt);
                         else:
-                            # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE + 1:
+
+                            # print(title[i].text.strip());
+                            # print(link[i].attrs.get('href'));
+                            # print(registrationdate[i].text.strip());
+                            # if numberCnt == 212:
                             #     break;
 
                             if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
                                 break;
 
                             changeText= str(registrationdate[i].text.replace('.','-'));
-
                             firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),

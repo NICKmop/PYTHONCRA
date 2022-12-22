@@ -33,7 +33,7 @@ class Youngsan_notice:
                         print(commonConstant_NAME.YOUNGSAN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Youngsan_notice.mainCra(cnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
                         if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip()) == 1):
                             break;

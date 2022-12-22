@@ -29,9 +29,8 @@ class Mapo:
                     print("Mapo Next Page : {}".format(cnt));
                     return Mapo.mainCra(cnt, numberCnt),
                 else:
-                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
-
                     if(registrationdate[i].text == '작성일'):
                         numberCnt -=1;
 
@@ -43,16 +42,16 @@ class Mapo:
                             break;
                         else:
                             maxCntNumber += 1;
-                            firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "마포문화재단"
-                            )
+                        firebase_con.updateModel( commonConstant_NAME.MAPO_NAME,maxCntNumber,
+                            datasModel.toJson(
+                                "https://www.mfac.or.kr/communication/notice_all_view.jsp?sc_b_code=BOARD_1207683401&sc_type=1&pk_seq={}&sc_cond=b_subject&page=1".format(linkSp),
+                                maxCntNumber,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "마포문화재단"
                         )
+                    )
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:
             raise ValueError("Argument에 잘못된 값이 전달되었습니다.")

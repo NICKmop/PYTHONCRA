@@ -11,13 +11,14 @@ class Youngsan:
         cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.YOUNGSAN_NAME);
         maxCntNumber = max(cntNumber);
 
+        print(maxCntNumber);
+        
         url = 'https://www.ysac.or.kr/page/sub07_01.jsp';
         soupData = com.pageconnect(cnt, url, "javascript:fnListMove({});".format(cnt));
 
-        link = soupData.select('.aleft');
-        title = soupData.select('.aleft');
-        registrationdate = soupData.select('tr > td:nth-child(4)');
-        noticeCheckValue = soupData.select('tr > td:nth-child(1)');
+        link = soupData.select('.bd_title > a');
+        title = soupData.select('.bd_title > a');
+        registrationdate = soupData.select('.bd_date');
         
         linkCount = len(link);
 
@@ -29,34 +30,24 @@ class Youngsan:
                 print(commonConstant_NAME.YOUNGSAN_NAME,"Next Page : {}".format(cnt));
                 return Youngsan.mainCra(cnt,numberCnt),
             else:
-                # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                # if numberCnt == 22:
                 #     break;
-
-                if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip()) == 1):
+                if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip()) == 1):
                     break;
+                linkAttr = link[i].attrs.get('href');
+                linkSub = linkAttr.split("(")[1];
+                linkSubNt = linkSub.split(")")[0];
 
-                linkAttr = link[i].attrs.get('onclick');
-
-
-                if(noticeCheckValue[i].text.strip() != ''):
-                    if linkAttr != None:
-                        pass;
-                    else:
-                        # linkSub = linkAttr.split("(")[1];
-                        # linkSubNt = linkSub.split(")")[0];
-                        # linkSubts = linkSubNt.split(",");
-                        changeText = registrationdate[i].text.strip().replace('.','-');
-
-                        # maxCntNumber += 1;
-                        # firebase_con.updateModel( commonConstant_NAME.YOUNGSAN_NAME,maxCntNumber,
-                        #     datasModel.toJson(
-                        #         # "https://www.sba.seoul.kr{}".format(linkSubts[0].replace('"','')),
-                        #         'https://www.sdm.go.kr/news/news/notice.do',
-                        #         maxCntNumber,
-                        #         "",
-                        #         title[i].text.strip(),
-                        #         "",
-                        #         fnChnagetype(changeText.strip()),
-                        #         "용산문화원"
-                        #     )
-                        # )
+                changeText = registrationdate[i].text.strip();
+                maxCntNumber += 1;
+                firebase_con.updateModel( commonConstant_NAME.YOUNGSAN_NAME,maxCntNumber,
+                    datasModel.toJson(
+                        "https://ysac.or.kr/page/sub07_01_v.jsp?p_IDX={}".format((linkSubNt.replace("'",''))),
+                        maxCntNumber,
+                        "",
+                        title[i].text.split(']', 1)[1].strip(),
+                        "",
+                        fnChnagetype(changeText.strip()),
+                        "용산문화원"
+                    )
+                )

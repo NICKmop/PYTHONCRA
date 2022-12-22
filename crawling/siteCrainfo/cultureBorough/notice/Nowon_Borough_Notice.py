@@ -30,7 +30,6 @@ class Nowon_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break; 
-                    
                     if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
                         break;
                     else:

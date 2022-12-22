@@ -35,7 +35,7 @@ class Seocho:
                         print("Seocho Next Page : {}".format(cnt));
                         return Seocho.mainCra(cnt, numberCnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE + 1:
                         #     break;
                         if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
                                 break;
