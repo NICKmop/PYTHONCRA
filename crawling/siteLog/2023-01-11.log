@@ -1,0 +1,1429 @@
+2023-01-11 08:54:33,052 - INFO - JUNGNANG
+2023-01-11 08:55:10,650 - INFO - JUNGNANG
+2023-01-11 08:55:11,823 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2023-01-11 08:55:13,341 - INFO - JUNGNANG
+2023-01-11 08:55:13,341 - INFO - JUNGNANG
+2023-01-11 08:55:25,707 - INFO - YONGSAN
+2023-01-11 08:55:25,707 - INFO - YONGSAN
+2023-01-11 08:55:25,707 - INFO - YONGSAN
+2023-01-11 08:55:38,323 - INFO - JUNGNANG
+2023-01-11 08:55:39,410 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2023-01-11 08:55:40,252 - INFO - JUNGNANG
+2023-01-11 08:55:40,252 - INFO - JUNGNANG
+2023-01-11 08:55:47,887 - INFO - YONGSAN
+2023-01-11 08:55:47,887 - INFO - YONGSAN
+2023-01-11 08:55:47,887 - INFO - YONGSAN
+2023-01-11 08:55:49,803 - INFO - YONGSAN
+2023-01-11 08:55:49,803 - INFO - YONGSAN
+2023-01-11 08:55:49,803 - INFO - YONGSAN
+2023-01-11 08:55:49,803 - INFO - YONGSAN
+2023-01-11 08:55:51,524 - INFO - YONGSAN
+2023-01-11 08:55:51,524 - INFO - YONGSAN
+2023-01-11 08:55:51,524 - INFO - YONGSAN
+2023-01-11 08:55:51,524 - INFO - YONGSAN
+2023-01-11 08:55:51,524 - INFO - YONGSAN
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:55:53,306 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:05,440 - INFO - GANGNAM
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:07,296 - INFO - GANGDONG
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:13,377 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:15,908 - INFO - GURO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:24,918 - INFO - GANGSEO
+2023-01-11 08:56:52,857 - INFO - GANGSEO
+2023-01-11 08:56:55,777 - INFO - GANGSEO
+2023-01-11 08:56:55,777 - INFO - GANGSEO
+2023-01-11 08:56:57,554 - INFO - GANGDONG
+2023-01-11 08:56:57,554 - INFO - GANGDONG
+2023-01-11 08:56:57,554 - INFO - GANGDONG
+2023-01-11 08:56:59,745 - INFO - GANGDONG
+2023-01-11 08:56:59,745 - INFO - GANGDONG
+2023-01-11 08:56:59,745 - INFO - GANGDONG
+2023-01-11 08:56:59,745 - INFO - GANGDONG
+2023-01-11 08:57:01,586 - INFO - GANGDONG
+2023-01-11 08:57:01,586 - INFO - GANGDONG
+2023-01-11 08:57:01,586 - INFO - GANGDONG
+2023-01-11 08:57:01,586 - INFO - GANGDONG
+2023-01-11 08:57:01,586 - INFO - GANGDONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:10,533 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:12,556 - INFO - DOBONG
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:13,975 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:23,061 - INFO - GANGBUK
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:32,380 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:34,576 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:36,758 - INFO - DONGDAEMUN
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:38,070 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:41,394 - INFO - DONGJAK
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:54,429 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:57,654 - INFO - GEUAMCHEOUN
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:57:58,966 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:14,077 - INFO - GWANAK
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:23,460 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:32,811 - INFO - SEONGDONG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:42,211 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:58:46,320 - INFO - EUNPYENG
+2023-01-11 08:59:40,736 - INFO - EUNPYENG
+2023-01-11 09:00:30,762 - INFO - EUNPYENG
+2023-01-11 09:00:33,830 - INFO - EUNPYENG
+2023-01-11 09:00:33,830 - INFO - EUNPYENG
+2023-01-11 09:00:42,883 - INFO - EUNPYENG
+2023-01-11 09:00:42,883 - INFO - EUNPYENG
+2023-01-11 09:00:42,883 - INFO - EUNPYENG
+2023-01-11 09:00:44,323 - INFO - GWANGZIN
+2023-01-11 09:00:44,323 - INFO - GWANGZIN
+2023-01-11 09:00:44,323 - INFO - GWANGZIN
+2023-01-11 09:00:44,323 - INFO - GWANGZIN
+2023-01-11 09:00:49,004 - INFO - GWANGZIN
+2023-01-11 09:00:49,004 - INFO - GWANGZIN
+2023-01-11 09:00:49,004 - INFO - GWANGZIN
+2023-01-11 09:00:49,004 - INFO - GWANGZIN
+2023-01-11 09:00:49,004 - INFO - GWANGZIN
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:00:51,269 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:01,582 - INFO - JONGRO
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:02,859 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:04,600 - INFO - JUNGGU
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:01:12,997 - INFO - MAPO
+2023-01-11 09:04:41,624 - INFO - MAPO
+2023-01-11 09:04:49,461 - INFO - MAPO
+2023-01-11 09:04:49,461 - INFO - MAPO
+2023-01-11 09:04:53,510 - INFO - MAPO
+2023-01-11 09:04:53,510 - INFO - MAPO
+2023-01-11 09:04:53,510 - INFO - MAPO
+2023-01-11 09:04:55,974 - INFO - MAPO
+2023-01-11 09:04:55,974 - INFO - MAPO
+2023-01-11 09:04:55,974 - INFO - MAPO
+2023-01-11 09:04:55,974 - INFO - MAPO
+2023-01-11 09:04:59,161 - INFO - NOWON
+2023-01-11 09:04:59,161 - INFO - NOWON
+2023-01-11 09:04:59,161 - INFO - NOWON
+2023-01-11 09:04:59,161 - INFO - NOWON
+2023-01-11 09:04:59,161 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:08,348 - INFO - NOWON
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:22,882 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:24,693 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:26,387 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:28,134 - INFO - SEOCHO
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:29,251 - INFO - SEONGBUK
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:05:37,483 - INFO - SONGPA
+2023-01-11 09:06:10,213 - INFO - SONGPA
+2023-01-11 09:06:12,688 - INFO - SONGPA
+2023-01-11 09:06:12,688 - INFO - SONGPA
+2023-01-11 09:06:15,219 - INFO - SONGPA
+2023-01-11 09:06:15,219 - INFO - SONGPA
+2023-01-11 09:06:15,219 - INFO - SONGPA
+2023-01-11 09:07:11,017 - INFO - SONGPA
+2023-01-11 09:07:19,387 - INFO - SONGPA
+2023-01-11 09:07:19,387 - INFO - SONGPA
+2023-01-11 09:07:46,293 - INFO - SONGPA
+2023-01-11 09:07:46,293 - INFO - SONGPA
+2023-01-11 09:07:46,293 - INFO - SONGPA
+2023-01-11 09:07:47,670 - INFO - YANGCHEON
+2023-01-11 09:07:47,670 - INFO - YANGCHEON
+2023-01-11 09:07:47,670 - INFO - YANGCHEON
+2023-01-11 09:07:47,670 - INFO - YANGCHEON
+2023-01-11 09:07:56,579 - INFO - YANGCHEON
+2023-01-11 09:07:56,579 - INFO - YANGCHEON
+2023-01-11 09:07:56,579 - INFO - YANGCHEON
+2023-01-11 09:07:56,579 - INFO - YANGCHEON
+2023-01-11 09:07:56,579 - INFO - YANGCHEON
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:07:58,255 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:00,040 - INFO - YEONGDEUNGPO
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:06,043 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:08,310 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:20,965 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:23,674 - INFO - SEOUL
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:08:24,488 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 00:08:24 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=AHKCBFOCPGHDMCPGKDBHPOLK; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 09:09:39,969 - INFO - SEODAEMUN
+2023-01-11 15:57:28,226 - INFO - JUNGNANG
+2023-01-11 15:57:29,134 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2023-01-11 15:57:32,573 - INFO - JUNGNANG
+2023-01-11 15:57:32,573 - INFO - JUNGNANG
+2023-01-11 15:57:41,638 - INFO - YONGSAN
+2023-01-11 15:57:41,638 - INFO - YONGSAN
+2023-01-11 15:57:41,638 - INFO - YONGSAN
+2023-01-11 15:57:43,548 - INFO - YONGSAN
+2023-01-11 15:57:43,548 - INFO - YONGSAN
+2023-01-11 15:57:43,548 - INFO - YONGSAN
+2023-01-11 15:57:43,548 - INFO - YONGSAN
+2023-01-11 15:57:45,345 - INFO - YONGSAN
+2023-01-11 15:57:45,345 - INFO - YONGSAN
+2023-01-11 15:57:45,345 - INFO - YONGSAN
+2023-01-11 15:57:45,345 - INFO - YONGSAN
+2023-01-11 15:57:45,345 - INFO - YONGSAN
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:57:47,101 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:01,596 - INFO - GANGNAM
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:03,397 - INFO - GANGDONG
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:09,499 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:17,290 - INFO - GURO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:26,905 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:31,167 - INFO - GANGSEO
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:32,765 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:37,835 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:39,622 - INFO - GANGDONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:48,676 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:50,651 - INFO - DOBONG
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:58:52,080 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:01,615 - INFO - GANGBUK
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:10,781 - INFO - DONGDAEMUN
+2023-01-11 15:59:42,531 - INFO - DONGJAK
+2023-01-11 15:59:49,561 - INFO - DONGJAK
+2023-01-11 15:59:49,561 - INFO - DONGJAK
+2023-01-11 16:00:03,235 - INFO - GEUAMCHEOUN
+2023-01-11 16:00:03,235 - INFO - GEUAMCHEOUN
+2023-01-11 16:00:03,235 - INFO - GEUAMCHEOUN
+2023-01-11 16:00:39,517 - INFO - DONGJAK
+2023-01-11 16:00:42,817 - INFO - DONGJAK
+2023-01-11 16:00:42,817 - INFO - DONGJAK
+2023-01-11 16:00:56,796 - INFO - GEUAMCHEOUN
+2023-01-11 16:00:56,796 - INFO - GEUAMCHEOUN
+2023-01-11 16:00:56,796 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:34,999 - INFO - DONGJAK
+2023-01-11 16:01:38,479 - INFO - DONGJAK
+2023-01-11 16:01:38,479 - INFO - DONGJAK
+2023-01-11 16:01:52,543 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:52,543 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:52,543 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:54,552 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:54,552 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:54,552 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:54,552 - INFO - GEUAMCHEOUN
+2023-01-11 16:01:55,977 - INFO - GWANAK
+2023-01-11 16:01:55,977 - INFO - GWANAK
+2023-01-11 16:01:55,977 - INFO - GWANAK
+2023-01-11 16:01:55,977 - INFO - GWANAK
+2023-01-11 16:01:55,977 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:15,010 - INFO - GWANAK
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:25,220 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:41,242 - INFO - SEONGDONG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:49,572 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:54,053 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:57,071 - INFO - EUNPYENG
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:02:58,542 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:03,749 - INFO - GWANGZIN
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:05,925 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:17,529 - INFO - JONGRO
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:18,782 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:20,433 - INFO - JUNGGU
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:30,402 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:37,727 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:41,830 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:44,241 - INFO - MAPO
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:47,291 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:03:58,182 - INFO - NOWON
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:04:09,896 - INFO - SEOCHO
+2023-01-11 16:13:34,352 - INFO - SEOCHO
+2023-01-11 16:13:36,168 - INFO - SEOCHO
+2023-01-11 16:13:36,168 - INFO - SEOCHO
+2023-01-11 16:13:39,326 - INFO - SEOCHO
+2023-01-11 16:13:39,326 - INFO - SEOCHO
+2023-01-11 16:13:39,326 - INFO - SEOCHO
+2023-01-11 16:13:40,999 - INFO - SEOCHO
+2023-01-11 16:13:40,999 - INFO - SEOCHO
+2023-01-11 16:13:40,999 - INFO - SEOCHO
+2023-01-11 16:13:40,999 - INFO - SEOCHO
+2023-01-11 16:13:42,126 - INFO - SEONGBUK
+2023-01-11 16:13:42,126 - INFO - SEONGBUK
+2023-01-11 16:13:42,126 - INFO - SEONGBUK
+2023-01-11 16:13:42,126 - INFO - SEONGBUK
+2023-01-11 16:13:42,126 - INFO - SEONGBUK
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:50,683 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:13:58,327 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:00,865 - INFO - SONGPA
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:02,413 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:14,086 - INFO - YANGCHEON
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:15,536 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:21,490 - INFO - YEONGDEUNGPO
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:24,252 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:26,452 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:39,328 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,219 - INFO - SEOUL
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:14:42,718 - WARNING - Failed to parse headers (url=https://www.sscmc.or.kr:443/info/notice/list.asp?db=BBS_notice&pageno=1&startpage=1&where=&keyfield=&keyword=&catekkk=): [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [MissingHeaderBodySeparatorDefect()], unparsed data: 'Server : Wow 3.8\r\nDate: Wed, 11 Jan 2023 07:14:42 GMT\r\nContent-Type: text/html\r\nContent-Length: 39690\r\nConnection: keep-alive\r\nCache-Control: private\r\nSet-Cookie: ASPSESSIONIDCQDCRRQD=LCBEBFOCHEKPPBCADGGBPIMA; path=/\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n'
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN
+2023-01-11 16:15:58,343 - INFO - SEODAEMUN

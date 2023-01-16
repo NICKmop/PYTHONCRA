@@ -32,22 +32,26 @@ class Youngsan:
             else:
                 # if numberCnt == 22:
                 #     break;
-                if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip()) == 1):
+                if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.split(']', 1)[1].strip()) == 1):
                     break;
-                linkAttr = link[i].attrs.get('href');
-                linkSub = linkAttr.split("(")[1];
-                linkSubNt = linkSub.split(")")[0];
+                else:
+                    linkAttr = link[i].attrs.get('href');
+                    linkSub = linkAttr.split("(")[1];
+                    linkSubNt = linkSub.split(")")[0];
 
-                changeText = registrationdate[i].text.strip();
-                maxCntNumber += 1;
-                firebase_con.updateModel( commonConstant_NAME.YOUNGSAN_NAME,maxCntNumber,
-                    datasModel.toJson(
-                        "https://ysac.or.kr/page/sub07_01_v.jsp?p_IDX={}".format((linkSubNt.replace("'",''))),
-                        maxCntNumber,
-                        "",
-                        title[i].text.split(']', 1)[1].strip(),
-                        "",
-                        fnChnagetype(changeText.strip()),
-                        "용산문화원"
+                    changeText = registrationdate[i].text.strip();
+
+                    print("{} : {}".format(i, title[i].text));
+
+                    maxCntNumber += 1;
+                    firebase_con.updateModel( commonConstant_NAME.YOUNGSAN_NAME,maxCntNumber,
+                        datasModel.toJson(
+                            "https://ysac.or.kr/page/sub07_01_v.jsp?p_IDX={}".format((linkSubNt.replace("'",''))),
+                            maxCntNumber,
+                            "",
+                            title[i].text.split(']', 1)[1].strip(),
+                            "",
+                            fnChnagetype(changeText.strip()),
+                            "용산문화원"
+                        )
                     )
-                )

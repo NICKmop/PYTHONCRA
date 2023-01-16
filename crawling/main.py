@@ -98,9 +98,9 @@ if __name__ == '__main__':
             # Jungnang.mainCra(1,0);
             # Jungnang_notice.mainCra(1);
 
-            Youngsan.mainCra(1,0);
-            Youngsan_notice.mainCra(1);
-            Youngsan_notice_event.mainCra(1);
+            # Youngsan.mainCra(1,0);
+            # Youngsan_notice.mainCra(1);
+            # Youngsan_notice_event.mainCra(1);
 
             # Gangnam.mainCra(1,0);
             # Gangnam_notice.mainCra(1);
@@ -162,30 +162,30 @@ if __name__ == '__main__':
             Nowon_notice.mainCra(1);
             Nowon_notice_event.mainCra(1);
 
-            # Seocho.mainCra(1,0);
-            # Seocho_notice.mainCra(1);
-            # Seocho_notice_education.mainCra(1);
-            # Seocho_notice_event.mainCra(1);
+            Seocho.mainCra(1,0);
+            Seocho_notice.mainCra(1);
+            Seocho_notice_education.mainCra(1);
+            Seocho_notice_event.mainCra(1);
 
-            # Seongbuk.mainCra(1,0);
+            Seongbuk.mainCra(1,0);
 
-            # Songpa.mainCra(1,0);
-            # Songpa_notice.mainCra(1);
-            # Songpa_notice_event.mainCra(1);
+            Songpa.mainCra(1,0);
+            Songpa_notice.mainCra(1);
+            Songpa_notice_event.mainCra(1);
 
-            # Yangcheon.mainCra(1,0);
-            # Yangcheon_notice.mainCra(1);
+            Yangcheon.mainCra(1,0);
+            Yangcheon_notice.mainCra(1);
 
-            # Yeongdeungpo.mainCra(1,0);
-            # Yeongdeungpo_notice.mainCra(1);
+            Yeongdeungpo.mainCra(1,0);
+            Yeongdeungpo_notice.mainCra(1);
 
-            # Npocra.mainCra(1,0);
-            # Youthseoul.mainCra(1);
-            # Sbaseoul.mainCra(1);
-            # Housingseoul.mainCra(1);
-            # Seoultourism.mainCra(1);
+            Npocra.mainCra(1,0);
+            Youthseoul.mainCra(1);
+            Sbaseoul.mainCra(1);
+            Housingseoul.mainCra(1);
+            Seoultourism.mainCra(1);
 
-            # Seodaemun.mainCra(1,0);
+            Seodaemun.mainCra(1,0);
 
             # $ is not defiend
             # Seodaemun_notice.mainCra(1);

@@ -13,7 +13,7 @@ class Seoultourism:
             numberCnt = max(cntNumber);
 
             url = 'https://www.sto.or.kr/unitrcrit?curPage={}'.format(cnt);
-            response = requests.get(url);
+            response = requests.get(url, verify=False);
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;

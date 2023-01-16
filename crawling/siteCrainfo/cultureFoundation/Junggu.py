@@ -35,6 +35,23 @@ class Junggu:
 
                 for i in range(len(link)):
                     numberCnt += 1;
+                    # sample Data
+                    # for i in range(0,2):
+                    #     print("data in : {}".format(i));
+                    #     numberCnt += 1;
+                    #     maxCntNumber += 1;
+                    #     firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,maxCntNumber,
+                    #         datasModel.toJson(
+                    #             "https://www.caci.or.kr/caci/bbs/BMSR00040/{}".format(link[i].attrs.get('href')),
+                    #             maxCntNumber,
+                    #             "",
+                    #             'test domain unber-{}'.format(maxCntNumber).strip(),
+                    #             "",
+                    #             fnChnagetype('2023-01-10'.strip()),
+                    #             "중구문화재단",
+                    #         )
+                    #     );
+                    # real source
                     if(checkValue[i].text.strip() != '공지'):
                         if linkCount == i:
                             cnt += 1;
@@ -59,8 +76,6 @@ class Junggu:
                                         "중구문화재단",
                                     )
                                 );
-                            # else:
-                            #     numberCnt = 0;
             else : 
                 print(response.status_code)
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:
