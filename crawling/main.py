@@ -158,16 +158,16 @@ if __name__ == '__main__':
             # Mapo_notice_education.mainCra(1);
             # Mapo_notice_event.mainCra(1);
 
-            Nowon.mainCra(1,0);
-            Nowon_notice.mainCra(1);
-            Nowon_notice_event.mainCra(1);
+            # Nowon.mainCra(1,0);
+            # Nowon_notice.mainCra(1);
+            # Nowon_notice_event.mainCra(1);
 
-            Seocho.mainCra(1,0);
-            Seocho_notice.mainCra(1);
-            Seocho_notice_education.mainCra(1);
-            Seocho_notice_event.mainCra(1);
+            # Seocho.mainCra(1,0);
+            # Seocho_notice.mainCra(1);
+            # Seocho_notice_education.mainCra(1);
+            # Seocho_notice_event.mainCra(1);
 
-            Seongbuk.mainCra(1,0);
+            # Seongbuk.mainCra(1,0);
 
             Songpa.mainCra(1,0);
             Songpa_notice.mainCra(1);
