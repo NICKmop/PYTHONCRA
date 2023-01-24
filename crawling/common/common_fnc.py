@@ -112,6 +112,7 @@ def fnCompareTitle(name, title):
     # cntData = firebase_con.selectModelValueNumber(name)[1];
 
     for i in cntTitle:
+        # print("not same data : {}".format(i));
         if(i == title):
             print("{} Firebase title : {}".format(name,i));
             print("{} webCra title : {}".format(name,title));

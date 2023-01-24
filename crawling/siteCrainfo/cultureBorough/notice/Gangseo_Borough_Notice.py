@@ -33,13 +33,14 @@ class Gangseo_notice:
                         print(commonConstant_NAME.GANGSEO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Gangseo_notice.mainCra(cnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        #     break;
+                        
                         if(noticeCheck[i].text.strip() == ''):
                             numberCnt -= 1;
 
                         if(noticeCheck[i].text.strip() != ''):
-                            if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
+                            # if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
+                            #     break;
+                            if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                                 break;
                             changeText = str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,numberCnt,
