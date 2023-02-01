@@ -13,7 +13,7 @@ class Housingseoul:
             numberCnt = max(cntNumber);
             url = 'https://housing.seoul.go.kr/site/main/board/notice/list?cp={}&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true'.format(cnt);
             
-            response = requests.get(url, verify=False);
+            response = requests.get(url, headers={'User-Agent':'Mozilla/5.0'});
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser');

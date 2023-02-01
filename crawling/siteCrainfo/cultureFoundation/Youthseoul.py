@@ -13,7 +13,7 @@ class Youthseoul:
             numberCnt = max(cntNumber);
             url = 'https://youth.seoul.go.kr/site/main/board/notice/list?cp={}&pageSize=15&sortOrder=BA_REGDATE&sortDirection=DESC&bcId=notice&baCategory1=basic&baNotice=false&baCommSelec=true&baOpenDay=true&baUse=true'.format(cnt);
             
-            response = requests.get(url, verify=False);
+            response = requests.get(url, headers={'User-Agent':'Mozilla/5.0'});
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser');

@@ -35,7 +35,7 @@ class Nowon:
                         firebase_con.updateModel(commonConstant_NAME.NOWON_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "https://nowonarts.kr{}".format(link[i].attrs.get('href')),
-                                    maxCntNumber,
+                                    numberCnt,
                                     "",
                                     title[i].text.strip(),
                                     "",
@@ -58,6 +58,7 @@ class Nowon:
                             if(changeText != '등록일'):
                                 numberCnt += 1;
                                 firebase_con.updateModel(commonConstant_NAME.NOWON_NAME,maxCntNumber,
+                                # firebase_con.updateModel(commonConstant_NAME.NOWON_NAME,numberCnt,
                                     datasModel.toJson(
                                         "https://nowonarts.kr{}".format(link[i].attrs.get('href')),
                                         maxCntNumber,

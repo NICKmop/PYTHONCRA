@@ -35,7 +35,7 @@ class Nowon_notice_event:
                     else:  
                         # if numberCnt == 121:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
                             break;
                         
                         changeText = str(registrationdate[i].text);

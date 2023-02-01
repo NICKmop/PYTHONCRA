@@ -48,6 +48,7 @@ class Gangseo:
                                 datasModel.toJson(
                                     "https://kcc2000.modoo.at/?link=2glkcxv4&messageNo={}&mode=view&query=&queryType=0&myList=0&page=1".format(link[i].attrs.get('data-message-no')),
                                     maxCntNumber,
+                                    # numberCnt,
                                     "",
                                     replaceString,
                                     "",

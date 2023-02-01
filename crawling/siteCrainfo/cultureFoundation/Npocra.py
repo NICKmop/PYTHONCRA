@@ -16,7 +16,8 @@ class Npocra:
 
             url = 'https://www.snpo.kr/bbs/board.php?bo_table=bbs_npo&page={}'.format(cnt);
             
-            response = requests.get(url, verify=False);
+            response = requests.get(url, headers={'User-Agent':'Mozilla/5.0'});
+            
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser');

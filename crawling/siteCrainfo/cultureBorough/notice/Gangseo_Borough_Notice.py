@@ -38,10 +38,10 @@ class Gangseo_notice:
                             numberCnt -= 1;
 
                         if(noticeCheck[i].text.strip() != ''):
-                            # if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
-                            #     break;
-                            if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                            if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
                                 break;
+                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                            #     break;
                             changeText = str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,numberCnt,
                                 datasModel.toJson(

@@ -1,0 +1,17 @@
+2023-01-28 13:38:01,861 - INFO - JUNGNANG
+2023-01-28 13:38:03,287 - WARNING - Failed to parse headers (url=https://www.jungnang.go.kr:443/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex=1): [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+Traceback (most recent call last):
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/connectionpool.py", line 469, in _make_request
+    assert_header_parsing(httplib_response.msg)
+  File "/Users/yeon/Library/Python/3.9/lib/python/site-packages/urllib3/util/response.py", line 91, in assert_header_parsing
+    raise HeaderParsingError(defects=defects, unparsed_data=unparsed_data)
+urllib3.exceptions.HeaderParsingError: [FirstHeaderLineIsContinuationDefect(' X-Content-Type-Options: nosniff\r\n')], unparsed data: ''
+2023-01-28 13:38:04,518 - INFO - JUNGNANG
+2023-01-28 13:38:04,518 - INFO - JUNGNANG
+2023-01-28 13:38:14,489 - INFO - YONGSAN
+2023-01-28 13:38:14,489 - INFO - YONGSAN
+2023-01-28 13:38:14,489 - INFO - YONGSAN
+2023-01-28 13:38:19,585 - INFO - GANGNAM
+2023-01-28 13:38:19,585 - INFO - GANGNAM
+2023-01-28 13:38:19,585 - INFO - GANGNAM
+2023-01-28 13:38:19,585 - INFO - GANGNAM

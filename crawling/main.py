@@ -95,50 +95,50 @@ if __name__ == '__main__':
         # 재단
         try:
             #서울시
-            Jungnang.mainCra(1,0);
-            Jungnang_notice.mainCra(1);
+            # Jungnang.mainCra(1,0);
+            # Jungnang_notice.mainCra(1);
 
-            Youngsan.mainCra(1,0);
-            Youngsan_notice.mainCra(1);
-            Youngsan_notice_event.mainCra(1);
+            # Youngsan.mainCra(1,0);
+            # Youngsan_notice.mainCra(1);
+            # Youngsan_notice_event.mainCra(1);
 
-            Gangnam.mainCra(1,0);
-            Gangnam_notice.mainCra(1);
-            Gangnam_notice_event.mainCra(1);
+            # Gangnam.mainCra(1,0);
+            # Gangnam_notice.mainCra(1);
+            # Gangnam_notice_event.mainCra(1);
 
-            Guro.mainCra(1,0);
-            Guro_notice.mainCra(1);
+            # Guro.mainCra(1,0);
+            # Guro_notice.mainCra(1);
 
-            Gangseo.mainCra(0);
-            Gangseo_notice.mainCra(1);
+            # Gangseo.mainCra(0);
+            # Gangseo_notice.mainCra(1);
 
-            Gangdong.mainCra(1,0);
-            Gangdong_notice.mainCra(1);
-            Gangdong_notice_second.mainCra(1);
+            # Gangdong.mainCra(1,0);
+            # Gangdong_notice.mainCra(1);
+            # Gangdong_notice_second.mainCra(1);
 
-            Dobong.mainCra(1,0); 
-            Dobong_notice.mainCra(1);
-            Dobong_notice_event.mainCra(1);
+            # Dobong.mainCra(1,0); 
+            # Dobong_notice.mainCra(1);
+            # Dobong_notice_event.mainCra(1);
 
-            Gnagbuk.mainCra(1,0);
-            Gangbuk_notice.mainCra(1);
+            # Gnagbuk.mainCra(1,0);
+            # Gangbuk_notice.mainCra(1);
 
-            Dongdaemun.mainCra(1,0);
-            Dongdaemun_notice.mainCra(1);
-            Dongdaemun_notice_event.mainCra(1);
+            # Dongdaemun.mainCra(1,0);
+            # Dongdaemun_notice.mainCra(1);
+            # Dongdaemun_notice_event.mainCra(1);
 
-            Dongjak.mainCra(1,0);
-            Dongjak_notice.mainCra(1);
-            Dongjak_notice_event.mainCra(1);
+            # Dongjak.mainCra(1,0);
+            # Dongjak_notice.mainCra(1);
+            # Dongjak_notice_event.mainCra(1);
 
-            Geuamcheoun.mainCra(1,0);
-            Geuamcheoun_notice.mainCra(1);
+            # Geuamcheoun.mainCra(1,0);
+            # Geuamcheoun_notice.mainCra(1);
 
-            Gwanak.mainCra(0,0);
-            Gwanak_notice.mainCra(1);
+            # Gwanak.mainCra(0,0);
+            # Gwanak_notice.mainCra(1);
 
-            Seongdong.mainCra(1,0);
-            Seongdong_notice.mainCra(1);
+            # Seongdong.mainCra(1,0);
+            # Seongdong_notice.mainCra(1);
 
             Eunpyeng.mainCra(1,0);
             Eunpyeng_notice.mainCra(1);

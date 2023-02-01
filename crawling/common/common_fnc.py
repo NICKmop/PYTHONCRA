@@ -93,6 +93,7 @@ def pageconnect(pageNumber, url, script):
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
 
     browser = webdriver.Chrome(current_working_directory+'/chromedriver', options=options);
     # browser = webdriver.Chrome(executable_path=ubuntuPath+'/chromedriver', chrome_options=options);
@@ -115,8 +116,8 @@ def fnCompareTitle(name, title):
         # print("not same data : {}".format(i));
         if(i == title):
             print("{} Firebase title : {}".format(name,i));
-            print("{} webCra title : {}".format(name,title));
-            loggingdata(name);
+            # print("{} webCra title : {}".format(name,title));
+            # loggingdata(name);
             dupltitleList.append(title);
             return 1;
 
