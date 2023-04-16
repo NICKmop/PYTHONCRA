@@ -31,8 +31,7 @@ class Guro_notice:
                         print(commonConstant_NAME.GURO_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Guro_notice.mainCra(cnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
-                        #     break;
+                        
                         # 기존 저장되어 있는 제목과 부딫 힐 경우 다음 함수로 이동
                         if('NEW' in title[i].text.strip()):
                             replaceString = title[i].text.strip().replace('NEW', '').strip();
@@ -40,6 +39,8 @@ class Guro_notice:
                             replaceString = title[i].text.strip();
                         
                         changeText = str(registrationdate[i].text.replace('.','-'));
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
+                        #   break;
                         if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString, changeText) == 1):
                             break;
                         else:

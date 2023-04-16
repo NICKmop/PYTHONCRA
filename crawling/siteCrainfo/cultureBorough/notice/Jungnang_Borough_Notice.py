@@ -11,9 +11,13 @@ class Jungnang_notice:
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.JUNGNANG_NAME);
             numberCnt = max(cntNumber);
-
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/605.1.15',
+            }
+            
             url = 'https://www.jungnang.go.kr/portal/bbs/list/B0000002.do?searchCnd=&searchWrd=&gubun=&delCode=0&useAt=&replyAt=&menuNo=200473&sdate=&edate=&deptId=&deptName=&popupYn=&dept=&dong=&option1=&viewType=&searchCnd2=&pageIndex={}'.format(cnt);
-            response = requests.get(url);
+
+            response = requests.get(url, headers=headers);
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser')
@@ -31,10 +35,10 @@ class Jungnang_notice:
                         print(commonConstant_NAME.JUNGNANG_NAME," Next Page : {}".format(cnt));
                         return Jungnang_notice.mainCra(cnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
-                        #     break;
                         changeText = str(registrationdate[i].text);
 
+                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
+                        #     break;
                         if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:

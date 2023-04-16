@@ -46,7 +46,7 @@ class firebase_con:
             originData = doc.to_dict().values();
             for i in originData:
                 ObjectData = {
-                    'title' : i['title'],
+                    'title' : str(i['title']).strip(),
                     'registrationdate' : i['registrationdate'],
                 }
 

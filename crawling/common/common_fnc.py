@@ -117,8 +117,9 @@ def fnCompareTitle(name, title, date):
 
     for i in cntTitle:
         date_str = i['registrationdate'].strftime("%Y-%m-%d");
-
-        if(i['title'] == title and date_str == date):
+        # print("date_str : " + date_str)
+        # print("date : " + date.strip())
+        if(i['title'] == title and date_str == date.strip()):
             # print("date : " + date);
 
             print("{} Firebase title : {}".format(name,i));
@@ -126,3 +127,6 @@ def fnCompareTitle(name, title, date):
             dupltitleList.append(title);
 
             return 1;
+        # else:
+        #     print("{} Firebase title : {}".format(name,i));
+            

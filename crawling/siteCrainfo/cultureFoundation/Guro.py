@@ -32,8 +32,7 @@ class Guro:
                         print("Guro Next Page : {}".format(cnt));
                         return Guro.mainCra(cnt, numberCnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
-                        #     break;
+                        
 
                         linkAttr = link[i].attrs.get('href');
                         linkSub = linkAttr.split("(")[1].replace(")", '');
@@ -43,13 +42,18 @@ class Guro:
                         linkSubts2 = linkSubts[1].replace("'",'');
                         changeText= str(registrationdate[i].text);
 
+                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT + 1:
+                        #     break;
+                        
                         if(fnCompareTitle(commonConstant_NAME.GURO_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;
+                            # firebase_con.updateModel(commonConstant_NAME.GURO_NAME,numberCnt,
                             firebase_con.updateModel(commonConstant_NAME.GURO_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "https://www.guroartsvalley.or.kr/user/board/boardDefaultView.do?page={}&pageST=&pageSV=&itemCd1=&itemCd2=&menuCode=mn011801&boardId={}&index={}".format(cnt,linkSubts1,linkSubts2.replace(';','')),
+                                    # numberCnt,
                                     maxCntNumber,
                                     "",
                                     title[i].text.strip(),

@@ -32,15 +32,20 @@ class Jungnang:
                 for i in range(len(link)):
                     changeText= str(registrationdate[i].text);
                     numberCnt += 1;
+                    # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
+                    #     break;  
 
-                    if linkCount == i:
-                        cnt += 1;
-                        # maxCntNumber += 1;
-                        
-                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
+                    if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip(), changeText) == 1):
+                        break;
+                    else:
+                        maxCntNumber += 1;
+
+                        firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
+                        # firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                             datasModel.toJson(
                                 'https://www.jnfac.or.kr/{}'.format(link[i].attrs.get('href')),
-                                numberCnt,
+                                # numberCnt,
+                                maxCntNumber,
                                 "",
                                 title[i].text.strip(),
                                 "",
@@ -48,28 +53,6 @@ class Jungnang:
                                 "중랑문화재단",
                             )
                         )
-
-                        print("Jungnang Next Page : {}".format(cnt));
-                        return Jungnang.mainCra(cnt, numberCnt);
-                    else:
-                        # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
-                        #     break;  
-
-                        if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip(), changeText) == 1):
-                            break;
-                        else:
-                            maxCntNumber += 1;
-                            firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,maxCntNumber,
-                                datasModel.toJson(
-                                    'https://www.jnfac.or.kr/{}'.format(link[i].attrs.get('href')),
-                                    maxCntNumber,
-                                    "",
-                                    title[i].text.strip(),
-                                    "",
-                                    fnChnagetype(changeText.strip()),
-                                    "중랑문화재단",
-                                )
-                            )
                 else:
                     print(response.status_code);
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:

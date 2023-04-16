@@ -34,17 +34,20 @@ class Gwangzin:
                         print(commonConstant_NAME.GWANGZIN_NAME," Next Page : {}".format(cnt));
                         return Gwangzin.mainCra(cnt, numberCnt);
                     else:
-                        # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        #     break;
+                        
+                        
                         cngdate = registrationdate[i].text.replace('.','-');
-
-                        if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip(), cngdate) == 1):
+                        if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                             break;
+                        # if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip(), "20"+cngdate) == 1):
+                        #     break;
                         else:
                             maxCntNumber += 1;
+                            # firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
                             firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     link[i].attrs.get('href'),
+                                    # numberCnt,
                                     maxCntNumber,
                                     "",
                                     title[i].text.strip(),

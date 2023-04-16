@@ -30,9 +30,10 @@ class Gwangzin_notice:
                         print(commonConstant_NAME.GWANGJIN_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Gwangzin_notice.mainCra(cnt);
                     else:
+                        changeText= str(registrationdate[i].text);
+
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        changeText= str(registrationdate[i].text);
 
                         if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip(), changeText) == 1):
                             break;
