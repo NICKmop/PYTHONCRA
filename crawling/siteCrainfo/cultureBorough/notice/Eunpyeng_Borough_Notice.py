@@ -33,10 +33,10 @@ class Eunpyeng_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text.replace('.','-'));
+                        if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
-                        changeText = str(registrationdate[i].text.replace('.','-'));
                         if(changeText != '등록일'):
                             firebase_con.updateModel(commonConstant_NAME.EUNPYENG_NAME,numberCnt,
                                 datasModel.toJson(

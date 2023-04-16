@@ -35,13 +35,12 @@ class Dobong_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        
-                        if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text.replace('.','-'));
+                        if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         
                         linkrep = link[i].attrs.get('href').replace("'", "");
 
-                        changeText = str(registrationdate[i].text.replace('.','-'));
                         firebase_con.updateModel(commonConstant_NAME.DOBONG_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.dobong.go.kr{}".format(linkrep.replace(".","",1)),

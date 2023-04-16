@@ -37,17 +37,26 @@ class firebase_con:
 
     def selectModelValueNumber(name):
         spdataList = [];
-        spdataDateList = [];
+        spdataListObjcet = [];
+
         db = firestore.client();
         doc_ref = db.collection(u'crawlingData').document(name);
         doc = doc_ref.get();
         if doc.exists:
             originData = doc.to_dict().values();
             for i in originData:
-                spdataList.append(i['title'].strip());
+                ObjectData = {
+                    'title' : i['title'],
+                    'registrationdate' : i['registrationdate'],
+                }
+
+                # print("ObjectData : ", ObjectData);
+                spdataListObjcet.append(ObjectData);
+                # spdataList.append(i['title'].strip());
                 # spdataDateList.append(i['registrationdate']);
 
-            return spdataList;
+            # return spdataList;
+            return spdataListObjcet;
             # return spdataList,spdataDateList;
         else:
             print(u'No such document!')        

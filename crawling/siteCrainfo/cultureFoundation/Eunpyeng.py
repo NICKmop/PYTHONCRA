@@ -15,12 +15,16 @@ class Eunpyeng:
             url = 'https://www.efac.or.kr/sub06/sub01.php';
 
             soupData = com.pageconnect(cnt, url, "javascript:pageNum('frm01','{}')".format(cnt));
+            print("soupData : ", soupData);
             link = soupData.select('.b-text-s > a');
             title = soupData.select('.board1');
             registrationdate = soupData.select('td:nth-child(5)');
-
-            linkCount = len(link) - 1;
+            print("linkCount : ", link);
+            linkCount = len(link);
             for i in range(len(link)):
+
+                print("title[i].text.strip() : "  , title[i].text.strip());
+
                 numberCnt += 1;
                 if linkCount == i:
                     # javascript:pageNum('frm01','200');
@@ -30,8 +34,9 @@ class Eunpyeng:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
+                    changeText= str(registrationdate[i + 1].text);
 
-                    if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip()) == 1):
+                    if(fnCompareTitle(commonConstant_NAME.EUNPYENG_NAME, title[i].text.strip(), changeText) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
@@ -39,7 +44,6 @@ class Eunpyeng:
                         if title[i].text.strip() == '':
                                 continue;
                         else:
-                            changeText= str(registrationdate[i + 1].text);
                             linkSp = re.sub(r'[^0-9]','',str(link[i].attrs.get('href')));
                             firebase_con.updateModel( commonConstant_NAME.EUNPYENG_NAME,maxCntNumber,
                                 datasModel.toJson(

@@ -38,11 +38,11 @@ class Songpa_notice:
                             replaceString = title[i].text.strip().replace('NEW', '').strip();
                         else:
                             replaceString = title[i].text.strip();
+                        changeText= str(registrationdate[i].text.replace('.','-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, replaceString) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, replaceString, changeText) == 1):
                             break;
                         else:
-                            changeText= str(registrationdate[i].text.replace('.','-'));
                             firebase_con.updateModel(commonConstant_NAME.SONGPA_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.songpa.go.kr/www{}".format(link[i].attrs.get('href').replace('.','',1)),

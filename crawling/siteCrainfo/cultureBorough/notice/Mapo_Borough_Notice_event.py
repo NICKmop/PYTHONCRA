@@ -37,13 +37,14 @@ class Mapo_notice_event:
                         #     break;
                         # print(title[i].text.strip());
                         # # print(link[i].attrs.get('href'));
-                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text.split(' ')[0]);
+
+                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
                         if(title[i].text.strip() == ''):
                             numberCnt -= 1;
 
-                        changeText = str(registrationdate[i].text.split(' ')[0]);
                         if(checkValue[i].text.strip() != ''):
                             firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
                                 datasModel.toJson(

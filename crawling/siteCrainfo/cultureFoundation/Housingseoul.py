@@ -34,9 +34,10 @@ class Housingseoul:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
-                            break;
                         changeText= str(registrationdate[i].text.strip());
+
+                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip(), changeText) == 1):
+                            break;
                         firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
                             datasModel.toJson(
                                 'https://housing.seoul.go.kr{}'.format(link[i].attrs.get('href')),

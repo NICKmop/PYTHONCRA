@@ -46,11 +46,12 @@ class Youthseoul:
                         else:
                             subStringText = subStringText;
                         
-                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText) == 1):
+                        changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, subStringText, changeText) == 1):
                             break;
 
                         if(checkValue[i].text.strip != '상단고정'):
-                            changeText= str(registrationdate[i].text);
 
                             firebase_con.updateModel(commonConstant_NAME.SEOUL_NAME,numberCnt,
                                 datasModel.toJson(

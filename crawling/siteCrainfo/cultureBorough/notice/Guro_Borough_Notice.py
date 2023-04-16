@@ -39,10 +39,10 @@ class Guro_notice:
                         else:
                             replaceString = title[i].text.strip();
                         
-                        if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString) == 1):
+                        changeText = str(registrationdate[i].text.replace('.','-'));
+                        if(fnCompareTitle(commonConstant_NAME.GURO_NAME, replaceString, changeText) == 1):
                             break;
                         else:
-                            changeText = str(registrationdate[i].text.replace('.','-'));
                             firebase_con.updateModel(commonConstant_NAME.GURO_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.guro.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),

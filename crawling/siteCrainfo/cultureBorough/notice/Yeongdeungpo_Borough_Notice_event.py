@@ -39,11 +39,11 @@ class Yeongdeungpo_notice_event:
                             replaceString = title[i].text.strip().replace('NEW', '').strip();
                         else:
                             replaceString = title[i].text.strip();
+                        changeText= str(registrationdate[i].text.replace('.','-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString, changeText) == 1):
                             break;
 
-                        changeText= str(registrationdate[i].text.replace('.','-'));
 
                         if(checkValue[i].text != '공지'):
                             firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,

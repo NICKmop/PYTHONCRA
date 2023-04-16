@@ -33,7 +33,7 @@ class Gangbuk_notice:
                     cnt += 1;
                     firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.gangbuk.go.kr/www{}".format(link[i].attrs.get('href').replace('.', '')),
+                            "https://www.gangbuk.go.kr/www{}".format(link[i].attrs.get('href').replace('.', '',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),
@@ -48,12 +48,12 @@ class Gangbuk_notice:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
 
-                    if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
+                    if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip(), changeText) == 1):
                         break;
 
                     firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                         datasModel.toJson(
-                            "https://www.gangbuk.go.kr/www{}".format(link[i].attrs.get('href').replace('.', '')),
+                            "https://www.gangbuk.go.kr/www{}".format(link[i].attrs.get('href').replace('.', '',1)),
                             numberCnt,
                             "",
                             title[i].text.strip(),

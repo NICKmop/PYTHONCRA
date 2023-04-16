@@ -33,10 +33,11 @@ class Jungnang_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
-                            changeText = str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.JUNGNANG_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.jungnang.go.kr{}".format(link[i].attrs.get('href')),

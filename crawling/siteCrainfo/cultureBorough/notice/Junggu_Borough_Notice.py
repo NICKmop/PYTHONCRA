@@ -33,11 +33,12 @@ class Junggu_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         
                         # print("link Data : {}".format(link[i].attrs.get('href')));
-                        changeText = str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.JUNGGU_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.junggu.seoul.kr{}".format(link[i].attrs.get('href')),

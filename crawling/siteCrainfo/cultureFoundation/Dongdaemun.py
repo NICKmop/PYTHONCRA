@@ -36,8 +36,9 @@ class Dongdaemun:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         # break;
+                    changeText= str(registrationdate[i].text);
 
-                    if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):
+                    if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip(), changeText) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
@@ -45,7 +46,6 @@ class Dongdaemun:
                             continue;
                         else:
                             linkSp = re.sub(r'[^0-9]','',link[i].attrs.get('href'));
-                            changeText= str(registrationdate[i].text);
 
                             # if(changeText == '등록일'):
                             #     numberCnt -= 1;

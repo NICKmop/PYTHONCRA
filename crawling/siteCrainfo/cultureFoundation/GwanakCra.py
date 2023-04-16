@@ -37,11 +37,12 @@ class Gwanak:
                         # print(registrationdate[i].text.strip());
                         # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text.strip());
+
+                        if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text.strip());
                             
                             firebase_con.updateModel(commonConstant_NAME.GWANAK_NAME,maxCntNumber,
                                 datasModel.toJson(

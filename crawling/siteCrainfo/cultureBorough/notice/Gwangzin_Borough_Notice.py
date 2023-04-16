@@ -32,9 +32,11 @@ class Gwangzin_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip()) == 1):
-                            break;
                         changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.GWANGZIN_NAME, title[i].text.strip(), changeText) == 1):
+                            break;
+                        
                         firebase_con.updateModel(commonConstant_NAME.GWANGZIN_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.gwangjin.go.kr{}".format(link[i].attrs.get('href')),

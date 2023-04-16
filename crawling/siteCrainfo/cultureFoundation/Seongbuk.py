@@ -37,11 +37,12 @@ class Seongbuk:
                     else:
                         # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.SEONGBUK_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.SEONGBUK_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                         else:
                             maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.SEONGBUK_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "https://www.sbculture.or.kr/culture/bbs/BMSR00021/{}".format(link[i].attrs.get('href')),

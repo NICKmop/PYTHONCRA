@@ -61,7 +61,7 @@ class Junggu:
                             # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                             #     break; 
                             changeText = str(registrationdate[i].text);
-                            if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip()) == 1):
+                            if(fnCompareTitle(commonConstant_NAME.JUNGGU_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                             else:
                                 maxCntNumber += 1;

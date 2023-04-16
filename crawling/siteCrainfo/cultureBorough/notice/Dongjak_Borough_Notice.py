@@ -11,9 +11,18 @@ class Dongjak_notice:
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.DONGJAK_NAME);
             numberCnt = max(cntNumber);
+            
+            print("numberCnt : " ,cnt);
 
             url = 'https://www.dongjak.go.kr/portal/bbs/B0000022/list.do?menuNo=200641&pageIndex={}'.format(cnt);
-            response = requests.get(url);
+            # page auth header add
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+            }
+
+            response = requests.get(url, headers=headers);
+            # print("response : " , response.text);
+            
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser')
@@ -32,13 +41,14 @@ class Dongjak_notice:
                         print(commonConstant_NAME.DONGJAK_BOROUGH_NOTICE," Next Page : {}".format(cnt));
                         return Dongjak_notice.mainCra(cnt);
                     else:
+                        changeText = str(registrationdate[i].text);
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
+                        
+                        if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
                         # print("linkK:::: ", link[i].attrs.get('href'));
-                        changeText = str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.dongjak.go.kr{}".format(link[i].attrs.get('href')),
@@ -51,7 +61,7 @@ class Dongjak_notice:
                             )
                         );
             else : 
-                print(response.status_code)
+                print("statusCode : " , response.status_code)
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:
             raise ValueError("Argument에 잘못된 값이 전달되었습니다.")
             

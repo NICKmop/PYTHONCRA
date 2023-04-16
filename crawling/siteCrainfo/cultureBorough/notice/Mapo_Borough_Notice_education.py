@@ -39,14 +39,14 @@ class Mapo_notice_education:
                         # print(title[i].text.strip());
                         # print(link[i].attrs.get('href'));
                         # print(registrationdate[i].text.strip());
+                        changeText = str(registrationdate[i].text.replace('.', '-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
                         # if(title[i].text.strip() == ''):
                         #     numberCnt -= 1;
 
-                        changeText = str(registrationdate[i].text.replace('.', '-'));
                         if(checkValue[i].text.strip() != ''):
                             firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,
                                 datasModel.toJson(

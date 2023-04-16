@@ -41,11 +41,12 @@ class Gangdong:
                             numberCnt += 1;
                             # if numberCnt == commonConstant_NAME.STOPCUOUNT + 1:
                             #     break;
-                            if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip()) == 1):
+                            changeText= str(registWordSp);
+
+                            if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                             else:
                                 maxCntNumber += 1;
-                                changeText= str(registWordSp);
                                 firebase_con.updateModel(commonConstant_NAME.GANGDONG_NAME,maxCntNumber,
                                     datasModel.toJson(
                                         "https://www.gdfac.or.kr/web/lay2/bbs/S1T235C370/A/23/{}".format(link[i].attrs.get('href')),

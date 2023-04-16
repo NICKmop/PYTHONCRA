@@ -41,12 +41,12 @@ class Guro:
 
                         linkSubts1 = linkSubts[0].replace("'",'');
                         linkSubts2 = linkSubts[1].replace("'",'');
+                        changeText= str(registrationdate[i].text);
 
-                        if(fnCompareTitle(commonConstant_NAME.GURO_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.GURO_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.GURO_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "https://www.guroartsvalley.or.kr/user/board/boardDefaultView.do?page={}&pageST=&pageSV=&itemCd1=&itemCd2=&menuCode=mn011801&boardId={}&index={}".format(cnt,linkSubts1,linkSubts2.replace(';','')),

@@ -38,11 +38,11 @@ class Dobong_notice_event:
                         # print(registrationdate[i].text);
                         # if numberCnt == 262:
                         #     break;
+                        changeText = str(registrationdate[i].text.replace('.','-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         
-                        changeText = str(registrationdate[i].text.replace('.','-'));
                         firebase_con.updateModel(commonConstant_NAME.DOBONG_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.dobong.go.kr{}".format(link[i].attrs.get('href').replace(".","",1)),

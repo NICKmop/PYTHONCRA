@@ -33,11 +33,12 @@ class Seodaemun:
                         if(checkValue[i].text != ''):
                             # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                             #     break;
-                            if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip()) == 1):
+                            changeText = str(registrationdate[i].text.replace('.','-'));
+
+                            if(fnCompareTitle(commonConstant_NAME.SEODAEMUN_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                             else:
                                 maxCntNumber += 1;
-                                changeText = str(registrationdate[i].text.replace('.','-'));
                                 firebase_con.updateModel(commonConstant_NAME.SEODAEMUN_NAME,maxCntNumber,
                                     datasModel.toJson(
                                         "https://www.sscmc.or.kr/info/notice/{}".format(link[i].attrs.get('href')),

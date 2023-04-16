@@ -55,7 +55,7 @@ class Jungnang:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                         #     break;  
 
-                        if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.JUNGNANG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;

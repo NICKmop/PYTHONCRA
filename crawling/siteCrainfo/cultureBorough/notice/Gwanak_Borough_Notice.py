@@ -33,8 +33,7 @@ class Gwanak_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FIVE:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip()) == 1):
-                        break;
+                    
                     # linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
                     linkAttr = link[i].attrs.get('onclick');
                     # print(linkAttr);
@@ -43,7 +42,10 @@ class Gwanak_notice:
                     linkSubNt = linkSub.split(")")[0];
 
                     linkSubts = linkSubNt.split(",");
+
                     changeText = str(registrationdate[i].text.replace('.','-'));
+                    if(fnCompareTitle(commonConstant_NAME.GWANAK_NAME, title[i].text.strip(), changeText) == 1):
+                        break;
                     firebase_con.updateModel( commonConstant_NAME.GWANAK_NAME,numberCnt,
                         datasModel.toJson(
                             "https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx={}&bcIdx={}&parentSeq={}".format(linkSubts[0].replace("'", ""), linkSubts[1].replace("'", ""), linkSubts[1].replace("'", "")),

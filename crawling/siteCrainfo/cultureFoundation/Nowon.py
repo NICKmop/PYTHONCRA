@@ -15,7 +15,7 @@ class Nowon:
             maxCntNumber = max(cntNumber);
 
             url = 'https://nowonarts.kr/html/openspace/notice.php';
-            response = requests.get(url);
+            response = requests.get(url, verify=False);
 
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
@@ -49,12 +49,12 @@ class Nowon:
                     else:
                         # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                         else:
                             maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text);
-                            print(changeText);
                             if(changeText != '등록일'):
                                 numberCnt += 1;
                                 firebase_con.updateModel(commonConstant_NAME.NOWON_NAME,maxCntNumber,

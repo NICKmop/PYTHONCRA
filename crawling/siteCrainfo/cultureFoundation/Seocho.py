@@ -37,11 +37,12 @@ class Seocho:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE + 1:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
                         else:
                             maxCntNumber += 1;
-                            changeText= str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "http://www.seochocf.or.kr{}".format(link[i].attrs.get('href')),

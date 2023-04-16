@@ -106,28 +106,23 @@ def pageconnect(pageNumber, url, script):
     browser.quit();
     return soup;
 
-def fnCompareTitle(name, title):
+
+# name : DONGJAK / title : centerTItle
+def fnCompareTitle(name, title, date):
     # changeDate = fnChnagetype(date);
-    dupltitleList = [];
+    dupltitleList = [];    
+    
     cntTitle = firebase_con.selectModelValueNumber(name);
     # cntData = firebase_con.selectModelValueNumber(name)[1];
 
     for i in cntTitle:
-        # print("not same data : {}".format(i));
-        if(i == title):
+        date_str = i['registrationdate'].strftime("%Y-%m-%d");
+
+        if(i['title'] == title and date_str == date):
+            # print("date : " + date);
+
             print("{} Firebase title : {}".format(name,i));
-            # print("{} webCra title : {}".format(name,title));
-            # loggingdata(name);
+
             dupltitleList.append(title);
+
             return 1;
-
-    # for i in zip(cntTitle , cntData):
-    #     print(i[0]);
-    #     if(i[0] == title):
-        #     print("{} Firebase title : {}".format(name,i));
-        #     print("{} webCra title : {}".format(name,title));
-        #     dupltitleList.append(title);
-        #     return 1;
-
-
-  

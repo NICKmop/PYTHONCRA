@@ -30,14 +30,15 @@ class Songpa:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip()) == 1):
+                    changeText= str(registrationdate[i].text);
+                    
+                    if(fnCompareTitle(commonConstant_NAME.SONGPA_NAME, title[i].text.strip(), changeText) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
                         linkSp = link[i].attrs.get('href').split('Page');
                         linkSub = re.sub(r'[^0-9]','',linkSp[0]);
                         
-                        changeText= str(registrationdate[i].text);
                         firebase_con.updateModel( commonConstant_NAME.SONGPA_NAME,maxCntNumber,
                             datasModel.toJson(
                                 "https://www.songpafac.or.kr/notice_view.do?brd_seq={}&curPage=&searchtype=&keyword=".format(cnt , linkSub),

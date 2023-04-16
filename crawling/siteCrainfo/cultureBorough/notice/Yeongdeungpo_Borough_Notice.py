@@ -39,11 +39,10 @@ class Yeongdeungpo_notice:
                             replaceString = title[i].text.strip().replace('NEW', '').strip();
                         else:
                             replaceString = title[i].text.strip();
-
-                        if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString) == 1):
-                            break;
-
                         changeText= str(registrationdate[i].text.replace('.','-'));
+
+                        if(fnCompareTitle(commonConstant_NAME.YEONGDEUNGPO_NAME, replaceString, changeText) == 1):
+                            break;
 
                         if(checkValue[i].text != '공지'):
                             firebase_con.updateModel(commonConstant_NAME.YEONGDEUNGPO_NAME,numberCnt,

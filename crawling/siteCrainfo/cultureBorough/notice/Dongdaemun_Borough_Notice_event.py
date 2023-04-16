@@ -15,7 +15,10 @@ class Dongdaemun_notice_event:
             print("numberCnt : {}".format(numberCnt));
 
             url = 'https://www.ddm.go.kr/www/selectBbsNttList.do?key=206&bbsNo=243&searchCtgry=&searchCnd=all&searchKrwd=&integrDeptCode=&pageIndex={}'.format(cnt);
-            response = requests.get(url);
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/605.1.15',
+            }
+            response = requests.get(url,headers=headers);
             if response.status_code == commonConstant_NAME.STATUS_SUCCESS_CODE:
                 html = response.text;
                 soup = BeautifulSoup(html, 'html.parser')
@@ -39,10 +42,10 @@ class Dongdaemun_notice_event:
                         # print(registrationdate[i].text);
                         # if numberCnt == 30:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text);
+                        if(fnCompareTitle(commonConstant_NAME.DONGDAEMUN_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
-                        changeText = str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.DONGDAEMUN_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.ddm.go.kr/www{}".format(link[i].attrs.get('href').replace(".","",1)),

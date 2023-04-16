@@ -30,14 +30,15 @@ class Yangcheon_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
-                        break;
                     linkAttr = link[i].attrs.get('onclick')
                     linkSub = linkAttr.split("(")[1];
                     linkSubNt = linkSub.split(")")[0];
 
                     linkSubts = linkSubNt.split(",");
                     changeText= str(registrationdate[i].text.replace('.','-'));
+
+                    if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip(), changeText) == 1):
+                        break;
 
                     firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,numberCnt,
                         datasModel.toJson(

@@ -36,11 +36,10 @@ class Gangdong_notice_second:
                         # print(registrationdate[i].text.strip());
                         # if numberCnt == 183:
                         #     break;
-
-                        if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text);
+                        if(fnCompareTitle(commonConstant_NAME.GANGDONG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         
-                        changeText = str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.GANGDONG_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.gangnam.go.kr{}".format(link[i].attrs.get('href')),

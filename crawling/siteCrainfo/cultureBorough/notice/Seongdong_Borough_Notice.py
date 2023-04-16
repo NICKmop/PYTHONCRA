@@ -34,15 +34,15 @@ class Seongdong_notice:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.SEONGDONG_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text.replace('.', '-'));
+
+                        if(fnCompareTitle(commonConstant_NAME.SEONGDONG_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
                         if('NEW' in title[i].text.strip()):
                             replaceString = title[i].text.strip().replace('NEW', '').strip();
                         else:
                             replaceString = title[i].text.strip();
-
-                        changeText= str(registrationdate[i].text.replace('.', '-'));
 
                         firebase_con.updateModel(commonConstant_NAME.SEONGDONG_NAME,numberCnt,
                             datasModel.toJson(

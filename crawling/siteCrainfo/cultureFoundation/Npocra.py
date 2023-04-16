@@ -40,13 +40,13 @@ class Npocra:
                     else:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_THREE:
                         #     break;
+                        changeText= str(registrationdate[i+1].text.replace('.','-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip()) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.SEOUL_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;
 
-                        changeText= str(registrationdate[i+1].text.replace('.','-'));
                         if(checkValue[i].text.strip() == 'NPO지원센터'):
                             numberCnt -= 1;
                         

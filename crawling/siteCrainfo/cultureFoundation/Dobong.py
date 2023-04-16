@@ -26,12 +26,8 @@ class Dobong:
                     print("Dobong Next Page : {}".format(cnt));
                     # return Dobong.mainCra(cnt, numberCnt),
                 else:
-                    if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                        break;
-
-                    if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip()) == 1):
-                        break;
-                        
+                    # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                    #     break;
                     if title[i].text.strip() == '':
                         continue;
                     else:
@@ -41,8 +37,12 @@ class Dobong:
 
                         linkSubts1 = linkSubts[0].replace("'",'');
                         linkSubts2 = linkSubts[1].replace("'",'');
-                        changeText= str(registrationdate[i].text.strip());
                         
+                        changeText= str(registrationdate[i].text.strip());
+
+                        if(fnCompareTitle(commonConstant_NAME.DOBONG_NAME, title[i].text.strip(), changeText) == 1):
+                            break;
+
                         maxCntNumber += 1;
                         firebase_con.updateModel( commonConstant_NAME.DOBONG_NAME,maxCntNumber,
                             datasModel.toJson(

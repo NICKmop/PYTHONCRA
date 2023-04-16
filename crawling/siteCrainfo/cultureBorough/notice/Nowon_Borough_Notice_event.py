@@ -35,10 +35,11 @@ class Nowon_notice_event:
                     else:  
                         # if numberCnt == 121:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.NOWON_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         
-                        changeText = str(registrationdate[i].text);
                         firebase_con.updateModel(commonConstant_NAME.NOWON_NAME,numberCnt,
                             datasModel.toJson(
                                 "https://www.nowon.kr/www/user/bbs/{}&q_estnColumn1=11&q_deptCode=&q_rowPerPage=10&q_currPage=1&q_sortName=&q_sortOrder=&q_searchKeyTy=sj___1002&q_searchVal=&".format(link[i].attrs.get('href')),

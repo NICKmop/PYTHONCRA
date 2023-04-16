@@ -10,6 +10,9 @@ class Gangseo_notice:
     def mainCra(cnt):
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGSEO_NAME);
+            if(cntNumber == []):
+                cntNumber = [0];
+            
             numberCnt = max(cntNumber);
 
             url = 'https://www.gangseo.seoul.kr/gs040101?curPage={}'.format(cnt);
@@ -38,11 +41,13 @@ class Gangseo_notice:
                             numberCnt -= 1;
 
                         if(noticeCheck[i].text.strip() != ''):
-                            if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
-                                break;
-                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
-                            #     break;
                             changeText = str(registrationdate[i].text);
+
+                            if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip(), changeText) == 1):
+                                break;
+                            # if numberCnt == 100:
+                            #     break;
+                            
                             firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.gangseo.seoul.kr{}".format(link[i].attrs.get('href')),

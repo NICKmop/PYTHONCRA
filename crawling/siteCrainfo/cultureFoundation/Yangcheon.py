@@ -38,11 +38,12 @@ class Yangcheon:
                     else:
                         # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         #     break; 
-                        if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip()) == 1):
+                        changeText = registrationdate[i].text.strip().replace('.','-');
+
+                        if(fnCompareTitle(commonConstant_NAME.YANGCHEON_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
                             maxCntNumber += 1;
-                            changeText = registrationdate[i].text.strip().replace('.','-');
                             firebase_con.updateModel(commonConstant_NAME.YANGCHEON_NAME,maxCntNumber,
                                 datasModel.toJson(
                                     "https://yfac.kr/main/contents.do{}".format(link[i].attrs.get('href')),

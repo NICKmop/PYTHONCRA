@@ -30,8 +30,7 @@ class Jongro_notice:
                 else:
                     # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                     #     break; 
-                    if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip()) == 1):
-                        break;
+                    
 
                     linkAttr = link[i].attrs.get('href');
                     linkSub = linkAttr.split("('")[1];
@@ -42,6 +41,8 @@ class Jongro_notice:
                     replregistD = replregistM.replace("일",'');
                     
                     changeText= str(replregistD.strip());
+                    if(fnCompareTitle(commonConstant_NAME.JONGRO_NAME, title[i].text.strip(), changeText) == 1):
+                        break;
                     if(changeText != '등록'):
                         firebase_con.updateModel( commonConstant_NAME.JONGRO_NAME,numberCnt,
                             datasModel.toJson(

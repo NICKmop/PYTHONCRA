@@ -37,10 +37,11 @@ class Youngsan_notice_event:
                     else:
                         # if numberCnt == 142:
                         #     break;
-                        if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip()) == 1):
+                        changeText= str(registrationdate[i].text);
+
+                        if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.strip(), changeText) == 1):
                             break;
                         else:
-                            changeText= str(registrationdate[i].text);
                             firebase_con.updateModel(commonConstant_NAME.YOUNGSAN_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.yongsan.go.kr{}".format(link[i].attrs.get('href')),

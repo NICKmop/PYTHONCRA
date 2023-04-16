@@ -32,14 +32,15 @@ class Youngsan:
             else:
                 # if numberCnt == 22:
                 #     break;
-                if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.split(']', 1)[1].strip()) == 1):
+                changeText = registrationdate[i].text.strip();
+            
+                if(fnCompareTitle(commonConstant_NAME.YOUNGSAN_NAME, title[i].text.split(']', 1)[1].strip(), changeText) == 1):
                     break;
                 else:
                     linkAttr = link[i].attrs.get('href');
                     linkSub = linkAttr.split("(")[1];
                     linkSubNt = linkSub.split(")")[0];
 
-                    changeText = registrationdate[i].text.strip();
 
                     print("{} : {}".format(i, title[i].text));
 

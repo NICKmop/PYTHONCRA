@@ -38,12 +38,13 @@ class Geuamcheoun_notice:
                             replaceString = title[i].text.strip().replace('새글', '').strip();
                         else:
                             replaceString = title[i].text.strip();
+                        
+                        changeText = str(registrationdate[i].text.replace('.', '-'));
 
-                        if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, replaceString) == 1):
+                        if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, replaceString, changeText) == 1):
                             break;
                         # print(link[i].attrs.get('href').removeprefix('.'));
                         linkrep = link[i].attrs.get('href').replace('.','',1);
-                        changeText = str(registrationdate[i].text.replace('.', '-'));
                         
                         firebase_con.updateModel(commonConstant_NAME.GEUAMCHEOUN_NAME,numberCnt,
                             datasModel.toJson(

@@ -36,13 +36,13 @@ class Mapo_notice:
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_SEVEN:
                         #     break;
                         # print(checkValue[i].text.strip());
-                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip()) == 1):
+                        changeText = str(registrationdate[i].text.replace('.','-'));
+
+                        if(fnCompareTitle(commonConstant_NAME.MAPO_NAME, title[i].text.strip(), changeText) == 1):
                             break;
 
                         if(title[i].text.strip() == ''):
                             numberCnt -= 1;
-
-                        changeText = str(registrationdate[i].text.replace('.','-'));
 
                         if(checkValue[i].text.strip() != ''):
                             firebase_con.updateModel(commonConstant_NAME.MAPO_NAME,numberCnt,

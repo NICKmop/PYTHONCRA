@@ -36,26 +36,24 @@ class Dongjak_notice_event:
                         print(commonConstant_NAME.DONGJAK_BOROUGH_NOTICE_EVENT," Next Page : {}".format(cnt));
                         return Dongjak_notice_event.mainCra(cnt);
                     else:
-                        print(title[i].text.strip());
-                        print(link[i].attrs.get('href'));
-                        print(registrationdate[i].text.strip());
                         # if numberCnt == commonConstant_NAME.SEOUL_STOP_COUNT_FOUR:
                         #     break;
-                        # if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip()) == 1):
-                        #     break;
+                        changeText = str(registrationdate[i].text);
 
-                        # changeText = str(registrationdate[i].text);
-                        # firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
-                        #     datasModel.toJson(
-                        #         "https://www.dongjak.go.kr{}".format(link[i].attrs.get('href')),
-                        #         numberCnt,
-                        #         "",
-                        #         title[i].text.strip(),
-                        #         "",
-                        #         fnChnagetype(changeText.strip()),
-                        #         "동작구청",
-                        #     )
-                        # );
+                        if(fnCompareTitle(commonConstant_NAME.DONGJAK_NAME, title[i].text.strip(), changeText) == 1):
+                            break;
+                        
+                        firebase_con.updateModel(commonConstant_NAME.DONGJAK_NAME,numberCnt,
+                            datasModel.toJson(
+                                "https://www.dongjak.go.kr{}".format(link[i].attrs.get('href')),
+                                numberCnt,
+                                "",
+                                title[i].text.strip(),
+                                "",
+                                fnChnagetype(changeText.strip()),
+                                "동작구청",
+                            )
+                        );
             else : 
                 print(response.status_code)
         except (ValueError, TypeError, TimeoutError, ConnectionError) as e:

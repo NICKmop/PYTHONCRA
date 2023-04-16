@@ -41,11 +41,11 @@ class Seocho_notice_education:
                             # print(registrationdate[i].text.strip());
                             # if numberCnt == 182:
                             #     break;
+                            changeText= str(registrationdate[i].text.replace('.','-'));
 
-                            if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip()) == 1):
+                            if(fnCompareTitle(commonConstant_NAME.SEOCHO_NAME, title[i].text.strip(), changeText) == 1):
                                 break;
 
-                            changeText= str(registrationdate[i].text.replace('.','-'));
                             firebase_con.updateModel(commonConstant_NAME.SEOCHO_NAME,numberCnt,
                                 datasModel.toJson(
                                     "https://www.seocho.go.kr{}".format(link[i].attrs.get('href')),

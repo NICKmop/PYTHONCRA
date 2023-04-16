@@ -31,7 +31,8 @@ class Gangseo:
                 else:
                     # if numberCnt == commonConstant_NAME.STOPCUOUNT + 1:
                     #     break;
-                    if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip()) == 1):
+                    changeText = str(registrationdate[i].text.replace('.','-'));
+                    if(fnCompareTitle(commonConstant_NAME.GANGSEO_NAME, title[i].text.strip(), changeText) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
@@ -42,7 +43,6 @@ class Gangseo:
                             
                         if('시간 전' not in registrationdate[i].text):
                             print(" True : {}".format(registrationdate[i].text));
-                            changeText = str(registrationdate[i].text.replace('.','-'));
 
                             firebase_con.updateModel(commonConstant_NAME.GANGSEO_NAME,maxCntNumber,
                                 datasModel.toJson(

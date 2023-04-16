@@ -10,7 +10,7 @@ class Gnagbuk:
     def mainCra(cnt,numberCnt):
         try:
             cntNumber = firebase_con.selectModelKeyNumber(commonConstant_NAME.GANGBUK_NAME);
-            maxCntNumber = max(cntNumber);
+            # maxCntNumber = max(cntNumber);
 
             url = 'http://www.gbcf.or.kr/load.asp?subPage=510&searchValue=&searchType=&cate=&page={}&board_md=list'.format(cnt);
             response = requests.get(url);
@@ -33,22 +33,26 @@ class Gnagbuk:
                     else:
                         # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                         #     break;
+                        
                         changeText= str(registrationdate[i].text.split("/")[0].replace(' ',''));
+
                         if(checkValue[i].text.strip() != '공지'):
                             numberCnt += 1;
-                            if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip()) == 1):
-                                    break;
+                            if(fnCompareTitle(commonConstant_NAME.GANGBUK_NAME, title[i].text.strip(), changeText) == 1):
+                                break;
+                            # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
+                            #     break;
                             else:
                                 if title[i].text.strip() == '':
                                     continue;
                                 else:
-                                    maxCntNumber += 1;
-                                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,maxCntNumber,
+                                    # maxCntNumber += 1;
+                                    firebase_con.updateModel(commonConstant_NAME.GANGBUK_NAME,numberCnt,
                                         datasModel.toJson(
                                             # https://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=773&searchValue=&searchType=&page=3
                                             # http://www.gbcf.or.kr/load.asp?subPage=510.view&cate=&idx=788&searchValue=&searchType=&page=1
                                             "http://www.gbcf.or.kr/{}".format(link[i].attrs.get('href')),
-                                            maxCntNumber,
+                                            numberCnt,
                                             "",
                                             title[i].text.strip(),
                                             "",

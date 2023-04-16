@@ -30,15 +30,14 @@ class Geuamcheoun:
                 else:
                     # if numberCnt == commonConstant_NAME.NOTICE_STOP_COUNT:
                     #     break;
+                    changeText= str(registrationdate[i].text.split(":")[1].replace(' ', ''));
                         
-                    if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, title[i].text.strip()) == 1):
+                    if(fnCompareTitle(commonConstant_NAME.GEUAMCHEOUN_NAME, title[i].text.strip(), changeText) == 1):
                         break;
                     else:
                         maxCntNumber += 1;
                         linkSp = re.sub(r'[^0-9]','',link[i + 1].attrs.get('onclick'));
-                        # print(title[i].text.strip());
                         
-                        changeText= str(registrationdate[i].text.split(":")[1].replace(' ', ''));
 
                         firebase_con.updateModel( commonConstant_NAME.GEUAMCHEOUN_NAME,maxCntNumber,
                             datasModel.toJson(
